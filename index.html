@@ -156,6 +156,52 @@
                 padding: 80px 32px 48px;
             }
         }
+
+        .creative-footer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 56px;
+            margin-bottom: 40px;
+            width: 100%;
+        }
+
+        .manifesto-line {
+            font-family: 'Jost', sans-serif;
+            font-weight: 300;
+            font-size: 0.7rem;
+            letter-spacing: 0.35em;
+            text-transform: uppercase;
+            color: rgba(201, 168, 76, 0.5);
+        }
+
+        .signature-text {
+            font-family: 'Great Vibes', cursive;
+            font-size: 42px;
+            fill: none;
+            stroke: #C9A84C;
+            stroke-width: 1.2;
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+            opacity: 0;
+        }
+
+        .signature-text.animate {
+            animation: signatureDraw 2.5s ease forwards;
+        }
+
+        @keyframes signatureDraw {
+            from {
+                stroke-dashoffset: 1000;
+                opacity: 0;
+            }
+            to {
+                stroke-dashoffset: 0;
+                opacity: 1;
+            }
+        }
     </style>
 </head>
 <body>
@@ -211,19 +257,60 @@
             </div>
         </div>
 
-        <div style="margin-top: 48px; margin-bottom: 32px; display: flex; flex-direction: column; align-items: center; gap: 16px;">
-            <svg width="120" height="2" viewBox="0 0 120 2"><line x1="0" y1="1" x2="120" y2="1" stroke="#C9A84C" stroke-width="1"/></svg>
-            <span style="font-family: 'Jost', sans-serif; font-weight: 300; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.25);">Crafted with Claude Code&ensp;&middot;&ensp;Deployed on Cloudflare</span>
-            <div style="display: flex; gap: 24px; color: rgba(201,168,76,0.4);">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-            </div>
+        <div class="creative-footer">
+            <!-- Art Deco Divider Top -->
+            <svg width="600" height="40" viewBox="0 0 600 40" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%;">
+                <line x1="0" y1="20" x2="600" y2="20" stroke="#C9A84C" stroke-width="0.75" opacity="0.6"/>
+                <polygon points="300,8 312,20 300,32 288,20" fill="none" stroke="#C9A84C" stroke-width="0.75" opacity="0.8"/>
+                <circle cx="260" cy="20" r="3" fill="none" stroke="#C9A84C" stroke-width="0.75" opacity="0.6"/>
+                <circle cx="340" cy="20" r="3" fill="none" stroke="#C9A84C" stroke-width="0.75" opacity="0.6"/>
+                <circle cx="220" cy="20" r="1.5" fill="#C9A84C" opacity="0.4"/>
+                <circle cx="380" cy="20" r="1.5" fill="#C9A84C" opacity="0.4"/>
+                <line x1="160" y1="14" x2="160" y2="26" stroke="#C9A84C" stroke-width="0.75" opacity="0.3"/>
+                <line x1="440" y1="14" x2="440" y2="26" stroke="#C9A84C" stroke-width="0.75" opacity="0.3"/>
+                <line x1="100" y1="17" x2="100" y2="23" stroke="#C9A84C" stroke-width="0.75" opacity="0.2"/>
+                <line x1="500" y1="17" x2="500" y2="23" stroke="#C9A84C" stroke-width="0.75" opacity="0.2"/>
+            </svg>
+
+            <!-- Manifesto Line -->
+            <span class="manifesto-line">WHERE STRATEGY MEETS CRAFT</span>
+
+            <!-- Animated Signature -->
+            <svg id="signature-svg" width="400" height="80" viewBox="0 0 400 80" style="max-width: 100%; overflow: visible;">
+                <text x="50%" y="55" text-anchor="middle" class="signature-text">Hugh Patrick</text>
+            </svg>
+
+            <!-- Art Deco Divider Bottom -->
+            <svg width="600" height="40" viewBox="0 0 600 40" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%;">
+                <line x1="0" y1="20" x2="600" y2="20" stroke="#C9A84C" stroke-width="0.75" opacity="0.6"/>
+                <polygon points="300,8 312,20 300,32 288,20" fill="none" stroke="#C9A84C" stroke-width="0.75" opacity="0.8"/>
+                <circle cx="260" cy="20" r="3" fill="none" stroke="#C9A84C" stroke-width="0.75" opacity="0.6"/>
+                <circle cx="340" cy="20" r="3" fill="none" stroke="#C9A84C" stroke-width="0.75" opacity="0.6"/>
+                <circle cx="220" cy="20" r="1.5" fill="#C9A84C" opacity="0.4"/>
+                <circle cx="380" cy="20" r="1.5" fill="#C9A84C" opacity="0.4"/>
+                <line x1="160" y1="14" x2="160" y2="26" stroke="#C9A84C" stroke-width="0.75" opacity="0.3"/>
+                <line x1="440" y1="14" x2="440" y2="26" stroke="#C9A84C" stroke-width="0.75" opacity="0.3"/>
+                <line x1="100" y1="17" x2="100" y2="23" stroke="#C9A84C" stroke-width="0.75" opacity="0.2"/>
+                <line x1="500" y1="17" x2="500" y2="23" stroke="#C9A84C" stroke-width="0.75" opacity="0.2"/>
+            </svg>
         </div>
     </main>
 
     <footer style="text-align: center; padding: 32px 24px; font-family: 'Jost', sans-serif; font-size: 0.8rem; color: rgba(255,255,255,0.4); letter-spacing: 0.08em;">
         Brittani Preschel&ensp;|&ensp;Homepage Designs by ~Hugh Patrick
     </footer>
+
+    <script>
+        const signatureSvg = document.getElementById('signature-svg');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    signatureSvg.querySelector('.signature-text').classList.add('animate');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        observer.observe(signatureSvg);
+    </script>
 </body>
 </html>
