@@ -177,30 +177,67 @@
             color: rgba(201, 168, 76, 0.5);
         }
 
-        .signature-text {
-            font-family: 'Great Vibes', cursive;
-            font-size: 42px;
-            fill: none;
-            stroke: #C9A84C;
-            stroke-width: 1.2;
-            stroke-dasharray: 1000;
-            stroke-dashoffset: 1000;
+        .monogram-container {
+            perspective: 800px;
+        }
+
+        .monogram-svg {
+            transition: transform 0.3s ease;
+        }
+
+        .monogram-container:hover .monogram-svg {
+            transform: rotateY(15deg) rotateX(-5deg);
+        }
+
+        .ring {
+            stroke-dasharray: 600;
+            stroke-dashoffset: 600;
+            transition: stroke-dashoffset 1.5s ease;
+        }
+
+        .ring-2 {
+            transition-delay: 0.3s;
+        }
+
+        .letter {
+            transition: stroke-dashoffset 2s ease;
+        }
+
+        .letter-p {
+            transition-delay: 0.8s;
+        }
+
+        .monogram-container.animate .ring {
+            stroke-dashoffset: 0;
+        }
+
+        .monogram-container.animate .letter {
+            stroke-dashoffset: 0;
+        }
+
+        .accent, .dot {
             opacity: 0;
+            transition: opacity 0.6s ease;
         }
 
-        .signature-text.animate {
-            animation: signatureDraw 2.5s ease forwards;
+        .monogram-container.animate .accent {
+            opacity: 0.5;
+            transition-delay: 1.5s;
         }
 
-        @keyframes signatureDraw {
-            from {
-                stroke-dashoffset: 1000;
-                opacity: 0;
-            }
-            to {
-                stroke-dashoffset: 0;
-                opacity: 1;
-            }
+        .monogram-container.animate .dot {
+            opacity: 0.6;
+            transition-delay: 1.8s;
+        }
+
+        @keyframes subtleFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-4px); }
+        }
+
+        .monogram-container.animate .monogram-svg {
+            animation: subtleFloat 4s ease-in-out infinite;
+            animation-delay: 2.5s;
         }
     </style>
 </head>
@@ -275,10 +312,33 @@
             <!-- Manifesto Line -->
             <span class="manifesto-line">WHERE STRATEGY MEETS CRAFT</span>
 
-            <!-- Animated Signature -->
-            <svg id="signature-svg" width="400" height="80" viewBox="0 0 400 80" style="max-width: 100%; overflow: visible;">
-                <text x="50%" y="55" text-anchor="middle" class="signature-text">Hugh Patrick</text>
-            </svg>
+            <!-- Animated 3D HP Monogram -->
+            <div class="monogram-container" id="monogram">
+                <svg class="monogram-svg" width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Outer decorative ring -->
+                    <circle cx="100" cy="100" r="90" fill="none" stroke="#C9A84C" stroke-width="0.75" class="ring ring-1"/>
+                    <!-- Inner decorative ring -->
+                    <circle cx="100" cy="100" r="78" fill="none" stroke="#C9A84C" stroke-width="0.5" class="ring ring-2"/>
+                    <!-- Corner diamond accents -->
+                    <polygon points="100,8 106,14 100,20 94,14" fill="#C9A84C" class="accent"/>
+                    <polygon points="100,180 106,186 100,192 94,186" fill="#C9A84C" class="accent"/>
+                    <polygon points="8,100 14,94 20,100 14,106" fill="#C9A84C" class="accent"/>
+                    <polygon points="180,100 186,94 192,100 186,106" fill="#C9A84C" class="accent"/>
+                    <!-- 3D shadow H -->
+                    <path d="M 58 58 L 58 148 M 58 103 L 98 103 M 98 58 L 98 148" fill="none" stroke="rgba(201,168,76,0.15)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+                    <!-- H letter path -->
+                    <path class="letter letter-h" d="M 55 55 L 55 145 M 55 100 L 95 100 M 95 55 L 95 145" fill="none" stroke="#C9A84C" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="400" stroke-dashoffset="400"/>
+                    <!-- 3D shadow P -->
+                    <path d="M 111 58 L 111 148 M 111 58 L 138 58 Q 155 58 155 80 Q 155 102 138 102 L 111 102" fill="none" stroke="rgba(201,168,76,0.15)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+                    <!-- P letter path -->
+                    <path class="letter letter-p" d="M 108 55 L 108 145 M 108 55 L 135 55 Q 152 55 152 77 Q 152 99 135 99 L 108 99" fill="none" stroke="#C9A84C" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="400" stroke-dashoffset="400"/>
+                    <!-- Decorative dots at compass points -->
+                    <circle cx="100" cy="12" r="2" fill="#C9A84C" class="dot"/>
+                    <circle cx="100" cy="188" r="2" fill="#C9A84C" class="dot"/>
+                    <circle cx="12" cy="100" r="2" fill="#C9A84C" class="dot"/>
+                    <circle cx="188" cy="100" r="2" fill="#C9A84C" class="dot"/>
+                </svg>
+            </div>
 
             <!-- Art Deco Divider Bottom -->
             <svg width="600" height="40" viewBox="0 0 600 40" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%;">
@@ -301,16 +361,16 @@
     </footer>
 
     <script>
-        const signatureSvg = document.getElementById('signature-svg');
+        const monogram = document.getElementById('monogram');
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    signatureSvg.querySelector('.signature-text').classList.add('animate');
+                    monogram.classList.add('animate');
                     observer.unobserve(entry.target);
                 }
             });
         }, { threshold: 0.5 });
-        observer.observe(signatureSvg);
+        observer.observe(monogram);
     </script>
 </body>
 </html>
