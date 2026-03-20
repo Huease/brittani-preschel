@@ -267,25 +267,24 @@
 
         .hero-text {
             flex: 1;
-            max-width: 560px;
+            max-width: 600px;
             display: flex;
             flex-direction: column;
+            align-items: flex-start;
             justify-content: center;
             gap: 1rem;
-            padding-left: 0;
-            margin-left: 0;
         }
 
         .hero-name {
             font-family: 'Great Vibes', cursive;
             font-weight: 400;
-            font-size: clamp(4rem, 5.5vw, 7rem);
+            font-size: clamp(3.5rem, 5vw, 6.5rem);
             color: #0A1628;
             line-height: 1.1;
             letter-spacing: 0.01em;
             white-space: nowrap;
-            margin: 0 0 1.5rem 0;
-            padding: 0;
+            margin: 0 0 0.5rem 0;
+            display: block;
             transition: color 300ms ease;
         }
 
@@ -293,6 +292,7 @@
             font-weight: 300;
             font-size: 1.05rem;
             color: #6B7A8D;
+            max-width: 480px;
             margin: 0;
             padding: 0;
             transition: color 300ms ease;
@@ -302,6 +302,7 @@
             font-weight: 400;
             font-size: 1.1rem;
             color: var(--text-primary);
+            max-width: 480px;
             margin: 0;
             padding: 0;
             transition: color 300ms ease;
@@ -309,6 +310,7 @@
 
         .hero-cta {
             margin-top: 0.5rem;
+            align-self: flex-start;
         }
 
         .btn-primary {
