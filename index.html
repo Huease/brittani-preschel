@@ -193,11 +193,12 @@
         .ring {
             stroke-dasharray: 600;
             stroke-dashoffset: 600;
-            transition: stroke-dashoffset 6s ease;
+            transition: stroke-dashoffset 5s ease;
+            transition-delay: 0.5s;
         }
 
         .ring-2 {
-            transition-delay: 3s;
+            transition-delay: 2s;
         }
 
         .letter {
@@ -205,11 +206,11 @@
         }
 
         .letter-h {
-            transition-delay: 5s;
+            transition-delay: 3s;
         }
 
         .letter-p {
-            transition-delay: 10s;
+            transition-delay: 3s;
         }
 
         .monogram-container.animate .ring {
@@ -226,7 +227,8 @@
         }
 
         .monogram-container.animate #hp-letters {
-            animation: hpSpin 30s ease forwards;
+            animation: hpSpin 8s ease forwards;
+            animation-delay: 3s;
         }
 
         @keyframes hpSpin {
@@ -234,11 +236,11 @@
                 transform: rotate(0deg) scale(0.3);
                 opacity: 0;
             }
-            15% {
+            60% {
                 transform: rotate(720deg) scale(1.1);
                 opacity: 1;
             }
-            20% {
+            80% {
                 transform: rotate(720deg) scale(1);
             }
             100% {
@@ -249,17 +251,32 @@
 
         .accent, .dot {
             opacity: 0;
-            transition: opacity 2s ease;
+            transition: opacity 0.4s ease;
         }
 
-        .monogram-container.animate .accent {
+        .monogram-container.animate .accent:nth-of-type(1) {
             opacity: 0.5;
-            transition-delay: 23s;
+            transition-delay: 1s;
+        }
+
+        .monogram-container.animate .accent:nth-of-type(2) {
+            opacity: 0.5;
+            transition-delay: 1.5s;
+        }
+
+        .monogram-container.animate .accent:nth-of-type(3) {
+            opacity: 0.5;
+            transition-delay: 2s;
+        }
+
+        .monogram-container.animate .accent:nth-of-type(4) {
+            opacity: 0.5;
+            transition-delay: 2.5s;
         }
 
         .monogram-container.animate .dot {
             opacity: 0.6;
-            transition-delay: 26s;
+            transition-delay: 3s;
         }
 
         @keyframes subtleFloat {
@@ -283,7 +300,7 @@
 
         .monogram-container.animate #monogram-group {
             animation: fullSpin 15s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-            animation-delay: 6s;
+            animation-delay: 12s;
         }
     </style>
 </head>
