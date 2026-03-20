@@ -183,6 +183,7 @@
 
         .monogram-svg {
             transition: transform 0.3s ease;
+            filter: drop-shadow(2px 3px 6px rgba(0,0,0,0.5));
         }
 
         .monogram-container:hover .monogram-svg {
@@ -192,42 +193,60 @@
         .ring {
             stroke-dasharray: 600;
             stroke-dashoffset: 600;
-            transition: stroke-dashoffset 1.5s ease;
+            transition: stroke-dashoffset 6s ease;
         }
 
         .ring-2 {
-            transition-delay: 0.3s;
+            transition-delay: 3s;
         }
 
         .letter {
-            transition: stroke-dashoffset 2s ease;
+            transition: stroke-dashoffset 8s ease;
+        }
+
+        .letter-h {
+            transition-delay: 5s;
         }
 
         .letter-p {
-            transition-delay: 0.8s;
+            transition-delay: 10s;
+        }
+
+        .letter-h-serifs, .letter-p-serifs {
+            transition: stroke-dashoffset 4s ease;
+        }
+
+        .letter-h-serifs {
+            transition-delay: 16s;
+        }
+
+        .letter-p-serifs {
+            transition-delay: 20s;
         }
 
         .monogram-container.animate .ring {
             stroke-dashoffset: 0;
         }
 
-        .monogram-container.animate .letter {
+        .monogram-container.animate .letter,
+        .monogram-container.animate .letter-h-serifs,
+        .monogram-container.animate .letter-p-serifs {
             stroke-dashoffset: 0;
         }
 
         .accent, .dot {
             opacity: 0;
-            transition: opacity 0.6s ease;
+            transition: opacity 2s ease;
         }
 
         .monogram-container.animate .accent {
             opacity: 0.5;
-            transition-delay: 1.5s;
+            transition-delay: 23s;
         }
 
         .monogram-container.animate .dot {
             opacity: 0.6;
-            transition-delay: 1.8s;
+            transition-delay: 26s;
         }
 
         @keyframes subtleFloat {
@@ -237,7 +256,7 @@
 
         .monogram-container.animate .monogram-svg {
             animation: subtleFloat 4s ease-in-out infinite;
-            animation-delay: 2.5s;
+            animation-delay: 30s;
         }
     </style>
 </head>
@@ -325,13 +344,17 @@
                     <polygon points="8,100 14,94 20,100 14,106" fill="#C9A84C" class="accent"/>
                     <polygon points="180,100 186,94 192,100 186,106" fill="#C9A84C" class="accent"/>
                     <!-- 3D shadow H -->
-                    <path d="M 58 58 L 58 148 M 58 103 L 98 103 M 98 58 L 98 148" fill="none" stroke="rgba(201,168,76,0.15)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M 58 58 L 58 148 M 58 103 L 98 103 M 98 58 L 98 148" fill="none" stroke="rgba(201,168,76,0.15)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
                     <!-- H letter path -->
-                    <path class="letter letter-h" d="M 55 55 L 55 145 M 55 100 L 95 100 M 95 55 L 95 145" fill="none" stroke="#C9A84C" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="400" stroke-dashoffset="400"/>
+                    <path class="letter letter-h" d="M 55 55 L 55 145 M 55 100 L 95 100 M 95 55 L 95 145" fill="none" stroke="#C9A84C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="400" stroke-dashoffset="400"/>
+                    <!-- H serifs -->
+                    <path class="letter letter-h-serifs" d="M 48 55 L 62 55 M 48 145 L 62 145 M 88 55 L 102 55 M 88 145 L 102 145" fill="none" stroke="#C9A84C" stroke-width="2" stroke-linecap="round" stroke-dasharray="200" stroke-dashoffset="200"/>
                     <!-- 3D shadow P -->
-                    <path d="M 111 58 L 111 148 M 111 58 L 138 58 Q 155 58 155 80 Q 155 102 138 102 L 111 102" fill="none" stroke="rgba(201,168,76,0.15)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M 111 58 L 111 148 M 111 58 L 138 58 Q 155 58 155 80 Q 155 102 138 102 L 111 102" fill="none" stroke="rgba(201,168,76,0.15)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
                     <!-- P letter path -->
-                    <path class="letter letter-p" d="M 108 55 L 108 145 M 108 55 L 135 55 Q 152 55 152 77 Q 152 99 135 99 L 108 99" fill="none" stroke="#C9A84C" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="400" stroke-dashoffset="400"/>
+                    <path class="letter letter-p" d="M 108 55 L 108 145 M 108 55 L 135 55 Q 152 55 152 77 Q 152 99 135 99 L 108 99" fill="none" stroke="#C9A84C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="400" stroke-dashoffset="400"/>
+                    <!-- P serifs -->
+                    <path class="letter letter-p-serifs" d="M 101 55 L 115 55 M 101 145 L 115 145" fill="none" stroke="#C9A84C" stroke-width="2" stroke-linecap="round" stroke-dasharray="100" stroke-dashoffset="100"/>
                     <!-- Decorative dots at compass points -->
                     <circle cx="100" cy="12" r="2" fill="#C9A84C" class="dot"/>
                     <circle cx="100" cy="188" r="2" fill="#C9A84C" class="dot"/>
