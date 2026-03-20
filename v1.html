@@ -67,9 +67,12 @@
         /* ── UTILITY ── */
         .container {
             width: 100%;
-            max-width: 1120px;
-            margin: 0 auto;
-            padding: 0 24px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 6%;
+            padding-right: 6%;
+            box-sizing: border-box;
         }
 
         .section-label {
@@ -253,11 +256,11 @@
             display: flex;
             flex-direction: row;
             align-items: center;
-            justify-content: center;
+            justify-content: space-between;
             width: 100%;
             max-width: 1200px;
-            padding: 0 8%;
-            gap: 8rem;
+            padding: 0 6%;
+            gap: 6rem;
             box-sizing: border-box;
         }
 
@@ -270,14 +273,15 @@
             gap: 1rem;
         }
 
-        .hero-text h1 {
+        .hero-name {
             font-family: 'Great Vibes', cursive;
             font-weight: 400;
-            font-size: clamp(5rem, 7vw, 9rem);
-            line-height: 1.0;
-            letter-spacing: 0.01em;
+            font-size: clamp(4rem, 5.5vw, 7rem);
             color: #0A1628;
-            margin: 0;
+            line-height: 1.1;
+            letter-spacing: 0.01em;
+            white-space: nowrap;
+            margin: 0 0 1.5rem 0;
             padding: 0;
             transition: color 300ms ease;
         }
@@ -326,17 +330,17 @@
         }
 
         .hero-photo {
-            flex: 0 0 400px;
-            width: 400px;
-            height: 400px;
+            flex: 0 0 380px;
+            width: 380px;
+            height: 380px;
             display: flex;
             align-items: center;
             justify-content: center;
         }
 
         .hero-photo img {
-            width: 400px;
-            height: 400px;
+            width: 380px;
+            height: 380px;
             border-radius: 50%;
             object-fit: cover;
             object-position: center top;
@@ -873,7 +877,7 @@
 <!-- NAV -->
 <nav id="navbar">
     <div class="container nav-inner">
-        <a href="#" class="nav-logo"><img src="brittani-logo.png" alt="Brittani Preschel" style="height: 52px; width: auto; display: block;"></a>
+        <a href="#" class="nav-logo"><img src="brittani-logo.png" alt="Brittani Preschel" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" style="height: 52px; width: auto; display: block;"><span style="display:none; font-family:'Great Vibes',cursive; font-size:1.8rem; color:#C9A84C;">Brittani Preschel</span></a>
         <ul class="nav-links">
             <li><a href="#about">About</a></li>
             <li><a href="#credentials">Credentials</a></li>
@@ -906,7 +910,7 @@
 <div class="hero-wrapper">
     <section class="hero">
         <div class="hero-text">
-            <h1 class="stagger">Brittani<br>Preschel</h1>
+            <h1 class="hero-name stagger">Brittani Preschel</h1>
             <p class="hero-subtitle stagger">Founder + CEO, D2 Advertising<br>Digital Advertising Leader&ensp;|&ensp;Speaker</p>
             <p class="hero-tagline stagger">20+ years at the intersection of data, creativity, and results.</p>
             <div class="hero-cta">
