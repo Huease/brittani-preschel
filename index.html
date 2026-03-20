@@ -271,6 +271,20 @@
             animation: subtleFloat 4s ease-in-out infinite;
             animation-delay: 30s;
         }
+
+        #monogram-group {
+            transform-origin: 100px 100px;
+        }
+
+        @keyframes fullSpin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .monogram-container.animate #monogram-group {
+            animation: fullSpin 15s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+            animation-delay: 45s;
+        }
     </style>
 </head>
 <body>
@@ -347,28 +361,30 @@
             <!-- Animated 3D HP Monogram -->
             <div class="monogram-container" id="monogram">
                 <svg class="monogram-svg" width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Outer decorative ring -->
-                    <circle cx="100" cy="100" r="90" fill="none" stroke="#C9A84C" stroke-width="0.75" class="ring ring-1"/>
-                    <!-- Inner decorative ring -->
-                    <circle cx="100" cy="100" r="78" fill="none" stroke="#C9A84C" stroke-width="0.5" class="ring ring-2"/>
-                    <!-- Corner diamond accents -->
-                    <polygon points="100,8 106,14 100,20 94,14" fill="#C9A84C" class="accent"/>
-                    <polygon points="100,180 106,186 100,192 94,186" fill="#C9A84C" class="accent"/>
-                    <polygon points="8,100 14,94 20,100 14,106" fill="#C9A84C" class="accent"/>
-                    <polygon points="180,100 186,94 192,100 186,106" fill="#C9A84C" class="accent"/>
-                    <!-- Filled shadow versions for depth -->
-                    <text x="44" y="137" font-family="'Cormorant Garamond', serif" font-size="110" font-weight="300" fill="rgba(201,168,76,0.08)" style="pointer-events:none;">H</text>
-                    <text x="105" y="137" font-family="'Cormorant Garamond', serif" font-size="110" font-weight="300" fill="rgba(201,168,76,0.08)" style="pointer-events:none;">P</text>
-                    <!-- H and P letters with spin group -->
-                    <g id="hp-letters">
-                        <text x="42" y="135" font-family="'Cormorant Garamond', serif" font-size="110" font-weight="300" fill="none" stroke="#C9A84C" stroke-width="1.2" class="letter letter-h" stroke-dasharray="800" stroke-dashoffset="800">H</text>
-                        <text x="103" y="135" font-family="'Cormorant Garamond', serif" font-size="110" font-weight="300" fill="none" stroke="#C9A84C" stroke-width="1.2" class="letter letter-p" stroke-dasharray="800" stroke-dashoffset="800">P</text>
+                    <g id="monogram-group">
+                        <!-- Outer decorative ring -->
+                        <circle cx="100" cy="100" r="90" fill="none" stroke="#C9A84C" stroke-width="0.75" class="ring ring-1"/>
+                        <!-- Inner decorative ring -->
+                        <circle cx="100" cy="100" r="78" fill="none" stroke="#C9A84C" stroke-width="0.5" class="ring ring-2"/>
+                        <!-- Corner diamond accents -->
+                        <polygon points="100,8 106,14 100,20 94,14" fill="#C9A84C" class="accent"/>
+                        <polygon points="100,180 106,186 100,192 94,186" fill="#C9A84C" class="accent"/>
+                        <polygon points="8,100 14,94 20,100 14,106" fill="#C9A84C" class="accent"/>
+                        <polygon points="180,100 186,94 192,100 186,106" fill="#C9A84C" class="accent"/>
+                        <!-- Filled shadow versions for depth -->
+                        <text x="44" y="137" font-family="'Cormorant Garamond', serif" font-size="110" font-weight="300" fill="rgba(201,168,76,0.08)" style="pointer-events:none;">H</text>
+                        <text x="105" y="137" font-family="'Cormorant Garamond', serif" font-size="110" font-weight="300" fill="rgba(201,168,76,0.08)" style="pointer-events:none;">P</text>
+                        <!-- H and P letters with spin group -->
+                        <g id="hp-letters">
+                            <text x="42" y="135" font-family="'Cormorant Garamond', serif" font-size="110" font-weight="300" fill="none" stroke="#C9A84C" stroke-width="1.2" class="letter letter-h" stroke-dasharray="800" stroke-dashoffset="800">H</text>
+                            <text x="103" y="135" font-family="'Cormorant Garamond', serif" font-size="110" font-weight="300" fill="none" stroke="#C9A84C" stroke-width="1.2" class="letter letter-p" stroke-dasharray="800" stroke-dashoffset="800">P</text>
+                        </g>
+                        <!-- Decorative dots at compass points -->
+                        <circle cx="100" cy="12" r="2" fill="#C9A84C" class="dot"/>
+                        <circle cx="100" cy="188" r="2" fill="#C9A84C" class="dot"/>
+                        <circle cx="12" cy="100" r="2" fill="#C9A84C" class="dot"/>
+                        <circle cx="188" cy="100" r="2" fill="#C9A84C" class="dot"/>
                     </g>
-                    <!-- Decorative dots at compass points -->
-                    <circle cx="100" cy="12" r="2" fill="#C9A84C" class="dot"/>
-                    <circle cx="100" cy="188" r="2" fill="#C9A84C" class="dot"/>
-                    <circle cx="12" cy="100" r="2" fill="#C9A84C" class="dot"/>
-                    <circle cx="188" cy="100" r="2" fill="#C9A84C" class="dot"/>
                 </svg>
             </div>
 
