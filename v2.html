@@ -51,13 +51,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 
+    <script>document.documentElement.classList.add('dark-mode');document.documentElement.classList.remove('light-mode');</script>
     <style>
         /* ===== CSS VARIABLES ===== */
         :root {
             --bg-primary: #0D0D0D;
             --bg-section: #1A1A1A;
             --text-primary: #FFFFFF;
-            --accent-pink: #FF2D78;
+            --accent-pink: #D4005A;
             --transition-speed: 300ms;
         }
 
@@ -65,7 +66,7 @@
             --bg-primary: #F5F5F5;
             --bg-section: #EBEBEB;
             --text-primary: #0D0D0D;
-            --accent-pink: #E0005E;
+            --accent-pink: #B80050;
         }
 
         /* ===== RESET ===== */
@@ -272,6 +273,7 @@
             justify-content: space-between;
             min-height: 100vh;
             padding: 70px 6% 0;
+            gap: 4rem;
             background-color: var(--bg-primary);
             position: relative;
             overflow: hidden;
@@ -279,14 +281,14 @@
         }
 
         .hero-text {
-            flex: 1;
+            flex: 1 1 55%;
             max-width: 620px;
             z-index: 2;
         }
 
         .hero-name-line {
             font-family: 'Bebas Neue', sans-serif;
-            font-size: clamp(5rem, 12vw, 11rem);
+            font-size: clamp(4rem, 9vw, 8rem);
             line-height: 0.95;
             letter-spacing: 0.04em;
         }
@@ -310,7 +312,7 @@
             font-weight: 300;
             font-size: 1.1rem;
             color: var(--text-primary);
-            margin-top: 1.5rem;
+            margin-top: 2rem;
             opacity: 0.8;
             transition: color var(--transition-speed) ease;
         }
@@ -319,7 +321,7 @@
             font-weight: 400;
             font-size: 1rem;
             color: var(--text-primary);
-            margin-top: 0.5rem;
+            margin-top: 0.75rem;
             opacity: 0.9;
             transition: color var(--transition-speed) ease;
         }
@@ -372,8 +374,8 @@
         }
 
         .hero-photo {
-            flex: 0 0 auto;
-            width: 480px;
+            flex: 0 0 45%;
+            max-width: 480px;
             position: relative;
             z-index: 1;
         }
@@ -425,15 +427,16 @@
 
         .marquee-track {
             display: inline-flex;
-            animation: marqueeScroll 30s linear infinite;
+            animation: marqueeScroll 40s linear infinite;
+            gap: 0;
         }
 
         .marquee-item {
             font-family: 'Bebas Neue', sans-serif;
-            font-size: 0.9rem;
+            font-size: 14px;
             letter-spacing: 0.15em;
             color: var(--accent-pink);
-            padding: 0 2rem;
+            padding: 0 1.5rem;
             flex-shrink: 0;
             transition: color var(--transition-speed) ease;
         }
@@ -460,7 +463,7 @@
         }
 
         .speaking-card {
-            background: var(--bg-primary);
+            background: #1A1A1A;
             border-top: 3px solid var(--accent-pink);
             padding: 32px 28px;
             transition: background-color var(--transition-speed) ease, transform 0.2s ease;
@@ -474,9 +477,12 @@
             font-family: 'DM Sans', sans-serif;
             font-weight: 500;
             font-size: 1.05rem;
-            color: var(--text-primary);
+            color: #FFFFFF;
             line-height: 1.4;
-            transition: color var(--transition-speed) ease;
+        }
+
+        .light-mode .speaking-card {
+            background: #2A2A2A;
         }
 
         @media (max-width: 768px) {
@@ -863,7 +869,7 @@
             </div>
         </div>
         <div class="hero-photo">
-            <img src="brittani-preschel-with-circle-background-.webp" alt="Brittani Preschel">
+            <img src="brittani-preschel-ceo-d2-advertisingheadshot-sitting-down-centered-black-suite.webp" alt="Brittani Preschel">
         </div>
     </section>
 
