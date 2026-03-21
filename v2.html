@@ -12,13 +12,13 @@
     <meta property="og:description" content="Founder and CEO of D2 Advertising. Google Premier Partner. 20+ years driving results across search, social, and display.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://brittanipreschel.com/v2.html">
-    <meta property="og:image" content="https://brittanipreschel.com/brittani-preschel-with-circle-background-.webp">
+    <meta property="og:image" content="https://brittanipreschel.com/brittani-preschel-ceo-d2-advertisingheadshot-sitting-down-centered-black-suite.webp">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Brittani Preschel | CEO, Speaker, Digital Strategist">
     <meta name="twitter:description" content="Founder and CEO of D2 Advertising. Google Premier Partner. 20+ years driving results.">
-    <meta name="twitter:image" content="https://brittanipreschel.com/brittani-preschel-with-circle-background-.webp">
+    <meta name="twitter:image" content="https://brittanipreschel.com/brittani-preschel-ceo-d2-advertisingheadshot-sitting-down-centered-black-suite.webp">
 
     <!-- Schema.org Person -->
     <script type="application/ld+json">
@@ -27,18 +27,10 @@
         "@type": "Person",
         "name": "Brittani Preschel",
         "jobTitle": "Founder and CEO",
-        "worksFor": {
-            "@type": "Organization",
-            "name": "D2 Advertising"
-        },
+        "worksFor": { "@type": "Organization", "name": "D2 Advertising" },
         "url": "https://brittanipreschel.com",
         "email": "brittani@d2ads.com",
-        "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Ormond Beach",
-            "addressRegion": "FL",
-            "addressCountry": "US"
-        },
+        "address": { "@type": "PostalAddress", "addressLocality": "Ormond Beach", "addressRegion": "FL", "addressCountry": "US" },
         "sameAs": [
             "https://www.linkedin.com/in/brittanipreschel/",
             "https://www.facebook.com/brittani.preschel",
@@ -47,96 +39,74 @@
     }
     </script>
 
+    <script>document.documentElement.classList.add('dark-mode');document.documentElement.classList.remove('light-mode');</script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600&display=swap" rel="stylesheet">
 
-    <script>document.documentElement.classList.add('dark-mode');document.documentElement.classList.remove('light-mode');</script>
     <style>
-        /* ===== CSS VARIABLES ===== */
+        /* ===== VARIABLES ===== */
         :root {
-            --bg-primary: #0D0D0D;
-            --bg-section: #1A1A1A;
+            --bg-primary: #0A0A0A;
+            --bg-alt: #111111;
+            --bg-alt2: #161616;
             --text-primary: #FFFFFF;
-            --accent-pink: #B8004A;
-            --transition-speed: 300ms;
+            --text-muted: #999999;
+            --text-body: #CCCCCC;
+            --accent: #B8004A;
+            --accent-dark: #8C0039;
+            --gold: #C9A84C;
+            --rule: #1A1A1A;
+            --speed: 300ms;
         }
 
         .light-mode {
             --bg-primary: #F5F5F5;
-            --bg-section: #EBEBEB;
-            --text-primary: #0D0D0D;
-            --accent-pink: #960040;
+            --bg-alt: #EBEBEB;
+            --bg-alt2: #E0E0E0;
+            --text-primary: #111111;
+            --text-muted: #666666;
+            --text-body: #333333;
+            --rule: #D0D0D0;
         }
 
         /* ===== RESET ===== */
-        *, *::before, *::after {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
 
         body {
             font-family: 'DM Sans', sans-serif;
             font-weight: 300;
-            font-size: 17px;
+            font-size: 16px;
             line-height: 1.7;
-            background-color: var(--bg-primary);
+            background: var(--bg-primary);
             color: var(--text-primary);
-            transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
             overflow-x: hidden;
+            transition: background var(--speed) ease, color var(--speed) ease;
         }
 
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
+        a { text-decoration: none; color: inherit; }
+        img { max-width: 100%; display: block; }
 
-        img {
-            max-width: 100%;
-            display: block;
-        }
-
-        .section-label {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 0.85rem;
-            letter-spacing: 0.2em;
+        /* ===== SHARED ===== */
+        .eyebrow {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 400;
+            font-size: 12px;
+            letter-spacing: 0.3em;
             text-transform: uppercase;
-            color: var(--accent-pink);
-            margin-bottom: 2rem;
-            transition: color var(--transition-speed) ease;
+            color: var(--accent);
         }
 
-        .section-inner {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 6%;
-        }
-
-        /* ===== ANIMATIONS ===== */
         .fade-up {
             opacity: 0;
             transform: translateY(30px);
             transition: opacity 0.6s ease-out, transform 0.6s ease-out;
         }
-
         .fade-up.visible {
             opacity: 1;
             transform: translateY(0);
-        }
-
-        @keyframes slideInLeft {
-            from { opacity: 0; transform: translateX(-60px); }
-            to { opacity: 1; transform: translateX(0); }
-        }
-
-        @keyframes marqueeScroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
         }
 
         /* ===== NAV ===== */
@@ -149,29 +119,31 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 0 6%;
+            padding: 0 clamp(24px, 5vw, 64px);
             z-index: 1000;
             background: transparent;
-            transition: background-color var(--transition-speed) ease;
+            transition: background var(--speed) ease, backdrop-filter var(--speed) ease;
         }
 
         nav.scrolled {
-            background-color: var(--bg-primary);
+            background: rgba(10, 10, 10, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .light-mode nav.scrolled {
+            background: rgba(245, 245, 245, 0.85);
         }
 
         .nav-logo {
             font-family: 'Bebas Neue', sans-serif;
-            font-size: 1.4rem;
-            letter-spacing: 0.12em;
+            font-size: 18px;
+            letter-spacing: 0.15em;
             color: var(--text-primary);
-            transition: color var(--transition-speed) ease;
+            transition: color var(--speed) ease;
         }
 
-        .nav-right {
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-        }
+        .nav-right { display: flex; align-items: center; gap: 2rem; }
 
         .nav-links {
             display: flex;
@@ -182,38 +154,26 @@
         .nav-links a {
             font-family: 'DM Sans', sans-serif;
             font-weight: 400;
-            font-size: 0.85rem;
-            letter-spacing: 0.04em;
+            font-size: 13px;
             color: var(--text-primary);
-            transition: color var(--transition-speed) ease;
+            transition: color var(--speed) ease;
         }
-
-        .nav-links a:hover {
-            color: var(--accent-pink);
-        }
+        .nav-links a:hover { color: var(--accent); }
 
         .theme-toggle {
             background: none;
             border: none;
             cursor: pointer;
             color: var(--text-primary);
-            width: 28px;
-            height: 28px;
+            width: 24px;
+            height: 24px;
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: color var(--transition-speed) ease;
+            transition: color var(--speed) ease;
         }
-
-        .theme-toggle:hover {
-            color: var(--accent-pink);
-        }
-
-        .theme-toggle svg {
-            width: 22px;
-            height: 22px;
-        }
-
+        .theme-toggle:hover { color: var(--accent); }
+        .theme-toggle svg { width: 20px; height: 20px; }
         .moon-icon { display: block; }
         .sun-icon { display: none; }
         .light-mode .moon-icon { display: none; }
@@ -225,28 +185,25 @@
             border: none;
             cursor: pointer;
             width: 28px;
-            height: 20px;
+            height: 18px;
             position: relative;
             z-index: 1001;
         }
-
         .hamburger span {
             display: block;
             width: 100%;
-            height: 2px;
+            height: 1.5px;
             background: var(--text-primary);
             position: absolute;
             left: 0;
             transition: all 0.3s ease;
         }
-
         .hamburger span:nth-child(1) { top: 0; }
-        .hamburger span:nth-child(2) { top: 9px; }
-        .hamburger span:nth-child(3) { top: 18px; }
-
-        .hamburger.active span:nth-child(1) { top: 9px; transform: rotate(45deg); }
+        .hamburger span:nth-child(2) { top: 8px; }
+        .hamburger span:nth-child(3) { top: 16px; }
+        .hamburger.active span:nth-child(1) { top: 8px; transform: rotate(45deg); }
         .hamburger.active span:nth-child(2) { opacity: 0; }
-        .hamburger.active span:nth-child(3) { top: 9px; transform: rotate(-45deg); }
+        .hamburger.active span:nth-child(3) { top: 8px; transform: rotate(-45deg); }
 
         @media (max-width: 768px) {
             .hamburger { display: block; }
@@ -254,275 +211,318 @@
                 position: fixed;
                 top: 0;
                 right: -100%;
-                width: 260px;
+                width: 280px;
                 height: 100vh;
                 background: var(--bg-primary);
                 flex-direction: column;
                 padding: 100px 40px 40px;
                 gap: 1.5rem;
-                transition: right 0.3s ease, background-color var(--transition-speed) ease;
+                transition: right 0.3s ease;
             }
             .nav-links.open { right: 0; }
-            .nav-links a { font-size: 1.1rem; }
+            .nav-links a { font-size: 16px; }
         }
 
         /* ===== HERO ===== */
         .hero {
             display: flex;
-            align-items: center;
-            justify-content: space-between;
             min-height: 100vh;
-            padding: 70px 6% 0;
-            gap: 4rem;
-            background-color: var(--bg-primary);
+            background: var(--bg-primary);
             position: relative;
             overflow: hidden;
-            transition: background-color var(--transition-speed) ease;
+            transition: background var(--speed) ease;
         }
 
         .hero-text {
-            flex: 1 1 55%;
-            max-width: 620px;
+            flex: 0 0 58%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 140px clamp(32px, 6vw, 80px) 80px clamp(32px, 6vw, 80px);
             z-index: 2;
         }
 
-        .hero-name-line {
+        .hero-eyebrow {
+            margin-bottom: 2rem;
+            opacity: 0;
+            animation: fadeUp 0.5s ease-out 0.2s forwards;
+        }
+
+        .hero-name {
             font-family: 'Bebas Neue', sans-serif;
-            font-size: clamp(4rem, 9vw, 8rem);
-            line-height: 0.95;
-            letter-spacing: 0.04em;
+            font-size: clamp(5rem, 10vw, 12rem);
+            line-height: 0.92;
+            letter-spacing: 0.02em;
+            margin-bottom: 2rem;
         }
 
         .hero-name-first {
-            color: var(--text-primary);
             display: block;
-            animation: slideInLeft 0.6s ease-out forwards;
-            transition: color var(--transition-speed) ease;
+            color: var(--text-primary);
+            opacity: 0;
+            animation: slideLeft 0.6s ease-out 0.4s forwards;
+            transition: color var(--speed) ease;
         }
 
         .hero-name-last {
-            color: var(--accent-pink);
             display: block;
-            animation: slideInLeft 0.6s ease-out 0.15s forwards;
+            color: var(--accent);
             opacity: 0;
-            transition: color var(--transition-speed) ease;
+            animation: slideLeft 0.6s ease-out 0.55s forwards;
         }
 
-        .hero-roles {
-            font-weight: 300;
-            font-size: 1.1rem;
-            color: var(--text-primary);
-            margin-top: 2rem;
-            opacity: 0.8;
-            transition: color var(--transition-speed) ease;
+        .hero-line {
+            width: 60px;
+            height: 1px;
+            background: var(--gold);
+            margin-bottom: 1.5rem;
+            transform: scaleX(0);
+            transform-origin: left;
+            animation: drawLine 0.6s ease-out 0.8s forwards;
         }
 
-        .hero-statement {
-            font-weight: 400;
-            font-size: 1rem;
-            color: var(--text-primary);
-            margin-top: 0.75rem;
-            opacity: 0.9;
-            transition: color var(--transition-speed) ease;
+        .hero-sub {
+            font-size: 16px;
+            color: var(--text-muted);
+            margin-bottom: 2.5rem;
+            opacity: 0;
+            animation: fadeUp 0.5s ease-out 1s forwards;
+            transition: color var(--speed) ease;
         }
 
         .hero-ctas {
             display: flex;
             gap: 1rem;
-            margin-top: 2rem;
             flex-wrap: wrap;
+            opacity: 0;
+            animation: fadeUp 0.5s ease-out 1.15s forwards;
         }
 
-        .btn-pink {
+        .btn-fill {
             display: inline-block;
-            padding: 14px 32px;
-            background: var(--accent-pink);
+            padding: 16px 36px;
+            background: var(--accent);
             color: #FFFFFF;
-            font-family: 'DM Sans', sans-serif;
-            font-weight: 500;
-            font-size: 0.9rem;
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
-            border: 2px solid var(--accent-pink);
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 16px;
+            letter-spacing: 0.1em;
+            border: 2px solid var(--accent);
             cursor: pointer;
-            transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease, border-color var(--transition-speed) ease;
+            transition: background var(--speed) ease, color var(--speed) ease;
         }
+        .btn-fill:hover { background: transparent; color: var(--accent); }
 
-        .btn-pink:hover {
-            background: transparent;
-            color: var(--accent-pink);
-        }
-
-        .btn-outline-white {
+        .btn-ghost {
             display: inline-block;
-            padding: 14px 32px;
+            padding: 16px 36px;
             background: transparent;
             color: var(--text-primary);
-            font-family: 'DM Sans', sans-serif;
-            font-weight: 500;
-            font-size: 0.9rem;
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
-            border: 2px solid var(--text-primary);
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 16px;
+            letter-spacing: 0.1em;
+            border: 1px solid var(--text-primary);
             cursor: pointer;
-            transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease, border-color var(--transition-speed) ease;
+            transition: background var(--speed) ease, color var(--speed) ease, border-color var(--speed) ease;
         }
-
-        .btn-outline-white:hover {
-            background: var(--text-primary);
-            color: var(--bg-primary);
-        }
+        .btn-ghost:hover { background: var(--text-primary); color: var(--bg-primary); }
 
         .hero-photo {
-            flex: 0 0 45%;
-            max-width: 480px;
+            flex: 0 0 42%;
             position: relative;
-            z-index: 1;
-            align-self: stretch;
-            display: flex;
-            align-items: center;
+            overflow: hidden;
         }
 
         .hero-photo img {
             width: 100%;
             height: 100%;
-            max-height: 85vh;
             object-fit: cover;
             object-position: center top;
-            position: relative;
-            z-index: 1;
         }
 
         .hero-photo::before {
             content: '';
             position: absolute;
             top: 0;
-            left: -10%;
-            bottom: 0;
-            width: 50%;
-            background: linear-gradient(to right, var(--bg-primary) 0%, transparent 100%);
-            z-index: 2;
-            pointer-events: none;
-        }
-
-        .hero-photo::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
             left: 0;
-            right: 0;
-            height: 40%;
-            background: linear-gradient(to top, var(--bg-primary) 0%, transparent 100%);
+            bottom: 0;
+            width: 120px;
+            background: linear-gradient(to right, var(--bg-primary), transparent);
             z-index: 2;
             pointer-events: none;
         }
 
         @media (max-width: 900px) {
-            .hero {
-                flex-direction: column;
-                justify-content: center;
-                text-align: center;
-                padding: 120px 6% 60px;
-                gap: 2rem;
+            .hero { flex-direction: column; }
+            .hero-text {
+                flex: none;
+                padding: 120px 24px 48px;
+                text-align: left;
             }
-            .hero-text { max-width: 100%; }
-            .hero-ctas { justify-content: center; }
             .hero-photo {
-                width: 320px;
-                order: -1;
+                flex: none;
+                height: 50vh;
             }
+            .hero-name { font-size: clamp(4rem, 14vw, 6rem); }
+        }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes slideLeft {
+            from { opacity: 0; transform: translateX(-40px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes drawLine {
+            from { transform: scaleX(0); }
+            to { transform: scaleX(1); }
+        }
+        @keyframes marqueeScroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
         }
 
         /* ===== MARQUEE ===== */
         .marquee {
-            background: var(--bg-section);
+            background: var(--bg-alt);
+            border-top: 1px solid var(--rule);
+            border-bottom: 1px solid var(--rule);
             overflow: hidden;
-            padding: 16px 0;
+            padding: 14px 0;
             white-space: nowrap;
-            transition: background-color var(--transition-speed) ease;
+            transition: background var(--speed) ease, border-color var(--speed) ease;
         }
 
         .marquee-track {
             display: inline-flex;
-            animation: marqueeScroll 40s linear infinite;
-            gap: 0;
+            animation: marqueeScroll 45s linear infinite;
         }
 
         .marquee-item {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 14px;
-            letter-spacing: 0.15em;
-            color: var(--accent-pink);
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 500;
+            font-size: 11px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--accent);
             padding: 0 1.5rem;
             flex-shrink: 0;
-            transition: color var(--transition-speed) ease;
         }
 
         /* ===== SPEAKING ===== */
         .speaking {
-            background: var(--bg-section);
-            padding: 80px 0;
-            transition: background-color var(--transition-speed) ease;
+            background: var(--bg-primary);
+            padding: 120px clamp(24px, 6vw, 80px);
+            display: flex;
+            gap: clamp(40px, 6vw, 100px);
+            transition: background var(--speed) ease;
         }
 
-        .speaking-intro {
-            max-width: 740px;
-            margin-bottom: 3rem;
+        .speaking-left {
+            flex: 0 0 40%;
+        }
+
+        .speaking-heading {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(4rem, 7vw, 6rem);
             color: var(--text-primary);
-            transition: color var(--transition-speed) ease;
+            line-height: 0.92;
+            padding-left: 24px;
+            border-left: 2px solid var(--accent);
+            margin-bottom: 2rem;
+            transition: color var(--speed) ease;
         }
 
-        .speaking-cards {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-            margin-bottom: 2.5rem;
+        .speaking-desc {
+            font-size: 15px;
+            color: var(--text-muted);
+            padding-left: 26px;
+            transition: color var(--speed) ease;
         }
 
-        .speaking-card {
-            background: #1A1A1A;
-            border-top: 3px solid var(--accent-pink);
-            padding: 32px 28px;
-            transition: background-color var(--transition-speed) ease, transform 0.2s ease;
+        .speaking-right {
+            flex: 1;
         }
 
-        .speaking-card:hover {
-            transform: translateY(-4px);
+        .speaking-topic {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 28px 0;
+            border-bottom: 1px solid var(--rule);
+            transition: border-color var(--speed) ease;
+        }
+        .speaking-topic:first-child { border-top: 1px solid var(--rule); }
+
+        .topic-name {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 28px;
+            color: var(--text-primary);
+            letter-spacing: 0.02em;
+            transition: color var(--speed) ease;
         }
 
-        .speaking-card h3 {
-            font-family: 'DM Sans', sans-serif;
-            font-weight: 500;
-            font-size: 1.05rem;
+        .topic-desc {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-top: 4px;
+            transition: color var(--speed) ease;
+        }
+
+        .topic-arrow {
+            font-size: 24px;
+            color: var(--accent);
+            flex-shrink: 0;
+            margin-left: 2rem;
+        }
+
+        .speaking-cta {
+            display: block;
+            width: 100%;
+            margin-top: 2rem;
+            padding: 18px 36px;
+            background: var(--accent);
             color: #FFFFFF;
-            line-height: 1.4;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 17px;
+            letter-spacing: 0.1em;
+            text-align: center;
+            border: 2px solid var(--accent);
+            cursor: pointer;
+            transition: background var(--speed) ease, color var(--speed) ease;
         }
+        .speaking-cta:hover { background: transparent; color: var(--accent); }
 
-        .light-mode .speaking-card {
-            background: #2A2A2A;
-        }
-
-        @media (max-width: 768px) {
-            .speaking-cards { grid-template-columns: 1fr; }
+        @media (max-width: 900px) {
+            .speaking { flex-direction: column; padding: 80px 24px; }
+            .speaking-left { flex: none; }
         }
 
         /* ===== STATS ===== */
         .stats {
-            background: #8C0039;
-            padding: 60px 0;
-            transition: background-color var(--transition-speed) ease;
+            background: var(--accent-dark);
+            padding: 72px clamp(24px, 6vw, 80px);
         }
 
         .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
+            display: flex;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .stat {
+            flex: 1;
             text-align: center;
+            padding: 0 1rem;
+        }
+        .stat + .stat {
+            border-left: 1px solid rgba(255,255,255,0.2);
         }
 
         .stat-number {
             font-family: 'Bebas Neue', sans-serif;
-            font-size: clamp(2.8rem, 5vw, 4rem);
+            font-size: clamp(3.5rem, 7vw, 6rem);
             color: #FFFFFF;
             line-height: 1;
         }
@@ -530,308 +530,342 @@
         .stat-label {
             font-family: 'DM Sans', sans-serif;
             font-weight: 300;
-            font-size: 0.85rem;
-            color: rgba(255, 255, 255, 0.85);
-            margin-top: 0.5rem;
+            font-size: 13px;
+            color: rgba(255,255,255,0.8);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-top: 8px;
         }
 
         @media (max-width: 768px) {
-            .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 2rem 1rem; }
+            .stats-grid { flex-wrap: wrap; }
+            .stat {
+                flex: 0 0 50%;
+                padding: 16px 1rem;
+                border-left: none !important;
+            }
+            .stat:nth-child(2n) { border-left: 1px solid rgba(255,255,255,0.2) !important; }
         }
 
         /* ===== ABOUT ===== */
         .about {
-            background: var(--bg-primary);
-            padding: 80px 0;
-            transition: background-color var(--transition-speed) ease;
+            background: var(--bg-alt);
+            padding: 120px clamp(24px, 6vw, 80px);
+            display: flex;
+            gap: clamp(40px, 5vw, 80px);
+            transition: background var(--speed) ease;
         }
 
-        .about-content {
-            max-width: 700px;
-            margin: 0 auto;
-            text-align: center;
+        .about-left {
+            flex: 0 0 38%;
         }
 
-        .about-content p {
+        .about-heading {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(4rem, 7vw, 6rem);
             color: var(--text-primary);
-            opacity: 0.85;
+            line-height: 0.9;
             margin-bottom: 2rem;
-            transition: color var(--transition-speed) ease;
+            transition: color var(--speed) ease;
         }
 
-        .btn-outline-pink {
+        .about-photo {
+            position: relative;
+            max-width: 380px;
+        }
+
+        .about-photo img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .about-photo::after {
+            content: '';
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            bottom: 8px;
+            width: 2px;
+            background: var(--gold);
+        }
+
+        .about-right {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .about-bio {
+            font-size: 16px;
+            line-height: 1.8;
+            color: var(--text-body);
+            margin-bottom: 2rem;
+            transition: color var(--speed) ease;
+        }
+
+        .about-creds {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 20px;
+            color: var(--accent);
+            letter-spacing: 0.04em;
+            margin-bottom: 2.5rem;
+        }
+
+        .btn-outline-accent {
             display: inline-block;
-            padding: 12px 28px;
+            padding: 14px 32px;
             background: transparent;
-            color: var(--accent-pink);
-            font-family: 'DM Sans', sans-serif;
-            font-weight: 500;
-            font-size: 0.85rem;
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
-            border: 2px solid var(--accent-pink);
+            color: var(--accent);
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 15px;
+            letter-spacing: 0.1em;
+            border: 1.5px solid var(--accent);
             cursor: pointer;
-            transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease, border-color var(--transition-speed) ease;
+            transition: background var(--speed) ease, color var(--speed) ease;
         }
+        .btn-outline-accent:hover { background: var(--accent); color: #FFFFFF; }
 
-        .btn-outline-pink:hover {
-            background: var(--accent-pink);
-            color: #FFFFFF;
+        @media (max-width: 900px) {
+            .about { flex-direction: column; padding: 80px 24px; }
+            .about-left { flex: none; }
+            .about-photo { max-width: 300px; margin-bottom: 2rem; }
         }
 
         /* ===== MODAL ===== */
         .modal-overlay {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.9);
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.92);
             z-index: 9999;
             display: none;
             align-items: center;
             justify-content: center;
             padding: 20px;
-            box-sizing: border-box;
         }
+        .modal-overlay.active { display: flex; }
 
-        .modal-overlay.active {
-            display: flex;
-        }
-
-        .modal-content {
-            position: relative;
-            max-width: 90vw;
-            max-height: 90vh;
-        }
+        .modal-content { position: relative; }
 
         .bio-modal-text {
             max-width: 640px;
             width: 90vw;
             max-height: 80vh;
             overflow-y: auto;
-            background: var(--bg-section);
+            background: var(--bg-alt);
             padding: 48px;
-            border-radius: 4px;
+            border-radius: 2px;
             font-family: 'DM Sans', sans-serif;
-            color: var(--text-primary);
-            transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+            transition: background var(--speed) ease;
         }
 
         .bio-modal-text h2 {
             font-family: 'Bebas Neue', sans-serif;
             font-size: 2.5rem;
             letter-spacing: 0.04em;
-            color: var(--accent-pink);
+            color: var(--accent);
             margin-bottom: 4px;
         }
 
         .bio-modal-text .bio-tagline {
-            font-size: 0.85rem;
-            letter-spacing: 0.12em;
+            font-size: 12px;
+            letter-spacing: 0.15em;
             text-transform: uppercase;
-            color: var(--accent-pink);
-            margin-bottom: 24px;
-            opacity: 0.8;
+            color: var(--accent);
+            margin-bottom: 28px;
+            opacity: 0.7;
         }
 
         .bio-modal-text h3 {
             font-family: 'Bebas Neue', sans-serif;
-            font-size: 1.1rem;
-            letter-spacing: 0.1em;
-            color: var(--accent-pink);
+            font-size: 16px;
+            letter-spacing: 0.12em;
+            color: var(--accent);
             margin-top: 28px;
             margin-bottom: 8px;
         }
 
         .bio-modal-text p {
-            font-size: 0.95rem;
+            font-size: 15px;
             line-height: 1.7;
-            color: var(--text-primary);
-            opacity: 0.8;
+            color: var(--text-body);
         }
 
         .modal-close {
             position: absolute;
-            top: -16px;
-            right: -16px;
-            width: 36px;
-            height: 36px;
-            background: var(--accent-pink);
+            top: -14px; right: -14px;
+            width: 32px; height: 32px;
+            background: var(--accent);
             color: #FFFFFF;
             border: none;
             border-radius: 50%;
-            font-size: 18px;
+            font-size: 16px;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            line-height: 1;
             z-index: 10000;
         }
-
-        .modal-close:hover {
-            background: #FFFFFF;
-            color: var(--accent-pink);
-        }
+        .modal-close:hover { background: #FFFFFF; color: var(--accent); }
 
         /* ===== TESTIMONIALS ===== */
         .testimonials {
-            background: var(--bg-section);
-            padding: 80px 0;
-            transition: background-color var(--transition-speed) ease;
+            background: var(--bg-primary);
+            padding: 120px clamp(24px, 6vw, 80px);
+            transition: background var(--speed) ease;
         }
+
+        .testimonials .eyebrow { margin-bottom: 3rem; }
 
         .testimonials-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-        }
-
-        .testimonial {
-            padding: 8px 0;
+            gap: clamp(24px, 4vw, 48px);
         }
 
         .testimonial-quote-mark {
             font-family: 'Bebas Neue', sans-serif;
-            font-size: 4rem;
-            color: var(--accent-pink);
-            line-height: 0.8;
-            margin-bottom: 0.5rem;
-            transition: color var(--transition-speed) ease;
+            font-size: 80px;
+            color: var(--accent);
+            line-height: 0.5;
+            margin-bottom: 16px;
         }
 
         .testimonial-text {
             font-weight: 300;
-            font-size: 0.95rem;
-            line-height: 1.7;
-            color: var(--text-primary);
-            margin-bottom: 1.5rem;
-            opacity: 0.85;
-            transition: color var(--transition-speed) ease;
+            font-size: 15px;
+            line-height: 1.75;
+            color: var(--text-body);
+            margin-bottom: 24px;
+            transition: color var(--speed) ease;
+        }
+
+        .testimonial-rule {
+            width: 40px;
+            height: 1px;
+            background: var(--accent);
+            margin-bottom: 16px;
         }
 
         .testimonial-name {
-            font-weight: 500;
-            font-size: 0.85rem;
-            color: var(--accent-pink);
-            transition: color var(--transition-speed) ease;
+            font-weight: 600;
+            font-size: 13px;
+            color: var(--text-primary);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            transition: color var(--speed) ease;
+        }
+
+        .testimonial-company {
+            font-weight: 400;
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-top: 4px;
+            transition: color var(--speed) ease;
         }
 
         @media (max-width: 768px) {
             .testimonials-grid { grid-template-columns: 1fr; }
+            .testimonials { padding: 80px 24px; }
         }
 
         /* ===== CTA BAND ===== */
         .cta-band {
-            background: #8C0039;
-            padding: 60px 0;
-            text-align: center;
-            transition: background-color var(--transition-speed) ease;
+            background: var(--accent);
+            padding: 80px clamp(24px, 6vw, 80px);
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 2rem;
+            flex-wrap: wrap;
         }
 
         .cta-band h2 {
             font-family: 'Bebas Neue', sans-serif;
-            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-size: clamp(4rem, 8vw, 8rem);
             color: #FFFFFF;
-            letter-spacing: 0.04em;
-            margin-bottom: 1.5rem;
+            line-height: 0.92;
+            letter-spacing: 0.02em;
         }
 
-        .btn-outline-band {
+        .btn-cta-white {
             display: inline-block;
-            padding: 14px 36px;
-            background: transparent;
-            color: #FFFFFF;
-            font-family: 'DM Sans', sans-serif;
-            font-weight: 500;
-            font-size: 0.9rem;
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
-            border: 2px solid #FFFFFF;
-            cursor: pointer;
-            transition: background-color 0.2s ease, color 0.2s ease;
-        }
-
-        .btn-outline-band:hover {
+            padding: 18px 48px;
             background: #FFFFFF;
-            color: var(--accent-pink);
+            color: var(--accent);
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 18px;
+            letter-spacing: 0.1em;
+            border: none;
+            cursor: pointer;
+            flex-shrink: 0;
+            transition: background 0.2s ease, color 0.2s ease;
+        }
+        .btn-cta-white:hover { background: var(--bg-primary); color: #FFFFFF; }
+
+        @media (max-width: 768px) {
+            .cta-band { padding: 60px 24px; }
+            .cta-band h2 { font-size: clamp(3rem, 12vw, 5rem); }
         }
 
         /* ===== CONTACT ===== */
         .contact {
             background: var(--bg-primary);
-            padding: 80px 0;
-            text-align: center;
-            transition: background-color var(--transition-speed) ease;
+            padding: 120px clamp(24px, 6vw, 80px);
+            transition: background var(--speed) ease;
         }
+
+        .contact .eyebrow { margin-bottom: 2rem; }
 
         .contact-email {
             font-family: 'Bebas Neue', sans-serif;
-            font-size: clamp(1.8rem, 4vw, 3rem);
+            font-size: clamp(2rem, 4vw, 4rem);
             color: var(--text-primary);
             letter-spacing: 0.04em;
-            display: block;
-            margin-bottom: 1.5rem;
-            transition: color var(--transition-speed) ease;
+            display: inline-block;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid transparent;
+            transition: color var(--speed) ease, border-color var(--speed) ease;
         }
-
-        .contact-email:hover {
-            color: var(--accent-pink);
-        }
+        .contact-email:hover { border-bottom-color: var(--accent); }
 
         .social-icons {
             display: flex;
-            justify-content: center;
             gap: 1.5rem;
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
         }
-
         .social-icons a {
             color: var(--text-primary);
-            transition: color var(--transition-speed) ease;
+            transition: color var(--speed) ease;
         }
-
-        .social-icons a:hover {
-            color: var(--accent-pink);
-        }
-
-        .social-icons svg {
-            width: 24px;
-            height: 24px;
-        }
+        .social-icons a:hover { color: var(--accent); }
+        .social-icons svg { width: 32px; height: 32px; }
 
         .contact-location {
-            font-weight: 300;
-            font-size: 0.95rem;
-            color: var(--text-primary);
-            opacity: 0.6;
-            transition: color var(--transition-speed) ease;
+            font-size: 13px;
+            color: var(--text-muted);
+            transition: color var(--speed) ease;
+        }
+
+        @media (max-width: 768px) {
+            .contact { padding: 80px 24px; }
         }
 
         /* ===== FOOTER ===== */
         footer {
             background: var(--bg-primary);
-            border-top: 1px solid var(--bg-section);
-            padding: 24px 6%;
+            border-top: 1px solid var(--rule);
+            padding: 24px clamp(24px, 6vw, 80px);
             text-align: center;
-            transition: background-color var(--transition-speed) ease, border-color var(--transition-speed) ease;
+            transition: background var(--speed) ease, border-color var(--speed) ease;
         }
-
         footer p {
             font-family: 'DM Sans', sans-serif;
             font-weight: 300;
-            font-size: 0.8rem;
-            color: var(--text-primary);
-            opacity: 0.5;
-            transition: color var(--transition-speed) ease;
-        }
-
-        /* ===== MOBILE ADJUSTMENTS ===== */
-        @media (max-width: 768px) {
-            .section-inner { padding: 0 5%; }
-            .speaking, .about, .testimonials, .contact { padding: 60px 0; }
-            .stats { padding: 48px 0; }
+            font-size: 12px;
+            color: #666666;
         }
     </style>
 </head>
@@ -847,26 +881,12 @@
                 <li><a href="#credentials">Credentials</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode">
-                <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-                </svg>
-                <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="12" cy="12" r="5"/>
-                    <line x1="12" y1="1" x2="12" y2="3"/>
-                    <line x1="12" y1="21" x2="12" y2="23"/>
-                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
-                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-                    <line x1="1" y1="12" x2="3" y2="12"/>
-                    <line x1="21" y1="12" x2="23" y2="12"/>
-                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
-                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
-                </svg>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
             </button>
             <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span></span><span></span><span></span>
             </button>
         </div>
     </nav>
@@ -874,116 +894,131 @@
     <!-- HERO -->
     <section class="hero">
         <div class="hero-text">
-            <div class="hero-name-line">
+            <p class="eyebrow hero-eyebrow">CEO &middot; FOUNDER &middot; SPEAKER &middot; DIGITAL STRATEGIST</p>
+            <h1 class="hero-name">
                 <span class="hero-name-first">BRITTANI</span>
                 <span class="hero-name-last">PRESCHEL</span>
-            </div>
-            <p class="hero-roles">CEO. Founder. Speaker. Digital Strategist.</p>
-            <p class="hero-statement">20+ years. 2100+ campaigns. One standard: results.</p>
+            </h1>
+            <div class="hero-line"></div>
+            <p class="hero-sub">20+ years. 2100+ campaigns. One standard: results.</p>
             <div class="hero-ctas">
-                <a href="#contact" class="btn-pink">Book Brittani</a>
-                <a href="#credentials" class="btn-outline-white">View Credentials</a>
+                <a href="#contact" class="btn-fill">BOOK BRITTANI</a>
+                <a href="#credentials" class="btn-ghost">VIEW CREDENTIALS</a>
             </div>
         </div>
         <div class="hero-photo">
-            <img src="brittani-preschel-ceo-d2-advertisingheadshot-sitting-down-centered-black-suite.webp" alt="Brittani Preschel">
+            <img src="brittani-preschel-ceo-d2-advertisingheadshot-sitting-down-centered-black-suite.webp" alt="Brittani Preschel, CEO of D2 Advertising">
         </div>
     </section>
 
     <!-- MARQUEE -->
     <div class="marquee" id="credentials">
         <div class="marquee-track">
-            <span class="marquee-item">Google Premier Partner</span>
-            <span class="marquee-item">&bull;</span>
-            <span class="marquee-item">40 Under 40</span>
-            <span class="marquee-item">&bull;</span>
-            <span class="marquee-item">Most Influential Women in Business</span>
-            <span class="marquee-item">&bull;</span>
-            <span class="marquee-item">Top 50 Women Leaders Orlando 2026</span>
-            <span class="marquee-item">&bull;</span>
-            <span class="marquee-item">Summa Cum Laude FSU</span>
-            <span class="marquee-item">&bull;</span>
-            <span class="marquee-item">Google Cloud Digital Leader</span>
-            <span class="marquee-item">&bull;</span>
-            <span class="marquee-item">Women TechMaker Ambassador</span>
-            <span class="marquee-item">&bull;</span>
-            <span class="marquee-item">Bing Accredited</span>
-            <span class="marquee-item">&bull;</span>
-            <span class="marquee-item">Facebook Marketing Partner</span>
-            <span class="marquee-item">&bull;</span>
-            <span class="marquee-item">Google Premier Partner</span>
-            <span class="marquee-item">&bull;</span>
-            <span class="marquee-item">40 Under 40</span>
-            <span class="marquee-item">&bull;</span>
-            <span class="marquee-item">Most Influential Women in Business</span>
-            <span class="marquee-item">&bull;</span>
-            <span class="marquee-item">Top 50 Women Leaders Orlando 2026</span>
-            <span class="marquee-item">&bull;</span>
-            <span class="marquee-item">Summa Cum Laude FSU</span>
-            <span class="marquee-item">&bull;</span>
-            <span class="marquee-item">Google Cloud Digital Leader</span>
-            <span class="marquee-item">&bull;</span>
-            <span class="marquee-item">Women TechMaker Ambassador</span>
-            <span class="marquee-item">&bull;</span>
-            <span class="marquee-item">Bing Accredited</span>
-            <span class="marquee-item">&bull;</span>
-            <span class="marquee-item">Facebook Marketing Partner</span>
-            <span class="marquee-item">&bull;</span>
+            <span class="marquee-item">GOOGLE PREMIER PARTNER</span>
+            <span class="marquee-item">&middot;</span>
+            <span class="marquee-item">40 UNDER 40</span>
+            <span class="marquee-item">&middot;</span>
+            <span class="marquee-item">MOST INFLUENTIAL WOMEN IN BUSINESS</span>
+            <span class="marquee-item">&middot;</span>
+            <span class="marquee-item">TOP 50 WOMEN LEADERS ORLANDO 2026</span>
+            <span class="marquee-item">&middot;</span>
+            <span class="marquee-item">SUMMA CUM LAUDE FSU</span>
+            <span class="marquee-item">&middot;</span>
+            <span class="marquee-item">GOOGLE CLOUD DIGITAL LEADER</span>
+            <span class="marquee-item">&middot;</span>
+            <span class="marquee-item">WOMEN TECHMAKER AMBASSADOR</span>
+            <span class="marquee-item">&middot;</span>
+            <span class="marquee-item">BING ACCREDITED</span>
+            <span class="marquee-item">&middot;</span>
+            <span class="marquee-item">FACEBOOK MARKETING PARTNER</span>
+            <span class="marquee-item">&middot;</span>
+            <span class="marquee-item">GOOGLE PREMIER PARTNER</span>
+            <span class="marquee-item">&middot;</span>
+            <span class="marquee-item">40 UNDER 40</span>
+            <span class="marquee-item">&middot;</span>
+            <span class="marquee-item">MOST INFLUENTIAL WOMEN IN BUSINESS</span>
+            <span class="marquee-item">&middot;</span>
+            <span class="marquee-item">TOP 50 WOMEN LEADERS ORLANDO 2026</span>
+            <span class="marquee-item">&middot;</span>
+            <span class="marquee-item">SUMMA CUM LAUDE FSU</span>
+            <span class="marquee-item">&middot;</span>
+            <span class="marquee-item">GOOGLE CLOUD DIGITAL LEADER</span>
+            <span class="marquee-item">&middot;</span>
+            <span class="marquee-item">WOMEN TECHMAKER AMBASSADOR</span>
+            <span class="marquee-item">&middot;</span>
+            <span class="marquee-item">BING ACCREDITED</span>
+            <span class="marquee-item">&middot;</span>
+            <span class="marquee-item">FACEBOOK MARKETING PARTNER</span>
+            <span class="marquee-item">&middot;</span>
         </div>
     </div>
 
     <!-- SPEAKING -->
     <section class="speaking fade-up" id="speaking">
-        <div class="section-inner">
-            <p class="section-label">SPEAKING</p>
-            <p class="speaking-intro">Before founding D2 Advertising, Brittani built her voice in on-air media and radio. She brought that presence to a Google conference stage, speaking on SEO and SEM strategy. Today she speaks on the topics that define modern business leadership.</p>
-            <div class="speaking-cards">
-                <div class="speaking-card">
-                    <h3>Digital Advertising + AI in Marketing</h3>
+        <div class="speaking-left">
+            <h2 class="speaking-heading">SPEAK<br>ING</h2>
+            <p class="speaking-desc">Before founding D2 Advertising, Brittani built her voice in on-air media and radio. She brought that presence to a Google conference stage, speaking on SEO and SEM strategy. Today she speaks on the topics that define modern business leadership.</p>
+        </div>
+        <div class="speaking-right">
+            <div class="speaking-topic">
+                <div>
+                    <div class="topic-name">DIGITAL ADVERTISING + AI IN MARKETING</div>
+                    <div class="topic-desc">Data-driven strategy, platform innovation, and AI-powered campaigns</div>
                 </div>
-                <div class="speaking-card">
-                    <h3>Women in Leadership + Building Your Agency</h3>
-                </div>
-                <div class="speaking-card">
-                    <h3>Community Impact + Corporate Responsibility</h3>
-                </div>
+                <span class="topic-arrow">&rarr;</span>
             </div>
-            <a href="#contact" class="btn-pink">Book a Speaking Engagement</a>
+            <div class="speaking-topic">
+                <div>
+                    <div class="topic-name">WOMEN IN LEADERSHIP + BUILDING YOUR AGENCY</div>
+                    <div class="topic-desc">Scaling a business, leading teams, and breaking industry barriers</div>
+                </div>
+                <span class="topic-arrow">&rarr;</span>
+            </div>
+            <div class="speaking-topic">
+                <div>
+                    <div class="topic-name">COMMUNITY IMPACT + CORPORATE RESPONSIBILITY</div>
+                    <div class="topic-desc">Aligning business growth with meaningful community investment</div>
+                </div>
+                <span class="topic-arrow">&rarr;</span>
+            </div>
+            <a href="#contact" class="speaking-cta">BOOK A SPEAKING ENGAGEMENT</a>
         </div>
     </section>
 
     <!-- STATS -->
     <section class="stats fade-up">
-        <div class="section-inner">
-            <div class="stats-grid">
-                <div class="stat">
-                    <div class="stat-number" data-target="2100" data-suffix="+">0</div>
-                    <div class="stat-label">Campaigns Delivered</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-number" data-target="20" data-suffix="+">0</div>
-                    <div class="stat-label">Years in the Industry</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-number" data-target="40" data-suffix="+">0</div>
-                    <div class="stat-label">Active Client Partners</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-number" data-target="1" data-prefix="#" data-suffix="">0</div>
-                    <div class="stat-label">CDJR Dealership in the Country (client result)</div>
-                </div>
+        <div class="stats-grid">
+            <div class="stat">
+                <div class="stat-number" data-target="2100" data-suffix="+">0</div>
+                <div class="stat-label">Campaigns Delivered</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number" data-target="20" data-suffix="+">0</div>
+                <div class="stat-label">Years in the Industry</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number" data-target="40" data-suffix="+">0</div>
+                <div class="stat-label">Active Client Partners</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number" data-target="1" data-prefix="#" data-suffix="">0</div>
+                <div class="stat-label">CDJR Dealership in the Country</div>
             </div>
         </div>
     </section>
 
     <!-- ABOUT -->
     <section class="about fade-up" id="about">
-        <div class="section-inner">
-            <div class="about-content">
-                <p class="section-label">ABOUT</p>
-                <p>Brittani Preschel founded D2 Advertising with a vision to challenge everything traditional agencies stood for. A Summa Cum Laude FSU grad with a background in on-air media, national agency work, and Google Developer community leadership, she built a team of 15 specialists driving results from automotive dealerships to law firms to tourism brands across Florida. Google Premier Partner. Bing Accredited. Facebook Marketing Partner. The credentials back up the confidence.</p>
-                <button class="btn-outline-pink" id="open-bio">View Full Bio</button>
+        <div class="about-left">
+            <h2 class="about-heading">ABOUT</h2>
+            <div class="about-photo">
+                <img src="brittani-preschel-headshot009.webp" alt="Brittani Preschel">
             </div>
+        </div>
+        <div class="about-right">
+            <p class="about-bio">Brittani Preschel founded D2 Advertising with a vision to challenge everything traditional agencies stood for. A Summa Cum Laude FSU grad with a background in on-air media, national agency work, and Google Developer community leadership, she built a team of 15 specialists driving results from automotive dealerships to law firms to tourism brands across Florida.</p>
+            <p class="about-creds">GOOGLE PREMIER PARTNER &middot; BING ACCREDITED &middot; FACEBOOK PARTNER</p>
+            <button class="btn-outline-accent" id="open-bio">VIEW FULL BIO</button>
         </div>
     </section>
 
@@ -1007,57 +1042,56 @@
 
     <!-- TESTIMONIALS -->
     <section class="testimonials fade-up">
-        <div class="section-inner">
-            <p class="section-label" style="color: var(--text-primary);">CLIENTS SAY</p>
-            <div class="testimonials-grid">
-                <div class="testimonial">
-                    <div class="testimonial-quote-mark">&ldquo;</div>
-                    <p class="testimonial-text">We are proud to have achieved the #1 sales ranking among all CDJR dealerships in the country. Brittani and her team made a very significant contribution to our success.</p>
-                    <p class="testimonial-name">Joey Falcon, Managing Partner, Jerry Ulm CDJR</p>
-                </div>
-                <div class="testimonial">
-                    <div class="testimonial-quote-mark">&ldquo;</div>
-                    <p class="testimonial-text">I have done business with Brittani and D2 for over 10 years. She is extremely talented and knowledgeable on all things digital. It's like she can picture it in her mind with ease.</p>
-                    <p class="testimonial-name">Michael Deardoff, Vice President, Deardoff Automobile Group</p>
-                </div>
-                <div class="testimonial">
-                    <div class="testimonial-quote-mark">&ldquo;</div>
-                    <p class="testimonial-text">Palmer Dodge has been with D2 for over ten years. We believe D2 is simply the best in the business. They continually innovate and deliver high volume sales opportunities.</p>
-                    <p class="testimonial-name">Jody Cruce, Managing Partner, Palmer CDJR</p>
-                </div>
+        <div>
+            <p class="eyebrow">CLIENTS SAY</p>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial">
+                <div class="testimonial-quote-mark">&ldquo;</div>
+                <p class="testimonial-text">We are proud to have achieved the #1 sales ranking among all CDJR dealerships in the country. Brittani and her team made a very significant contribution to our success.</p>
+                <div class="testimonial-rule"></div>
+                <p class="testimonial-name">Joey Falcon</p>
+                <p class="testimonial-company">Managing Partner, Jerry Ulm CDJR</p>
+            </div>
+            <div class="testimonial">
+                <div class="testimonial-quote-mark">&ldquo;</div>
+                <p class="testimonial-text">I have done business with Brittani and D2 for over 10 years. She is extremely talented and knowledgeable on all things digital. It's like she can picture it in her mind with ease.</p>
+                <div class="testimonial-rule"></div>
+                <p class="testimonial-name">Michael Deardoff</p>
+                <p class="testimonial-company">Vice President, Deardoff Automobile Group</p>
+            </div>
+            <div class="testimonial">
+                <div class="testimonial-quote-mark">&ldquo;</div>
+                <p class="testimonial-text">Palmer Dodge has been with D2 for over ten years. We believe D2 is simply the best in the business. They continually innovate and deliver high volume sales opportunities.</p>
+                <div class="testimonial-rule"></div>
+                <p class="testimonial-name">Jody Cruce</p>
+                <p class="testimonial-company">Managing Partner, Palmer CDJR</p>
             </div>
         </div>
     </section>
 
     <!-- CTA BAND -->
     <section class="cta-band fade-up">
-        <div class="section-inner">
-            <h2>READY TO WORK TOGETHER?</h2>
-            <a href="#contact" class="btn-outline-band">Let's Talk</a>
-        </div>
+        <h2>READY TO WORK<br>TOGETHER?</h2>
+        <a href="#contact" class="btn-cta-white">LET'S TALK</a>
     </section>
 
     <!-- CONTACT -->
     <section class="contact fade-up" id="contact">
-        <div class="section-inner">
-            <p class="section-label">CONTACT</p>
-            <a href="mailto:brittani@d2ads.com" class="contact-email">brittani@d2ads.com</a>
-            <div class="social-icons">
-                <!-- LinkedIn -->
-                <a href="https://www.linkedin.com/in/brittanipreschel/" target="_blank" rel="noopener" aria-label="LinkedIn">
-                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                </a>
-                <!-- Facebook -->
-                <a href="https://www.facebook.com/brittani.preschel" target="_blank" rel="noopener" aria-label="Facebook">
-                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-                </a>
-                <!-- Instagram -->
-                <a href="https://www.instagram.com/d2mfp/?hl=en" target="_blank" rel="noopener" aria-label="Instagram">
-                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
-                </a>
-            </div>
-            <p class="contact-location">Based in Ormond Beach, Florida.</p>
+        <p class="eyebrow">CONTACT</p>
+        <a href="mailto:brittani@d2ads.com" class="contact-email">brittani@d2ads.com</a><br>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/brittanipreschel/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="https://www.facebook.com/brittani.preschel" target="_blank" rel="noopener" aria-label="Facebook">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/d2mfp/?hl=en" target="_blank" rel="noopener" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
         </div>
+        <p class="contact-location">Based in Ormond Beach, Florida.</p>
     </section>
 
     <!-- FOOTER -->
@@ -1086,15 +1120,14 @@
             });
         });
 
-        /* ===== DARK/LIGHT TOGGLE ===== */
-        const themeToggle = document.getElementById('theme-toggle');
+        /* ===== THEME TOGGLE ===== */
         const html = document.documentElement;
-        themeToggle.addEventListener('click', () => {
+        document.getElementById('theme-toggle').addEventListener('click', () => {
             html.classList.toggle('dark-mode');
             html.classList.toggle('light-mode');
         });
 
-        /* ===== INTERSECTION OBSERVER FADE-UP ===== */
+        /* ===== INTERSECTION OBSERVER ===== */
         const fadeEls = document.querySelectorAll('.fade-up');
         const fadeObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -1103,47 +1136,40 @@
                     fadeObserver.unobserve(entry.target);
                 }
             });
-        }, { threshold: 0.15 });
+        }, { threshold: 0.12 });
         fadeEls.forEach(el => fadeObserver.observe(el));
 
         /* ===== STATS COUNT UP ===== */
-        const statNumbers = document.querySelectorAll('.stat-number');
-        let statsCounted = false;
-        const statsObserver = new IntersectionObserver((entries) => {
+        let counted = false;
+        const statsSection = document.querySelector('.stats');
+        const statsObs = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting && !statsCounted) {
-                    statsCounted = true;
-                    statNumbers.forEach(num => {
+                if (entry.isIntersecting && !counted) {
+                    counted = true;
+                    document.querySelectorAll('.stat-number').forEach(num => {
                         const target = parseInt(num.dataset.target);
                         const prefix = num.dataset.prefix || '';
                         const suffix = num.dataset.suffix || '';
                         const duration = 1800;
-                        const step = Math.ceil(target / (duration / 16));
+                        const step = Math.max(1, Math.ceil(target / (duration / 16)));
                         let current = 0;
                         const counter = setInterval(() => {
                             current += step;
-                            if (current >= target) {
-                                current = target;
-                                clearInterval(counter);
-                            }
+                            if (current >= target) { current = target; clearInterval(counter); }
                             num.textContent = prefix + current.toLocaleString() + suffix;
                         }, 16);
                     });
-                    statsObserver.unobserve(entry.target);
+                    statsObs.unobserve(entry.target);
                 }
             });
         }, { threshold: 0.3 });
-        document.querySelector('.stats') && statsObserver.observe(document.querySelector('.stats'));
+        if (statsSection) statsObs.observe(statsSection);
 
         /* ===== BIO MODAL ===== */
-        const openBio = document.getElementById('open-bio');
-        const closeBio = document.getElementById('close-bio');
         const bioModal = document.getElementById('bio-modal');
-        openBio.addEventListener('click', () => bioModal.classList.add('active'));
-        closeBio.addEventListener('click', () => bioModal.classList.remove('active'));
-        bioModal.addEventListener('click', (e) => {
-            if (e.target === bioModal) bioModal.classList.remove('active');
-        });
+        document.getElementById('open-bio').addEventListener('click', () => bioModal.classList.add('active'));
+        document.getElementById('close-bio').addEventListener('click', () => bioModal.classList.remove('active'));
+        bioModal.addEventListener('click', (e) => { if (e.target === bioModal) bioModal.classList.remove('active'); });
     </script>
 </body>
 </html>
