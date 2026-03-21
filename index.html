@@ -139,9 +139,54 @@
 
         footer {
             text-align: center;
-            padding: 32px 24px;
-            font-size: 0.85rem;
-            color: rgba(245, 240, 235, 0.4);
+            padding: 40px 24px 48px;
+            background-color: #080F1A;
+            border-top: 1px solid rgba(201, 168, 76, 0.12);
+        }
+
+        .footer-inner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .footer-diamond {
+            margin-bottom: 4px;
+        }
+
+        .footer-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 400;
+            font-size: 1.1rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: rgba(201, 168, 76, 0.6);
+        }
+
+        .footer-divider {
+            display: block;
+            width: 40px;
+            height: 1px;
+            background: rgba(201, 168, 76, 0.25);
+        }
+
+        .footer-credit {
+            font-family: 'Jost', sans-serif;
+            font-weight: 300;
+            font-size: 0.78rem;
+            letter-spacing: 0.1em;
+            color: rgba(240, 237, 232, 0.4);
+        }
+
+        .footer-copyright {
+            font-family: 'Jost', sans-serif;
+            font-weight: 300;
+            font-size: 0.68rem;
+            letter-spacing: 0.06em;
+            color: rgba(240, 237, 232, 0.2);
         }
 
         @media (max-width: 900px) {
@@ -418,9 +463,17 @@
         </div>
     </main>
 
-    <footer style="padding: 24px 20px 32px; text-align: center; width: 100%; font-family: 'Jost', sans-serif;">
-        <span style="display: block; font-size: 0.85rem; letter-spacing: 0.08em; color: rgba(255,255,255,0.7); margin-bottom: 8px;">Brittani Preschel Site</span>
-        <span style="display: block; font-size: 0.75rem; letter-spacing: 0.06em; color: rgba(255,255,255,0.45);">&copy; 2026 | Hugh Patrick Digital | All Rights Reserved</span>
+    <footer>
+        <div class="footer-inner">
+            <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" class="footer-diamond">
+                <polygon points="20,4 26,20 20,36 14,20" fill="none" stroke="#C9A84C" stroke-width="0.75" opacity="0.4"/>
+                <circle cx="20" cy="20" r="2" fill="#C9A84C" opacity="0.3"/>
+            </svg>
+            <span class="footer-title">Brittani Preschel</span>
+            <span class="footer-divider"></span>
+            <span class="footer-credit">Website Designs by Hugh Patrick Digital</span>
+            <span class="footer-copyright">&copy; 2026 Hugh Patrick Digital. All Rights Reserved.</span>
+        </div>
     </footer>
 
     <script>
