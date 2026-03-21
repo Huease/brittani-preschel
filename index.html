@@ -15,14 +15,64 @@
         }
 
         body {
-            background-color: #0D1B2A;
-            color: #F5F0EB;
+            --bg-primary: #0D1B2A;
+            --card-bg: #112236;
+            --text-primary: #F5F0EB;
+            --accent-gold: #C9A84C;
+            --text-muted: rgba(245, 240, 235, 0.6);
+            --text-faint: rgba(245, 240, 235, 0.4);
+            --card-desc: rgba(245, 240, 235, 0.75);
+            --swatch-border: rgba(245, 240, 235, 0.15);
+            --btn-hover-text: #0D1B2A;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
             font-family: 'Jost', sans-serif;
             font-weight: 300;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
+            transition: background-color 300ms ease, color 300ms ease;
         }
+
+        body.light-mode {
+            --bg-primary: #F0EDE8;
+            --card-bg: #E8E4DE;
+            --text-primary: #0A1628;
+            --accent-gold: #C9A84C;
+            --text-muted: rgba(10, 22, 40, 0.55);
+            --text-faint: rgba(10, 22, 40, 0.35);
+            --card-desc: rgba(10, 22, 40, 0.7);
+            --swatch-border: rgba(10, 22, 40, 0.15);
+            --btn-hover-text: #F0EDE8;
+        }
+
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 24px;
+            background: none;
+            border: 1.5px solid var(--accent-gold);
+            border-radius: 50%;
+            width: 42px;
+            height: 42px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-gold);
+            z-index: 1000;
+            transition: background-color 300ms ease, color 300ms ease, border-color 300ms ease;
+        }
+
+        .theme-toggle:hover {
+            background-color: var(--accent-gold);
+            color: var(--bg-primary);
+        }
+
+        .theme-toggle .icon-sun { display: none; }
+        .theme-toggle .icon-moon { display: block; }
+        body.light-mode .theme-toggle .icon-sun { display: block; }
+        body.light-mode .theme-toggle .icon-moon { display: none; }
 
         main {
             flex: 1;
@@ -48,7 +98,8 @@
 
         .subtitle {
             font-size: 1.05rem;
-            color: rgba(245, 240, 235, 0.6);
+            color: var(--text-muted);
+            transition: color 300ms ease;
         }
 
         .cards-grid {
@@ -70,11 +121,11 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            background: #112236;
+            background: var(--card-bg);
             border-radius: 12px;
             padding: 32px 24px;
             box-sizing: border-box;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 300ms ease;
         }
 
         .card:hover {
@@ -91,7 +142,8 @@
             overflow: hidden;
             text-overflow: ellipsis;
             margin-bottom: 16px;
-            color: #C9A84C;
+            color: var(--accent-gold);
+            transition: color 300ms ease;
         }
 
         .swatches {
@@ -105,14 +157,15 @@
             height: 20px;
             border-radius: 50%;
             display: inline-block;
-            border: 2px solid rgba(245, 240, 235, 0.15);
+            border: 2px solid var(--swatch-border);
         }
 
         .card-description {
             font-size: 0.95rem;
             line-height: 1.6;
-            color: rgba(245, 240, 235, 0.75);
+            color: var(--card-desc);
             margin-bottom: 24px;
+            transition: color 300ms ease;
             flex: 1;
         }
 
@@ -120,8 +173,8 @@
             display: block;
             text-align: center;
             padding: 12px 16px;
-            border: 1.5px solid #C9A84C;
-            color: #C9A84C;
+            border: 1.5px solid var(--accent-gold);
+            color: var(--accent-gold);
             text-decoration: none;
             font-family: 'Jost', sans-serif;
             font-weight: 400;
@@ -133,15 +186,16 @@
         }
 
         .card-btn:hover {
-            background-color: #C9A84C;
-            color: #0D1B2A;
+            background-color: var(--accent-gold);
+            color: var(--btn-hover-text);
         }
 
         footer {
             text-align: center;
             padding: 32px 24px;
             font-size: 0.85rem;
-            color: rgba(245, 240, 235, 0.4);
+            color: var(--text-faint);
+            transition: color 300ms ease;
         }
 
         @media (max-width: 900px) {
@@ -304,6 +358,18 @@
     </style>
 </head>
 <body>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode">
+        <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+        <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+    </button>
     <main>
         <header>
             <h1>Brittani Preschel</h1>
@@ -434,6 +500,12 @@
             });
         }, { threshold: 0.5 });
         observer.observe(monogram);
+
+        // Dark/Light mode toggle
+        const toggle = document.getElementById('themeToggle');
+        toggle.addEventListener('click', () => {
+            document.body.classList.toggle('light-mode');
+        });
     </script>
 </body>
 </html>
