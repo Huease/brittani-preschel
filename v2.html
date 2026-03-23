@@ -355,6 +355,7 @@
             overflow: hidden;
             background: #080808;
             transition: background 300ms;
+            position: relative;
         }
 
         .hero-left {
@@ -362,10 +363,11 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            padding-left: 80px;
-            padding-right: 60px;
+            padding: 0 60px 0 80px;
             background: #080808;
             transition: background 300ms;
+            position: relative;
+            z-index: 2;
         }
 
         .hero-eyebrow {
@@ -523,7 +525,7 @@
         /* === SPEAKING === */
         .sec-speaking {
             background: #080808;
-            padding: 120px 80px;
+            padding: 120px 0;
             transition: background 300ms;
         }
 
@@ -596,7 +598,7 @@
         /* === STATS === */
         .sec-stats {
             background: #8C0039;
-            padding: 80px;
+            padding: 80px 0;
         }
 
         .stats-row {
@@ -634,14 +636,15 @@
         /* === ABOUT === */
         .sec-about {
             background: #0F0F0F;
-            padding: 120px 80px;
+            padding: 120px 0;
             transition: background 300ms;
         }
 
         .abt-grid {
             display: grid;
-            grid-template-columns: 38% 62%;
-            gap: 80px;
+            grid-template-columns: 380px 1fr;
+            gap: 60px;
+            align-items: start;
         }
 
         .abt-heading {
@@ -665,6 +668,7 @@
             color: #AAAAAA;
             line-height: 1.9;
             margin-bottom: 32px;
+            max-width: 580px;
             transition: color 300ms;
         }
 
@@ -696,7 +700,7 @@
         /* === TESTIMONIALS === */
         .sec-testimonials {
             background: #080808;
-            padding: 120px 80px;
+            padding: 120px 0;
             transition: background 300ms;
         }
 
@@ -765,7 +769,13 @@
         /* === CTA BAND === */
         .sec-cta {
             background: #C4004F;
-            padding: 100px 80px;
+            padding: 100px 0;
+        }
+
+        .cta-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 60px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -800,9 +810,15 @@
         /* === CONTACT === */
         .sec-contact {
             background: #080808;
-            padding: 120px 80px;
+            padding: 120px 0;
             text-align: center;
             transition: background 300ms;
+        }
+
+        .cnt-inner {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 60px;
         }
 
         .cnt-label {
@@ -856,9 +872,15 @@
         .site-footer {
             background: #080808;
             border-top: 1px solid #1E1E1E;
-            padding: 32px 80px;
+            padding: 32px 0;
             text-align: center;
             transition: background 300ms, border-color 300ms;
+        }
+
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 60px;
         }
 
         .site-footer p {
@@ -909,6 +931,29 @@
             max-width: 600px;
             max-height: 90vh;
             width: 90%;
+        }
+
+        /* === HERO TOP GRADIENT (nav readability) === */
+        .hero-top-gradient {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 120px;
+            background: linear-gradient(to bottom, #080808 0%, transparent 100%);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        body.light .hero-top-gradient {
+            background: linear-gradient(to bottom, #F8F8F8 0%, transparent 100%);
+        }
+
+        /* === SECTION INNER WRAPPER === */
+        .section-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 60px;
         }
 
         /* === SCROLL REVEAL === */
@@ -982,8 +1027,15 @@
                 flex-direction: column;
             }
 
+            .section-inner,
+            .cta-inner,
+            .cnt-inner,
+            .footer-inner {
+                padding: 0 24px;
+            }
+
             .sec-speaking {
-                padding: 80px 24px;
+                padding: 80px 0;
             }
 
             .spk-grid {
@@ -996,7 +1048,7 @@
             }
 
             .sec-stats {
-                padding: 60px 24px;
+                padding: 60px 0;
             }
 
             .stats-row {
@@ -1010,7 +1062,7 @@
             }
 
             .sec-about {
-                padding: 80px 24px;
+                padding: 80px 0;
             }
 
             .abt-grid {
@@ -1018,12 +1070,16 @@
                 gap: 48px;
             }
 
+            .abt-text {
+                max-width: 100%;
+            }
+
             .abt-heading {
                 font-size: 64px;
             }
 
             .sec-testimonials {
-                padding: 80px 24px;
+                padding: 80px 0;
             }
 
             .tst-grid {
@@ -1032,18 +1088,21 @@
             }
 
             .sec-cta {
-                padding: 80px 24px;
+                padding: 80px 0;
+            }
+
+            .cta-inner {
                 flex-direction: column;
                 text-align: center;
                 gap: 32px;
             }
 
             .sec-contact {
-                padding: 80px 24px;
+                padding: 80px 0;
             }
 
             .site-footer {
-                padding: 24px;
+                padding: 24px 0;
             }
         }
     </style>
@@ -1079,6 +1138,7 @@
 
     <!-- HERO -->
     <section class="hero">
+        <div class="hero-top-gradient"></div>
         <div class="hero-left">
             <p class="hero-eyebrow">CEO &middot; Founder &middot; Speaker &middot; Digital Strategist</p>
             <h1>
@@ -1108,6 +1168,7 @@
 
     <!-- SPEAKING -->
     <section class="sec-speaking" id="speaking">
+        <div class="section-inner">
         <div class="spk-grid">
             <div class="reveal">
                 <h2 class="spk-heading">SPEAKING</h2>
@@ -1140,10 +1201,12 @@
                 </div>
             </div>
         </div>
+        </div>
     </section>
 
     <!-- STATS -->
     <section class="sec-stats">
+        <div class="section-inner">
         <div class="stats-row">
             <div class="stat-box reveal">
                 <div class="stat-num" data-target="2100">0</div>
@@ -1162,10 +1225,12 @@
                 <div class="stat-lbl">CDJR Dealership in the Country</div>
             </div>
         </div>
+        </div>
     </section>
 
     <!-- ABOUT -->
     <section class="sec-about" id="about">
+        <div class="section-inner">
         <div class="abt-grid">
             <div class="reveal">
                 <h2 class="abt-heading">ABOUT</h2>
@@ -1177,10 +1242,12 @@
                 <button class="btn-bio" id="openModal">VIEW FULL BIO</button>
             </div>
         </div>
+        </div>
     </section>
 
     <!-- TESTIMONIALS -->
     <section class="sec-testimonials" id="testimonials">
+        <div class="section-inner">
         <p class="tst-label reveal">CLIENT RESULTS</p>
         <div class="tst-grid">
             <div class="tst-card reveal">
@@ -1205,19 +1272,23 @@
                 <p class="tst-co">Palmer CDJR</p>
             </div>
         </div>
+        </div>
     </section>
 
     <!-- CTA BAND -->
     <section class="sec-cta">
-        <div class="cta-words">
-            <div>READY TO WORK</div>
-            <div>TOGETHER?</div>
+        <div class="cta-inner">
+            <div class="cta-words">
+                <div>READY TO WORK</div>
+                <div>TOGETHER?</div>
+            </div>
+            <a href="#contact" class="btn-cta">LET'S TALK</a>
         </div>
-        <a href="#contact" class="btn-cta">LET'S TALK</a>
     </section>
 
     <!-- CONTACT -->
     <section class="sec-contact" id="contact">
+        <div class="cnt-inner">
         <p class="cnt-label reveal">CONTACT</p>
         <a href="mailto:brittani@d2ads.com" class="cnt-email reveal">BRITTANI@D2ADS.COM</a>
         <div class="cnt-social reveal">
@@ -1232,11 +1303,14 @@
             </a>
         </div>
         <p class="cnt-loc reveal">Based in Ormond Beach, Florida.</p>
+        </div>
     </section>
 
     <!-- FOOTER -->
     <footer class="site-footer">
-        <p>&copy; 2026 Brittani Preschel. All rights reserved.</p>
+        <div class="footer-inner">
+            <p>&copy; 2026 Brittani Preschel. All rights reserved.</p>
+        </div>
     </footer>
 
     <!-- BIO MODAL -->
