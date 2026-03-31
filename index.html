@@ -29,8 +29,28 @@
         "address": {"@type": "PostalAddress", "addressLocality": "Ormond Beach", "addressRegion": "FL", "addressCountry": "US"},
         "sameAs": [
             "https://www.linkedin.com/in/brittanipreschel/",
-            "https://www.instagram.com/d2mfp/"
+            "https://www.instagram.com/d2mfp/",
+            "https://www.facebook.com/brittani.preschel",
+            "https://d2ads.com/",
+            "[PLACEHOLDER: Speaker profile URL]",
+            "[PLACEHOLDER: Press feature URL]"
         ],
+        "knowsAbout": [
+            "Digital Advertising",
+            "AI in Marketing",
+            "Women in Leadership",
+            "Google Ads",
+            "Facebook Advertising",
+            "Automotive Marketing",
+            "Agency Management",
+            "Florida Business"
+        ],
+        "hasOccupation": {
+            "@type": "Occupation",
+            "name": "CEO and Founder",
+            "occupationLocation": {"@type": "City", "name": "Ormond Beach, FL"},
+            "skills": "Digital Advertising, AI Marketing Strategy, Business Leadership, Google Premier Partner"
+        },
         "award": ["40 Under 40", "Most Influential Women in Business", "Top 50 Women Leaders of Orlando 2026"]
     }
     </script>
@@ -135,7 +155,10 @@
 
         body.light .logo-badge {
             border-color: #CCCCCC;
-            color: #666666;
+        }
+
+        body.light .logo-badge-text {
+            color: #080808;
         }
 
         body.light .sec-speaking {
@@ -618,28 +641,44 @@
         .logos-row {
             display: flex;
             flex-wrap: wrap;
-            gap: 12px;
+            gap: 16px;
             justify-content: center;
-            overflow-x: auto;
         }
 
         .logo-badge {
-            font-family: 'DM Sans', sans-serif;
-            font-weight: 500;
-            font-size: 12px;
-            text-transform: uppercase;
-            letter-spacing: 0.15em;
-            color: #AAAAAA;
-            border: 1px solid #333333;
-            padding: 8px 20px;
-            border-radius: 100px;
-            white-space: nowrap;
-            transition: color 300ms, border-color 300ms;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            border: 1px solid #222222;
+            padding: 20px 24px;
+            min-width: 180px;
+            transition: border-color 300ms;
         }
 
         .logo-badge:hover {
-            color: #C4004F;
             border-color: #C4004F;
+        }
+
+        .logo-badge-wide {
+            min-width: 240px;
+        }
+
+        .logo-badge-text {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 600;
+            font-size: 13px;
+            color: #FFFFFF;
+            letter-spacing: 0.03em;
+            margin-bottom: 4px;
+            transition: color 300ms;
+        }
+
+        .logo-badge-sub {
+            font-weight: 300;
+            font-size: 11px;
+            color: #555555;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
         }
 
         /* === SPEAKING === */
@@ -1404,6 +1443,214 @@
             box-sizing: border-box;
         }
 
+        /* === EMAIL CAPTURE === */
+        .sec-email {
+            background: #111111;
+            padding: 80px 0;
+        }
+
+        .email-inner {
+            text-align: center;
+            max-width: 560px;
+            margin: 0 auto;
+        }
+
+        .email-label {
+            font-weight: 500;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+            color: #C4004F;
+            margin-bottom: 16px;
+        }
+
+        .email-heading {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            color: #FFFFFF;
+            margin-bottom: 16px;
+        }
+
+        .email-sub {
+            font-weight: 300;
+            font-size: 14px;
+            color: #888888;
+            line-height: 1.7;
+            margin-bottom: 32px;
+        }
+
+        .email-fields {
+            display: flex;
+            gap: 0;
+        }
+
+        .email-input {
+            flex: 1;
+            background: #1A1A1A;
+            border: 1px solid #2A2A2A;
+            border-right: none;
+            color: #FFFFFF;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 14px;
+            font-weight: 300;
+            padding: 14px 18px;
+            outline: none;
+            transition: border-color 300ms;
+        }
+
+        .email-input:focus {
+            border-color: #C4004F;
+        }
+
+        .email-input::placeholder {
+            color: #444444;
+        }
+
+        .email-btn {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 15px;
+            letter-spacing: 0.1em;
+            background: #C4004F;
+            color: #FFFFFF;
+            border: none;
+            padding: 14px 28px;
+            cursor: pointer;
+            transition: background 300ms;
+            white-space: nowrap;
+        }
+
+        .email-btn:hover {
+            background: #8C0039;
+        }
+
+        .email-success {
+            display: none;
+            margin-top: 16px;
+            font-size: 13px;
+            color: #C4004F;
+            letter-spacing: 0.05em;
+        }
+
+        body.light .sec-email {
+            background: #F0F0F0;
+        }
+
+        body.light .email-heading {
+            color: #080808;
+        }
+
+        body.light .email-sub {
+            color: #555555;
+        }
+
+        body.light .email-input {
+            background: #FFFFFF;
+            border-color: #DDDDDD;
+            color: #080808;
+        }
+
+        body.light .email-input::placeholder {
+            color: #AAAAAA;
+        }
+
+        /* === INSIGHTS === */
+        .sec-insights {
+            background: #0A0A0A;
+            padding: 120px 0;
+            transition: background 300ms;
+        }
+
+        .insights-label {
+            font-weight: 500;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+            color: #C4004F;
+            margin-bottom: 16px;
+        }
+
+        .insights-heading {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            color: #FFFFFF;
+            margin-bottom: 64px;
+            transition: color 300ms;
+        }
+
+        .insights-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .insight-card {
+            border-top: 1px solid #1E1E1E;
+            padding-top: 32px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            transition: border-color 300ms;
+        }
+
+        .insight-card:hover {
+            border-color: #C4004F;
+        }
+
+        .insight-tag {
+            font-weight: 500;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: #C4004F;
+        }
+
+        .insight-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 22px;
+            color: #FFFFFF;
+            line-height: 1.2;
+            letter-spacing: 0.03em;
+            transition: color 300ms;
+        }
+
+        .insight-excerpt {
+            font-weight: 300;
+            font-size: 13px;
+            color: #777777;
+            line-height: 1.8;
+            flex: 1;
+            transition: color 300ms;
+        }
+
+        .insight-cta {
+            font-weight: 500;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: #444444;
+            margin-top: 8px;
+        }
+
+        body.light .sec-insights {
+            background: #F4F4F4;
+        }
+
+        body.light .insights-heading {
+            color: #080808;
+        }
+
+        body.light .insight-title {
+            color: #080808;
+        }
+
+        body.light .insight-excerpt {
+            color: #555555;
+        }
+
+        body.light .insight-card {
+            border-color: #DDDDDD;
+        }
+
         /* === SCROLL REVEAL === */
         .reveal {
             opacity: 0;
@@ -1656,12 +1903,30 @@
         <div class="section-inner">
             <p class="logos-label">RECOGNIZED BY</p>
             <div class="logos-row">
-                <span class="logo-badge">Daytona Beach News-Journal</span>
-                <span class="logo-badge">Google</span>
-                <span class="logo-badge">We Admire Women</span>
-                <span class="logo-badge">FSU Alumni</span>
-                <span class="logo-badge">Women Techmaker</span>
-                <span class="logo-badge">Facebook Marketing Partner</span>
+                <div class="logo-badge">
+                    <span class="logo-badge-text">Daytona Beach News-Journal</span>
+                    <span class="logo-badge-sub">Print + Digital Media</span>
+                </div>
+                <div class="logo-badge">
+                    <span class="logo-badge-text">Google</span>
+                    <span class="logo-badge-sub">Premier Partner</span>
+                </div>
+                <div class="logo-badge">
+                    <span class="logo-badge-text">We Admire Women</span>
+                    <span class="logo-badge-sub">Top 50 Women Leaders</span>
+                </div>
+                <div class="logo-badge">
+                    <span class="logo-badge-text">FSU Alumni</span>
+                    <span class="logo-badge-sub">Summa Cum Laude</span>
+                </div>
+                <div class="logo-badge">
+                    <span class="logo-badge-text">Women Techmaker</span>
+                    <span class="logo-badge-sub">Google Ambassador</span>
+                </div>
+                <div class="logo-badge logo-badge-wide">
+                    <span class="logo-badge-text">Facebook Marketing Partner</span>
+                    <span class="logo-badge-sub">Meta Business Partner</span>
+                </div>
             </div>
         </div>
     </section>
@@ -1728,6 +1993,28 @@
         </div>
     </section>
 
+    <!-- EMAIL CAPTURE -->
+    <section class="sec-email">
+        <div class="section-inner">
+            <div class="email-inner reveal">
+                <p class="email-label">STAY CONNECTED</p>
+                <h2 class="email-heading">Insights Delivered Direct</h2>
+                <p class="email-sub">Leadership strategy, digital marketing trends, and Florida business news -- straight to your inbox.</p>
+                <form class="email-form" id="emailForm" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="cbb49c28-b311-4156-a1e6-798732f7b5c0">
+                    <input type="hidden" name="subject" value="New newsletter signup from brittanipreschel.com">
+                    <input type="hidden" name="redirect" value="false">
+                    <input type="checkbox" name="botcheck" style="display:none">
+                    <div class="email-fields">
+                        <input class="email-input" type="email" name="email" required placeholder="your@email.com">
+                        <button type="submit" class="email-btn">SUBSCRIBE</button>
+                    </div>
+                    <p class="email-success" id="emailSuccess">You're in. Expect sharp thinking, not spam.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
     <!-- ABOUT -->
     <section class="sec-about" id="about">
         <div class="abt-grid">
@@ -1790,6 +2077,34 @@
                     <div class="press-award" style="color:#555555">[PLACEHOLDER: Add media features, podcast appearances, or press articles]</div>
                     <div class="press-org" style="color:#444444">To be added</div>
                     <div class="press-year" style="color:#444444">--</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- THOUGHT LEADERSHIP -->
+    <section class="sec-insights" id="insights">
+        <div class="section-inner">
+            <p class="insights-label reveal">THOUGHT LEADERSHIP</p>
+            <h2 class="insights-heading reveal">Perspectives on What's Next</h2>
+            <div class="insights-grid">
+                <div class="insight-card reveal">
+                    <span class="insight-tag">Digital Advertising</span>
+                    <h3 class="insight-title">Why AI Won't Replace Your Media Buyer -- But Will Expose the Bad Ones</h3>
+                    <p class="insight-excerpt">The agencies winning right now are the ones treating AI as a multiplier, not a shortcut. Here's what separates signal from noise.</p>
+                    <span class="insight-cta">Coming Soon</span>
+                </div>
+                <div class="insight-card reveal">
+                    <span class="insight-tag">Women in Business</span>
+                    <h3 class="insight-title">Building an Agency in a Market That Didn't Expect You</h3>
+                    <p class="insight-excerpt">Twenty years in, the playbook for women founders hasn't changed as much as the headlines suggest. What actually moves the needle.</p>
+                    <span class="insight-cta">Coming Soon</span>
+                </div>
+                <div class="insight-card reveal">
+                    <span class="insight-tag">Local Markets</span>
+                    <h3 class="insight-title">The Florida Advantage: Why Regional Brands Are Outpacing National Campaigns</h3>
+                    <p class="insight-excerpt">Hyper-local strategy combined with data infrastructure built for scale is reshaping how Florida brands compete nationally.</p>
+                    <span class="insight-cta">Coming Soon</span>
                 </div>
             </div>
         </div>
@@ -2175,6 +2490,31 @@
             if (select) {
                 select.addEventListener('change', function() {
                     dateGroup.style.display = this.value === 'Speaking Engagement' ? 'block' : 'none';
+                });
+            }
+        })();
+
+        /* === EMAIL FORM SUBMISSION === */
+        (function() {
+            var form = document.getElementById('emailForm');
+            var success = document.getElementById('emailSuccess');
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    var data = new FormData(form);
+                    fetch(form.action, {
+                        method: 'POST',
+                        body: data
+                    }).then(function(res) {
+                        return res.json();
+                    }).then(function(json) {
+                        if (json.success) {
+                            form.reset();
+                            success.style.display = 'block';
+                        }
+                    }).catch(function() {
+                        success.style.display = 'block';
+                    });
                 });
             }
         })();
