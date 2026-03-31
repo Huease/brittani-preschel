@@ -465,7 +465,7 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            padding: 0 60px 0 80px;
+            padding: 0 60px 0 max(80px, calc((100vw - 1040px) / 2));
             background: #080808;
             transition: background 300ms;
             position: relative;
@@ -516,7 +516,7 @@
 
         .hero-sub {
             font-weight: 300;
-            font-size: 15px;
+            font-size: 17px;
             color: #888888;
             line-height: 1.6;
             margin-bottom: 48px;
@@ -534,9 +534,9 @@
         .btn-solid {
             display: inline-block;
             font-family: 'Bebas Neue', sans-serif;
-            font-size: 16px;
+            font-size: 17px;
             letter-spacing: 0.1em;
-            padding: 14px 32px;
+            padding: 16px 40px;
             background: #C4004F;
             color: #FFFFFF;
             border: none;
@@ -552,9 +552,9 @@
         .btn-ghost {
             display: inline-block;
             font-family: 'Bebas Neue', sans-serif;
-            font-size: 16px;
+            font-size: 17px;
             letter-spacing: 0.1em;
-            padding: 14px 32px;
+            padding: 16px 40px;
             background: transparent;
             color: #FFFFFF;
             border: 1px solid rgba(255, 255, 255, 0.4);
@@ -686,7 +686,7 @@
         /* === SPEAKING === */
         .sec-speaking {
             background: #080808;
-            padding: 120px 0;
+            padding: 100px 0;
             transition: background 300ms;
         }
 
@@ -753,7 +753,7 @@
 
         .topic-sub {
             font-weight: 300;
-            font-size: 13px;
+            font-size: 15px;
             color: #888888;
             margin-top: 4px;
             transition: color 300ms;
@@ -811,7 +811,7 @@
         /* === ABOUT === */
         .sec-about {
             background: #0F0F0F;
-            padding: 120px 0;
+            padding: 100px 0;
             transition: background 300ms;
         }
 
@@ -880,7 +880,7 @@
         /* === PRESS === */
         .sec-press {
             background: #0A0A0A;
-            padding: 120px 0;
+            padding: 100px 0;
             transition: background 300ms;
         }
 
@@ -897,7 +897,7 @@
             font-family: 'Bebas Neue', sans-serif;
             font-size: clamp(2.5rem, 5vw, 4rem);
             color: #FFFFFF;
-            margin-bottom: 64px;
+            margin-bottom: 48px;
             transition: color 300ms;
         }
 
@@ -921,7 +921,7 @@
 
         .press-award {
             font-weight: 600;
-            font-size: 14px;
+            font-size: 15px;
             color: #FFFFFF;
             margin-bottom: 6px;
             transition: color 300ms;
@@ -929,7 +929,7 @@
 
         .press-org {
             font-weight: 300;
-            font-size: 12px;
+            font-size: 13px;
             color: #888888;
             transition: color 300ms;
         }
@@ -1002,7 +1002,7 @@
         /* === TESTIMONIALS === */
         .sec-testimonials {
             background: #080808;
-            padding: 120px 0;
+            padding: 100px 0;
             transition: background 300ms;
         }
 
@@ -1012,7 +1012,7 @@
             text-transform: uppercase;
             letter-spacing: 0.3em;
             color: #C4004F;
-            margin-bottom: 64px;
+            margin-bottom: 40px;
         }
 
         .testi-carousel-wrap {
@@ -1191,7 +1191,7 @@
         /* === CONTACT === */
         .sec-contact {
             background: #080808;
-            padding: 120px 0;
+            padding: 100px 0;
             transition: background 300ms;
         }
 
@@ -1244,7 +1244,7 @@
             border: 1px solid #2A2A2A;
             color: #FFFFFF;
             font-family: 'DM Sans', sans-serif;
-            font-size: 14px;
+            font-size: 16px;
             font-weight: 300;
             padding: 14px 18px;
             outline: none;
@@ -1653,7 +1653,7 @@
         /* === INSIGHTS === */
         .sec-insights {
             background: #0A0A0A;
-            padding: 120px 0;
+            padding: 80px 0;
             transition: background 300ms;
         }
 
@@ -1670,7 +1670,7 @@
             font-family: 'Bebas Neue', sans-serif;
             font-size: clamp(2.5rem, 5vw, 4rem);
             color: #FFFFFF;
-            margin-bottom: 64px;
+            margin-bottom: 48px;
             transition: color 300ms;
         }
 
@@ -1712,7 +1712,7 @@
 
         .insight-excerpt {
             font-weight: 300;
-            font-size: 13px;
+            font-size: 15px;
             color: #777777;
             line-height: 1.8;
             flex: 1;
@@ -2190,12 +2190,6 @@
                     <div class="press-award">Google Cloud Digital Leader</div>
                     <div class="press-org">Google</div>
                     <div class="press-year">Active</div>
-                </div>
-                <div class="press-card press-placeholder reveal">
-                    <svg class="press-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6L12 2z" fill="#333333"/></svg>
-                    <div class="press-award" style="color:#555555">[PLACEHOLDER: Add media features, podcast appearances, or press articles]</div>
-                    <div class="press-org" style="color:#444444">To be added</div>
-                    <div class="press-year" style="color:#444444">--</div>
                 </div>
             </div>
         </div>
