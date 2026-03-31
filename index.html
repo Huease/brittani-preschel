@@ -16,7 +16,8 @@
     <meta name="twitter:description" content="CEO and Founder of D2 Advertising. Google Premier Partner. 20+ years building brands that lead markets.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap"></noscript>
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -678,7 +679,7 @@
         .logo-badge-sub {
             font-weight: 300;
             font-size: 11px;
-            color: #555555;
+            color: #888888;
             text-transform: uppercase;
             letter-spacing: 0.15em;
         }
@@ -1428,7 +1429,7 @@
 
         .footer-privacy {
             font-size: 11px;
-            color: #444444;
+            color: #777777;
             text-transform: uppercase;
             letter-spacing: 0.1em;
             transition: color 300ms;
@@ -2021,7 +2022,7 @@
             </div>
         </div>
         <div class="hero-right">
-            <img src="brittani-preschel-ceo-d2-advertisingheadshot-sitting-down-centered-black-suite.webp" alt="Brittani Preschel, CEO and Founder of D2 Advertising, seated in a black business suit" width="800" height="1000">
+            <img src="brittani-preschel-ceo-d2-advertisingheadshot-sitting-down-centered-black-suite.webp" alt="Brittani Preschel, CEO and Founder of D2 Advertising, seated in a black business suit" width="800" height="1000" fetchpriority="high" loading="eager">
             <div class="hero-overlay"></div>
         </div>
     </section>
@@ -2035,7 +2036,7 @@
     </div>
 
     <!-- LOGO BAR -->
-    <section class="sec-logos">
+    <div class="sec-logos">
         <div class="section-inner">
             <p class="logos-label">RECOGNIZED BY</p>
             <div class="logos-row">
@@ -2065,7 +2066,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
     <!-- SPEAKING -->
     <section class="sec-speaking" id="speaking">
@@ -2106,7 +2107,7 @@
     </section>
 
     <!-- STATS -->
-    <section class="sec-stats">
+    <div class="sec-stats">
         <div class="section-inner">
         <div class="stats-row">
             <div class="stat-box reveal">
@@ -2127,7 +2128,7 @@
             </div>
         </div>
         </div>
-    </section>
+    </div>
 
     <!-- EMAIL CAPTURE -->
     <section class="sec-email">
@@ -2254,7 +2255,7 @@
     <!-- TESTIMONIALS -->
     <section class="sec-testimonials" id="recognition">
         <div class="section-inner">
-        <p class="tst-label reveal">CLIENT RESULTS</p>
+        <h2 class="tst-label reveal">CLIENT RESULTS</h2>
         <div class="testi-carousel-wrap reveal">
             <button class="testi-arrow testi-prev" id="testiPrev" aria-label="Previous">&#8592;</button>
             <div class="testi-track-clip">
@@ -2333,7 +2334,7 @@
     </section>
 
     <!-- CTA BAND -->
-    <section class="sec-cta">
+    <div class="sec-cta">
         <div class="cta-inner">
             <div class="cta-words">
                 <div>READY TO WORK</div>
@@ -2341,7 +2342,7 @@
             </div>
             <a href="#contact" class="btn-cta">LET'S TALK</a>
         </div>
-    </section>
+    </div>
 
     <!-- CONTACT -->
     <section class="sec-contact" id="contact">
@@ -2408,6 +2409,7 @@
                 </div>
                 <img src="brittani-preschel-2024.webp"
                      alt="Brittani Preschel"
+                     width="280" height="350"
                      style="width:100%; max-width:280px; height:auto; margin-top:32px; display:block;">
             </div>
         </div>
