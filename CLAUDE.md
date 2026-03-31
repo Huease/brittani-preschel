@@ -1,36 +1,60 @@
-# Project: Brittani Preschel Personal Brand Website
-# Purpose: 4 homepage design variations for client review
-# Stack: Vanilla HTML/CSS/JS, no frameworks
-# Deployment target: Cloudflare Pages (single project)
-## File structure
-- index.html: variation selector/landing page
-- v1.html: Executive Minimalist (navy/warm white/gold)
-- v2.html: Bold Speaker Brand (near black/white/hot pink)
-- v3.html: Warm Editorial (cream/terracotta/blush)
-- v4.html: Modern Agency Leader (deep teal/off-white/gold)
-- brittani-preschel-2024.webp: primary headshot
-- brittani-preschel-with-circle-background-.webp: circular headshot
-- Brittani_Bio_.webp: full bio graphic for modal popup
-## Code style
-- Each variation is a single self-contained HTML file
-- Embedded CSS in style tag, embedded JS in script tag
-- Google Fonts via CDN only, no external JS libraries
-- Semantic HTML, one H1 per page
-- Mobile-first responsive on all four variations
-## Shared content
-- Name: Brittani Preschel
-- Title: Founder + CEO, D2 Advertising
-- Email: brittani@d2ads.com
-- LinkedIn: https://www.linkedin.com/in/brittanipreschel/
-- Facebook: https://www.facebook.com/brittani.preschel
-- Instagram: https://www.instagram.com/d2mfp/?hl=en
-- Location: Daytona Beach / Ormond Beach, Florida
-## Workflow
-- Build index.html selector page first
-- Build v1.html through v4.html in sequence
-- Preview each in browser before moving to the next
-- Commit to GitHub after each completed variation
-- Deploy entire project to one Cloudflare Pages project
-## Output preferences
-- No em dashes in any written content
-- No horizontal dividers as decorative elements
+# Project: Brittani Preschel Personal Brand Site
+# Client: Brittani Preschel, CEO D2 Advertising
+# Stack: Plain HTML/CSS/JavaScript
+# Deploy: Cloudflare Pages via GitHub
+# Repo: Huease/brittani-preschel
+# Live URL: brittani-preschel.pages.dev
+# Working file: index.html ONLY — never touch v2.html
+
+## Brand colors
+--color-primary: #CE0058 (pink — CTAs only)
+--color-accent: #8B6914 (dark gold — borders, accents)
+--color-bg-1: #0a0a0a (darkest sections)
+--color-bg-2: #111111 (mid sections)
+--color-bg-3: #131313 (lighter sections)
+
+## Fonts
+Display: Barlow Condensed (headlines)
+Body: Lato (paragraph text)
+Never use Inter or Roboto
+
+## Layout rules — NON-NEGOTIABLE
+Every section inner wrapper:
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 80px;
+  box-sizing: border-box;
+Mobile breakpoint max-width 768px: padding: 0 24px
+Section vertical padding: 80-100px
+Two-column grid: grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;
+Body text: 17px minimum, line-height: 1.7
+Hero H1: clamp(48px, 8vw, 80px)
+
+## Pending items (needs Brittani input)
+- [BRITTANI_LINKEDIN_URL] — replace in footer + schema
+- [BRITTANI_INSTAGRAM_URL] — replace in footer + schema
+- [BRITTANI_FACEBOOK_URL] — replace in footer + schema
+- [WEB3FORMS_API_KEY_PLACEHOLDER] — replace in both forms
+
+## Mandatory workflow
+1. Read index.html before any edit
+2. Grep for actual class names before writing CSS
+3. Screenshot before and after every visual change
+4. Run Playwright to verify before pushing to GitHub
+5. Commit message must describe what changed
+
+## Known lessons
+MISTAKE: Writing CSS fixes without reading actual class names first
+CORRECTION: Always grep the file for exact class names before writing any CSS
+
+MISTAKE: Using different padding values across sections
+CORRECTION: All section wrappers use exactly padding: 0 80px desktop, 0 24px mobile
+
+MISTAKE: Fixing centering when the real problem was column alignment
+CORRECTION: Ask what they see visually before assuming which CSS property to change
+
+## Do not touch
+- v2.html (reference backup only)
+- backup-v1.html
+- backup-original-index.html
