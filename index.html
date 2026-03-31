@@ -1248,13 +1248,14 @@
             font-weight: 300;
             padding: 14px 18px;
             outline: none;
-            transition: border-color 300ms;
+            transition: border-color 300ms, box-shadow 300ms;
             appearance: none;
             -webkit-appearance: none;
         }
 
         .form-input:focus {
             border-color: #C4004F;
+            box-shadow: 0 0 0 3px rgba(196, 0, 79, 0.25);
         }
 
         .form-input::placeholder {
@@ -1597,6 +1598,7 @@
 
         .email-input:focus {
             border-color: #C4004F;
+            box-shadow: 0 0 0 3px rgba(196, 0, 79, 0.25);
         }
 
         .email-input::placeholder {
@@ -1724,7 +1726,7 @@
             font-size: 11px;
             text-transform: uppercase;
             letter-spacing: 0.15em;
-            color: #444444;
+            color: #777777;
             margin-top: 8px;
         }
 
@@ -1746,6 +1748,19 @@
 
         body.light .insight-card {
             border-color: #DDDDDD;
+        }
+
+        /* === ACCESSIBILITY === */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0,0,0,0);
+            white-space: nowrap;
+            border: 0;
         }
 
         /* === SCROLL REVEAL === */
@@ -1973,23 +1988,25 @@
             <button class="theme-toggle" id="themeBtn" aria-label="Toggle light mode">
                 <svg id="themeIcon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
             </button>
-            <button class="hamburger" id="menuBtn" aria-label="Menu">
+            <button class="hamburger" id="menuBtn" aria-label="Menu" aria-expanded="false" aria-controls="mobNav">
                 <span></span><span></span><span></span>
             </button>
         </div>
     </nav>
 
     <!-- MOBILE NAV -->
-    <div class="mob-nav" id="mobNav">
+    <div class="mob-nav" id="mobNav" aria-hidden="true">
         <a href="#about">About</a>
         <a href="#speaking">Speaking</a>
         <a href="#recognition">Recognition</a>
         <a href="#contact">Contact</a>
     </div>
 
+    <main id="main-content">
+
     <!-- HERO -->
     <section class="hero">
-        <div class="hero-top-gradient"></div>
+        <div class="hero-top-gradient" aria-hidden="true"></div>
         <div class="hero-left">
             <p class="hero-eyebrow">CEO &middot; Founder &middot; Speaker &middot; Digital Strategist</p>
             <h1>
@@ -2010,7 +2027,7 @@
     </section>
 
     <!-- MARQUEE -->
-    <div class="marquee-section">
+    <div class="marquee-section" aria-hidden="true">
         <div class="marquee-inner">
             <span>GOOGLE PREMIER PARTNER &nbsp;&middot;&nbsp; 40 UNDER 40 &nbsp;&middot;&nbsp; MOST INFLUENTIAL WOMEN IN BUSINESS &nbsp;&middot;&nbsp; TOP 50 WOMEN LEADERS ORLANDO 2026 &nbsp;&middot;&nbsp; SUMMA CUM LAUDE FSU &nbsp;&middot;&nbsp; GOOGLE CLOUD DIGITAL LEADER &nbsp;&middot;&nbsp; WOMEN TECHMAKER AMBASSADOR &nbsp;&middot;&nbsp; BING ACCREDITED &nbsp;&middot;&nbsp; FACEBOOK MARKETING PARTNER &nbsp;&middot;&nbsp;&nbsp;</span>
             <span>GOOGLE PREMIER PARTNER &nbsp;&middot;&nbsp; 40 UNDER 40 &nbsp;&middot;&nbsp; MOST INFLUENTIAL WOMEN IN BUSINESS &nbsp;&middot;&nbsp; TOP 50 WOMEN LEADERS ORLANDO 2026 &nbsp;&middot;&nbsp; SUMMA CUM LAUDE FSU &nbsp;&middot;&nbsp; GOOGLE CLOUD DIGITAL LEADER &nbsp;&middot;&nbsp; WOMEN TECHMAKER AMBASSADOR &nbsp;&middot;&nbsp; BING ACCREDITED &nbsp;&middot;&nbsp; FACEBOOK MARKETING PARTNER &nbsp;&middot;&nbsp;&nbsp;</span>
@@ -2126,7 +2143,8 @@
                 <input type="hidden" name="redirect" value="false">
                 <input type="checkbox" name="botcheck" style="display:none">
                 <div class="email-fields">
-                    <input class="email-input" type="email" name="email" required placeholder="your@email.com">
+                    <label for="emailCapture" class="sr-only">Email address</label>
+                    <input class="email-input" type="email" id="emailCapture" name="email" required placeholder="your@email.com">
                     <button type="submit" class="email-btn">SUBSCRIBE</button>
                 </div>
                 <p class="email-success" id="emailSuccess">You're in. Expect sharp thinking, not spam.</p>
@@ -2395,6 +2413,8 @@
         </div>
     </section>
 
+    </main>
+
     <!-- FOOTER -->
     <footer class="site-footer">
         <div class="footer-inner">
@@ -2426,10 +2446,10 @@
     </footer>
 
     <!-- BIO MODAL -->
-    <div class="bio-modal" id="bioModal">
-        <button class="bio-modal-close" id="closeModal">&times;</button>
+    <div class="bio-modal" id="bioModal" role="dialog" aria-modal="true" aria-labelledby="bioModalTitle">
+        <button class="bio-modal-close" id="closeModal" aria-label="Close biography">&times;</button>
         <div class="bio-modal-content">
-            <h2 class="bio-modal-title">ABOUT BRITTANI</h2>
+            <h2 class="bio-modal-title" id="bioModalTitle">ABOUT BRITTANI</h2>
             <p>Brittani Preschel is the CEO and Founder of D2 Advertising, a full-service digital marketing agency based in Ormond Beach, Florida. A Summa Cum Laude graduate of Florida State University, Brittani began her career in on-air media and radio before transitioning into digital marketing at the national agency level. She founded D2 Advertising on a single conviction: that digital strategy should be the foundation of every marketing decision, not an afterthought.</p>
             <p>Under her leadership, D2 has grown into a Google Premier Partner with a team of fifteen specialists serving clients across automotive, legal, tourism, healthcare, and retail throughout Florida. The agency is also a Bing Accredited Partner, Facebook Marketing Partner, Google Cloud Digital Leader, and Women Techmaker Ambassador.</p>
             <p>Brittani has been recognized as one of the Daytona Beach News-Journal's 40 Under 40 and Most Influential Women in Business, and was named to the Top 50 Women Leaders of Orlando 2026 by We Admire Women. She has spoken at Google conferences and continues to represent the next generation of digital advertising leadership.</p>
@@ -2472,6 +2492,8 @@
 
             function closeMenu() {
                 mobNav.classList.remove('open');
+                mobNav.setAttribute('aria-hidden', 'true');
+                menuBtn.setAttribute('aria-expanded', 'false');
                 spans[0].style.transform = '';
                 spans[1].style.opacity = '';
                 spans[2].style.transform = '';
@@ -2482,6 +2504,8 @@
                     closeMenu();
                 } else {
                     mobNav.classList.add('open');
+                    mobNav.setAttribute('aria-hidden', 'false');
+                    menuBtn.setAttribute('aria-expanded', 'true');
                     spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
                     spans[1].style.opacity = '0';
                     spans[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
