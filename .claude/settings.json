@@ -1,0 +1,14 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo 'Session ended - remember to update lessons.md'"
+          }
+        ]
+      }
+    ]
+  }
+}
