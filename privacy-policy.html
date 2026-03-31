@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | Brittani Preschel</title>
+    <meta name="description" content="Privacy Policy for brittanipreschel.com — how we collect, use, and protect your information.">
+    <link rel="canonical" href="https://brittanipreschel.com/privacy-policy.html">
+    <meta name="robots" content="noindex, follow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap"></noscript>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --color-primary:    #C4004F;
+            --color-accent:     #8B6914;
+            --color-bg-1:       #080808;
+            --color-bg-2:       #0d0d0d;
+            --color-bg-3:       #111111;
+            --color-text:       #ffffff;
+            --color-text-muted: #888888;
+            --color-border:     #222222;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 17px;
+            line-height: 1.7;
+            background: var(--color-bg-1);
+            color: var(--color-text);
+            -webkit-font-smoothing: antialiased;
+            transition: background 300ms, color 300ms;
+        }
+
+        body.light {
+            --color-bg-1:       #f9f7f4;
+            --color-bg-2:       #f2eeea;
+            --color-bg-3:       #ebe6e1;
+            --color-text:       #111111;
+            --color-text-muted: #666666;
+            --color-border:     #dddddd;
+        }
+
+        /* === NAV === */
+        .nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 80px;
+            height: 64px;
+            background: transparent;
+            transition: background 300ms, border-color 300ms;
+        }
+        .nav.scrolled {
+            background: var(--color-bg-1);
+            border-bottom: 1px solid var(--color-border);
+        }
+        .nav-logo {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 18px;
+            letter-spacing: 0.12em;
+            color: var(--color-text);
+            text-decoration: none;
+        }
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 40px;
+        }
+        .nav-link {
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--color-text-muted);
+            text-decoration: none;
+            transition: color 200ms;
+        }
+        .nav-link:hover { color: var(--color-text); }
+        .theme-toggle {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 4px;
+            display: flex;
+            align-items: center;
+        }
+        .theme-toggle svg {
+            width: 18px;
+            height: 18px;
+            fill: var(--color-text-muted);
+            transition: fill 200ms;
+        }
+        .theme-toggle:hover svg { fill: var(--color-text); }
+        .hamburger { display: none; }
+
+        @media (max-width: 768px) {
+            .nav { padding: 0 24px; }
+            .nav-links { display: none; }
+            .hamburger {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                background: none;
+                border: none;
+                cursor: pointer;
+                padding: 4px;
+            }
+            .hamburger span {
+                display: block;
+                width: 22px;
+                height: 2px;
+                background: var(--color-text);
+                transition: background 200ms;
+            }
+        }
+
+        /* === MOB NAV === */
+        .mob-nav {
+            display: none;
+            position: fixed;
+            top: 64px; left: 0; right: 0;
+            background: var(--color-bg-1);
+            border-bottom: 1px solid var(--color-border);
+            z-index: 99;
+            flex-direction: column;
+            padding: 24px;
+            gap: 20px;
+        }
+        .mob-nav.open { display: flex; }
+        .mob-nav a {
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--color-text);
+            text-decoration: none;
+        }
+
+        /* === PAGE === */
+        .pp-hero {
+            padding: 140px 0 60px;
+            background: var(--color-bg-1);
+            border-bottom: 1px solid var(--color-border);
+        }
+        .pp-hero .inner {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 80px;
+        }
+        .pp-eyebrow {
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--color-primary);
+            margin-bottom: 16px;
+        }
+        .pp-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(40px, 6vw, 72px);
+            letter-spacing: 0.03em;
+            color: var(--color-text);
+            line-height: 1;
+            margin-bottom: 24px;
+        }
+        .pp-meta {
+            font-size: 14px;
+            color: var(--color-text-muted);
+        }
+
+        /* === CONTENT === */
+        .pp-body {
+            padding: 80px 0 100px;
+            background: var(--color-bg-1);
+        }
+        .pp-body .inner {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 80px;
+        }
+        .pp-content {
+            max-width: 760px;
+        }
+        .pp-content h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 28px;
+            letter-spacing: 0.06em;
+            color: var(--color-text);
+            margin: 48px 0 16px;
+        }
+        .pp-content h2:first-child { margin-top: 0; }
+        .pp-content p {
+            font-size: 17px;
+            line-height: 1.7;
+            color: var(--color-text-muted);
+            margin-bottom: 16px;
+        }
+        .pp-content ul {
+            margin: 0 0 16px 20px;
+            color: var(--color-text-muted);
+        }
+        .pp-content ul li {
+            font-size: 17px;
+            line-height: 1.7;
+            margin-bottom: 8px;
+        }
+        .pp-content a {
+            color: var(--color-primary);
+            text-decoration: none;
+        }
+        .pp-content a:hover { text-decoration: underline; }
+        .pp-divider {
+            border: none;
+            border-top: 1px solid var(--color-border);
+            margin: 48px 0;
+        }
+
+        /* === FOOTER === */
+        .site-footer {
+            background: var(--color-bg-1);
+            border-top: 1px solid var(--color-border);
+            padding: 48px 0 32px;
+        }
+        .footer-inner {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 80px;
+        }
+        .footer-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 32px;
+            gap: 32px;
+            flex-wrap: wrap;
+        }
+        .footer-logo {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 16px;
+            letter-spacing: 0.14em;
+            color: var(--color-text);
+        }
+        .footer-nav {
+            display: flex;
+            gap: 32px;
+        }
+        .footer-nav a {
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--color-text-muted);
+            text-decoration: none;
+            transition: color 200ms;
+        }
+        .footer-nav a:hover { color: var(--color-text); }
+        .footer-social {
+            display: flex;
+            gap: 20px;
+        }
+        .footer-social a { display: flex; align-items: center; }
+        .footer-social svg {
+            width: 18px;
+            height: 18px;
+            fill: var(--color-text-muted);
+            transition: fill 200ms;
+        }
+        .footer-social a:hover svg { fill: var(--color-text); }
+        .footer-bottom {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 24px;
+            border-top: 1px solid var(--color-border);
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        .footer-bottom p {
+            font-size: 13px;
+            color: var(--color-text-muted);
+        }
+        .footer-bottom a {
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--color-text-muted);
+            text-decoration: none;
+        }
+        .footer-bottom a:hover { color: var(--color-text); }
+
+        @media (max-width: 768px) {
+            .pp-hero .inner,
+            .pp-body .inner,
+            .footer-inner { padding: 0 24px; }
+            .footer-nav { flex-wrap: wrap; gap: 16px; }
+            .footer-top { flex-direction: column; align-items: flex-start; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav class="nav" id="mainNav">
+        <a href="index.html" class="nav-logo">BRITTANI PRESCHEL</a>
+        <div class="nav-right">
+            <div class="nav-links">
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="index.html#speaking" class="nav-link">Speaking</a>
+                <a href="index.html#recognition" class="nav-link">Recognition</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+            </div>
+            <button class="theme-toggle" id="themeBtn" aria-label="Toggle light mode">
+                <svg id="themeIcon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            </button>
+            <button class="hamburger" id="menuBtn" aria-label="Menu" aria-expanded="false" aria-controls="mobNav">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- MOBILE NAV -->
+    <div class="mob-nav" id="mobNav" aria-hidden="true">
+        <a href="index.html#about">About</a>
+        <a href="index.html#speaking">Speaking</a>
+        <a href="index.html#recognition">Recognition</a>
+        <a href="index.html#contact">Contact</a>
+    </div>
+
+    <!-- HERO -->
+    <section class="pp-hero">
+        <div class="inner">
+            <p class="pp-eyebrow">Legal</p>
+            <h1 class="pp-title">PRIVACY POLICY</h1>
+            <p class="pp-meta">Last updated: March 31, 2026 &nbsp;&middot;&nbsp; Effective immediately</p>
+        </div>
+    </section>
+
+    <!-- CONTENT -->
+    <main class="pp-body" id="main-content">
+        <div class="inner">
+            <div class="pp-content">
+
+                <h2>Overview</h2>
+                <p>This Privacy Policy describes how Brittani Preschel (<strong>"we," "us,"</strong> or <strong>"our"</strong>) collects, uses, and protects information when you visit <strong>brittanipreschel.com</strong> (the "Site"). By using this Site, you agree to the practices described below.</p>
+                <p>We respect your privacy. This Site does not sell your personal information to third parties.</p>
+
+                <hr class="pp-divider">
+
+                <h2>Information We Collect</h2>
+                <p>We collect information in two ways:</p>
+                <ul>
+                    <li><strong>Information you provide voluntarily</strong> — When you submit the contact form or email capture form, we collect your name, email address, organization, and message content.</li>
+                    <li><strong>Information collected automatically</strong> — When you visit the Site, standard web server logs and analytics tools may record your IP address, browser type, referring URL, pages visited, and time spent on the Site.</li>
+                </ul>
+
+                <hr class="pp-divider">
+
+                <h2>How We Use Your Information</h2>
+                <p>We use the information we collect to:</p>
+                <ul>
+                    <li>Respond to your inquiries, speaking booking requests, or press questions</li>
+                    <li>Send you the newsletter or updates you subscribed to</li>
+                    <li>Understand how visitors use the Site so we can improve it</li>
+                    <li>Comply with applicable laws and regulations</li>
+                </ul>
+                <p>We will not use your email address to send unsolicited commercial messages. You may opt out of any email communication at any time by replying with "unsubscribe" or contacting us directly.</p>
+
+                <hr class="pp-divider">
+
+                <h2>Forms and Third-Party Services</h2>
+                <p>Contact and subscription forms on this Site are processed by <strong>Web3Forms</strong> (<a href="https://web3forms.com" target="_blank" rel="noopener">web3forms.com</a>). When you submit a form, your data is transmitted to Web3Forms servers in accordance with their privacy policy. We receive the submitted data via email. We do not store form submissions in any database operated by this Site.</p>
+                <p>This Site may also use the following third-party services, each of which has its own privacy policy:</p>
+                <ul>
+                    <li><strong>Google Analytics</strong> — website traffic analytics (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">privacy policy</a>)</li>
+                    <li><strong>Google Fonts</strong> — font delivery via Google CDN</li>
+                    <li><strong>Cloudflare Pages</strong> — website hosting and CDN</li>
+                </ul>
+
+                <hr class="pp-divider">
+
+                <h2>Cookies</h2>
+                <p>This Site uses minimal cookies. We do not use advertising cookies or track you across other websites. Analytics tools may set cookies to distinguish unique visitors and sessions. You can disable cookies in your browser settings at any time, though some Site features may not function as expected.</p>
+
+                <hr class="pp-divider">
+
+                <h2>Data Retention</h2>
+                <p>We retain contact form submissions and newsletter subscriber emails only as long as necessary to fulfill the purpose for which they were collected — typically for the duration of an ongoing business relationship. You may request deletion of your information at any time by contacting us.</p>
+
+                <hr class="pp-divider">
+
+                <h2>Your Rights</h2>
+                <p>Depending on your location, you may have certain rights regarding your personal data, including:</p>
+                <ul>
+                    <li>The right to access the personal information we hold about you</li>
+                    <li>The right to request correction of inaccurate data</li>
+                    <li>The right to request deletion of your data</li>
+                    <li>The right to opt out of marketing communications at any time</li>
+                </ul>
+                <p>To exercise any of these rights, contact us at <a href="mailto:brittani@d2ads.com">brittani@d2ads.com</a>.</p>
+
+                <hr class="pp-divider">
+
+                <h2>Children's Privacy</h2>
+                <p>This Site is not directed at children under 13 years of age. We do not knowingly collect personal information from children. If you believe a child has submitted information to us, please contact us and we will delete it promptly.</p>
+
+                <hr class="pp-divider">
+
+                <h2>External Links</h2>
+                <p>This Site may contain links to external websites, including LinkedIn, Instagram, Facebook, and D2 Advertising. We are not responsible for the privacy practices or content of those sites. We encourage you to review their individual privacy policies.</p>
+
+                <hr class="pp-divider">
+
+                <h2>Changes to This Policy</h2>
+                <p>We may update this Privacy Policy from time to time. When we do, we will update the "Last updated" date at the top of this page. Continued use of the Site after any changes constitutes acceptance of the updated policy.</p>
+
+                <hr class="pp-divider">
+
+                <h2>Contact</h2>
+                <p>If you have questions about this Privacy Policy or how your information is handled, please contact:</p>
+                <ul>
+                    <li><strong>Brittani Preschel</strong></li>
+                    <li>D2 Advertising</li>
+                    <li>Ormond Beach, Florida</li>
+                    <li><a href="mailto:brittani@d2ads.com">brittani@d2ads.com</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-top">
+                <span class="footer-logo">BRITTANI PRESCHEL</span>
+                <nav class="footer-nav">
+                    <a href="index.html#about">About</a>
+                    <a href="index.html#speaking">Speaking</a>
+                    <a href="press.html">Press</a>
+                    <a href="index.html#contact">Contact</a>
+                </nav>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/brittanipreschel/" aria-label="LinkedIn" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    </a>
+                    <a href="https://www.instagram.com/d2mfp/?hl=en" aria-label="Instagram" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+                    </a>
+                    <a href="https://www.facebook.com/brittani.preschel" aria-label="Facebook" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Brittani Preschel. All rights reserved. Based in Ormond Beach, Florida.</p>
+                <a href="privacy-policy.html" class="footer-privacy">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        /* === NAV SCROLL === */
+        (function() {
+            var nav = document.getElementById('mainNav');
+            window.addEventListener('scroll', function() {
+                nav.classList.toggle('scrolled', window.scrollY > 40);
+            });
+        })();
+
+        /* === THEME TOGGLE === */
+        (function() {
+            var btn = document.getElementById('themeBtn');
+            var icon = document.getElementById('themeIcon');
+            var sunPath = 'M12 2a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0V3a1 1 0 0 1 1-1zm0 15a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm7.07-12.07a1 1 0 0 1 0 1.41l-.71.71a1 1 0 1 1-1.41-1.41l.71-.71a1 1 0 0 1 1.41 0zM21 11h1a1 1 0 1 1 0 2h-1a1 1 0 1 1 0-2zm-2.22 6.36a1 1 0 0 1 1.41 1.41l-.71.71a1 1 0 0 1-1.41-1.41l.71-.71zM12 20a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0v-1a1 1 0 0 1 1-1zm-6.36-2.22a1 1 0 0 1 0 1.41l-.71.71a1 1 0 0 1-1.41-1.41l.71-.71a1 1 0 0 1 1.41 0zM3 11h1a1 1 0 1 1 0 2H3a1 1 0 1 1 0-2zm1.93-6.07l.71.71A1 1 0 1 1 4.22 7.05l-.71-.71a1 1 0 0 1 1.41-1.41z';
+            var moonPath = 'M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z';
+            var stored = localStorage.getItem('theme');
+            if (stored === 'light') {
+                document.body.classList.add('light');
+                icon.querySelector('path').setAttribute('d', sunPath);
+            }
+            btn.addEventListener('click', function() {
+                var isLight = document.body.classList.toggle('light');
+                icon.querySelector('path').setAttribute('d', isLight ? sunPath : moonPath);
+                localStorage.setItem('theme', isLight ? 'light' : 'dark');
+                btn.setAttribute('aria-label', isLight ? 'Toggle dark mode' : 'Toggle light mode');
+            });
+        })();
+
+        /* === MOBILE NAV === */
+        (function() {
+            var menuBtn = document.getElementById('menuBtn');
+            var mobNav  = document.getElementById('mobNav');
+            menuBtn.addEventListener('click', function() {
+                var open = mobNav.classList.toggle('open');
+                mobNav.setAttribute('aria-hidden', !open);
+                menuBtn.setAttribute('aria-expanded', open);
+            });
+        })();
+    </script>
+</body>
+</html>
