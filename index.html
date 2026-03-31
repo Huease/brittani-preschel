@@ -1005,10 +1005,87 @@
             margin-bottom: 64px;
         }
 
-        .tst-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 48px;
+        .testi-carousel-wrap {
+            position: relative;
+        }
+
+        .testi-track-clip {
+            overflow: hidden;
+        }
+
+        .testi-carousel-track {
+            display: flex;
+            transition: transform 0.5s ease;
+            gap: 32px;
+        }
+
+        .testi-carousel-track .tst-card {
+            flex-shrink: 0;
+        }
+
+        .testi-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: #FFFFFF;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            font-size: 1.1rem;
+            cursor: pointer;
+            z-index: 10;
+            transition: background 0.3s, border-color 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .testi-arrow:hover {
+            background: #C4004F;
+            border-color: #C4004F;
+        }
+
+        .testi-prev {
+            left: -22px;
+        }
+
+        .testi-next {
+            right: -22px;
+        }
+
+        .tst-reviews-link {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .tst-reviews-link a {
+            color: #C4004F;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            border-bottom: 1px solid rgba(196, 0, 79, 0.3);
+            padding-bottom: 2px;
+            transition: border-color 300ms, color 300ms;
+        }
+
+        .tst-reviews-link a:hover {
+            border-color: #C4004F;
+            color: #FFFFFF;
+        }
+
+        body.light .testi-arrow {
+            background: rgba(0, 0, 0, 0.06);
+            border-color: rgba(0, 0, 0, 0.15);
+            color: #080808;
+        }
+
+        body.light .testi-arrow:hover {
+            background: #C4004F;
+            border-color: #C4004F;
+            color: #FFFFFF;
         }
 
         .tst-card {
@@ -1787,9 +1864,16 @@
                 padding: 80px 0;
             }
 
-            .tst-grid {
-                grid-template-columns: 1fr;
-                gap: 40px;
+            .testi-carousel-track .tst-card {
+                min-width: calc(80vw - 48px);
+            }
+
+            .testi-prev {
+                left: 0;
+            }
+
+            .testi-next {
+                right: 0;
             }
 
             .sec-cta {
@@ -2124,42 +2208,79 @@
     <section class="sec-testimonials" id="recognition">
         <div class="section-inner">
         <p class="tst-label reveal">CLIENT RESULTS</p>
-        <div class="tst-grid">
-            <div class="tst-card reveal">
-                <span class="tst-mark">&ldquo;</span>
-                <p class="tst-quote">We at Jerry Ulm CDJR are proud to have achieved the #1 sales ranking among all CDJR dealerships in the country. Brittani Preschel and her team at D2 Advertising made a very significant contribution to our success. They truly work with us as partners and provide the digital advertising expertise to efficiently and effectively drive sales opportunities.</p>
-                <hr class="tst-divider">
-                <p class="tst-name">JOEY FALCON</p>
-                <p class="tst-co">Managing Partner, Jerry Ulm CDJR</p>
+        <div class="testi-carousel-wrap reveal">
+            <button class="testi-arrow testi-prev" id="testiPrev" aria-label="Previous">&#8592;</button>
+            <div class="testi-track-clip">
+                <div class="testi-carousel-track" id="testiTrack">
+                    <div class="tst-card">
+                        <span class="tst-mark">&ldquo;</span>
+                        <p class="tst-quote">We at Jerry Ulm CDJR are proud to have achieved the #1 sales ranking among all CDJR dealerships in the country. Brittani Preschel and her team at D2 Advertising made a very significant contribution to our success. They truly work with us as partners and provide the digital advertising expertise to efficiently and effectively drive sales opportunities.</p>
+                        <hr class="tst-divider">
+                        <p class="tst-name">JOEY FALCON</p>
+                        <p class="tst-co">Managing Partner, Jerry Ulm CDJR</p>
+                    </div>
+                    <div class="tst-card">
+                        <span class="tst-mark">&ldquo;</span>
+                        <p class="tst-quote">I have done business with Brittani Preschel and D2 Advertising for over 10 years. She took me kicking and screaming into the digital and social media age. She is extremely talented on all things digital. It has been a gift to have her on my side.</p>
+                        <hr class="tst-divider">
+                        <p class="tst-name">MICHAEL DEARDOFF</p>
+                        <p class="tst-co">Deardoff Automobile Group</p>
+                    </div>
+                    <div class="tst-card">
+                        <span class="tst-mark">&ldquo;</span>
+                        <p class="tst-quote">We engaged D2 Advertising to enhance the overall performance of the traffic we were already driving. We were amazed. The increase in organic traffic was very impressive. Brittani and her team at D2 rock. They did a great job partnering with us to improve the effectiveness and efficiency of our advertising.</p>
+                        <hr class="tst-divider">
+                        <p class="tst-name">DENISE NELSON</p>
+                        <p class="tst-co">Director of Marketing, Bogin Munns &amp; Munns</p>
+                    </div>
+                    <div class="tst-card">
+                        <span class="tst-mark">&ldquo;</span>
+                        <p class="tst-quote">ACA has partnered with Brittani and the D2 team for over 10 years. She is a pleasure to work with. From social media and digital marketing to conventional TV commercials, she's a guru. Brittani is results focused, innovative, and shows a willingness to go above and beyond to get positive results for her clients.</p>
+                        <hr class="tst-divider">
+                        <p class="tst-name">ACA CLIENT PARTNER</p>
+                        <p class="tst-co">10-Year Agency Partner</p>
+                    </div>
+                    <div class="tst-card">
+                        <span class="tst-mark">&ldquo;</span>
+                        <p class="tst-quote">Brittani and D2 Advertising take a granular approach to digital. What I appreciate most is that the strategy is not a one size fits all approach. She and her team take into account the specific dealership's own strengths in conversion and content. D2 understands the holistic benefit of an integrated approach between search, social, and SEO.</p>
+                        <hr class="tst-divider">
+                        <p class="tst-name">AUTOMOTIVE CLIENT PARTNER</p>
+                        <p class="tst-co">Florida Dealership Group</p>
+                    </div>
+                    <div class="tst-card">
+                        <span class="tst-mark">&ldquo;</span>
+                        <p class="tst-quote">Brittani and her team are a pleasure to work with! They listen to their client's vision and work to bring it to life while staying aligned to your business metrics. They provide great ideas that help elevate your brand and reach!</p>
+                        <hr class="tst-divider">
+                        <p class="tst-name">SAMANTHA CROUCH</p>
+                        <p class="tst-co">&#9733;&#9733;&#9733;&#9733;&#9733; Google Review</p>
+                    </div>
+                    <div class="tst-card">
+                        <span class="tst-mark">&ldquo;</span>
+                        <p class="tst-quote">Brittani and her team are AMAZING! Very creative with flawless execution. Highly recommend her.</p>
+                        <hr class="tst-divider">
+                        <p class="tst-name">JOSEPH KAIM</p>
+                        <p class="tst-co">&#9733;&#9733;&#9733;&#9733;&#9733; Google Review</p>
+                    </div>
+                    <div class="tst-card">
+                        <span class="tst-mark">&ldquo;</span>
+                        <p class="tst-quote">Brittani and her team are responsive and extremely knowledgeable. Great ideas and spend like it is their money.</p>
+                        <hr class="tst-divider">
+                        <p class="tst-name">MITCHELL HYUNDAI</p>
+                        <p class="tst-co">&#9733;&#9733;&#9733;&#9733;&#9733; Google Review</p>
+                    </div>
+                    <div class="tst-card">
+                        <span class="tst-mark">&ldquo;</span>
+                        <p class="tst-quote">I've had the pleasure of working with Brittani on several different projects. They go beyond the duties of an advertising agency to make you feel comfortable and keep close communication to make sure you're happy with the work they've done. Great customer service, great company!</p>
+                        <hr class="tst-divider">
+                        <p class="tst-name">AMANDA GAID</p>
+                        <p class="tst-co">&#9733;&#9733;&#9733;&#9733;&#9733; Google Review</p>
+                    </div>
+                </div>
             </div>
-            <div class="tst-card reveal">
-                <span class="tst-mark">&ldquo;</span>
-                <p class="tst-quote">I have done business with Brittani Preschel and D2 Advertising for over 10 years. She took me kicking and screaming into the digital and social media age. She is extremely talented on all things digital. It has been a gift to have her on my side.</p>
-                <hr class="tst-divider">
-                <p class="tst-name">MICHAEL DEARDOFF</p>
-                <p class="tst-co">Deardoff Automobile Group</p>
-            </div>
-            <div class="tst-card reveal">
-                <span class="tst-mark">&ldquo;</span>
-                <p class="tst-quote">We engaged D2 Advertising to enhance the overall performance of the traffic we were already driving. We were amazed. The increase in organic traffic was very impressive. Brittani and her team at D2 rock. They did a great job partnering with us to improve the effectiveness and efficiency of our advertising.</p>
-                <hr class="tst-divider">
-                <p class="tst-name">DENISE NELSON</p>
-                <p class="tst-co">Director of Marketing, Bogin Munns &amp; Munns</p>
-            </div>
-            <div class="tst-card reveal">
-                <span class="tst-mark">&ldquo;</span>
-                <p class="tst-quote">ACA has partnered with Brittani and the D2 team for over 10 years. She is a pleasure to work with. From social media and digital marketing to conventional TV commercials, she's a guru. Brittani is results focused, innovative, and shows a willingness to go above and beyond to get positive results for her clients.</p>
-                <hr class="tst-divider">
-                <p class="tst-name">ACA CLIENT PARTNER</p>
-                <p class="tst-co">10-Year Agency Partner</p>
-            </div>
-            <div class="tst-card reveal">
-                <span class="tst-mark">&ldquo;</span>
-                <p class="tst-quote">Brittani and D2 Advertising take a granular approach to digital. What I appreciate most is that the strategy is not a one size fits all approach. She and her team take into account the specific dealership's own strengths in conversion and content. D2 understands the holistic benefit of an integrated approach between search, social, and SEO.</p>
-                <hr class="tst-divider">
-                <p class="tst-name">AUTOMOTIVE CLIENT PARTNER</p>
-                <p class="tst-co">Florida Dealership Group</p>
-            </div>
+            <button class="testi-arrow testi-next" id="testiNext" aria-label="Next">&#8594;</button>
+        </div>
+        <div class="tst-reviews-link">
+            <a href="https://g.page/r/CcWpGbt3pVv_EAI/review" target="_blank" rel="noopener">SEE ALL GOOGLE REVIEWS &rarr;</a>
         </div>
         </div>
     </section>
@@ -2557,6 +2678,71 @@
                         success.style.display = 'block';
                     });
                 });
+            }
+        })();
+
+        /* === TESTIMONIALS CAROUSEL === */
+        (function() {
+            var track = document.getElementById('testiTrack');
+            var clipEl = document.querySelector('.testi-track-clip');
+            var cards = track ? track.querySelectorAll('.tst-card') : [];
+            var total = cards.length;
+            var visible = 3;
+            var gap = 32;
+            var current = 0;
+            var autoTimer;
+
+            function setCardWidths() {
+                if (!clipEl || !cards.length) return;
+                var clipW = clipEl.clientWidth;
+                var cardW = Math.floor((clipW - gap * (visible - 1)) / visible);
+                for (var i = 0; i < total; i++) {
+                    cards[i].style.width = cardW + 'px';
+                    cards[i].style.minWidth = cardW + 'px';
+                }
+            }
+
+            function getCardWidth() {
+                if (!cards[0]) return 0;
+                return cards[0].offsetWidth + gap;
+            }
+
+            function goTo(index) {
+                var max = total - visible;
+                if (index < 0) index = max;
+                if (index > max) index = 0;
+                current = index;
+                track.style.transform = 'translateX(-' + (current * getCardWidth()) + 'px)';
+            }
+
+            function startAuto() {
+                autoTimer = setInterval(function() { goTo(current + 1); }, 10000);
+            }
+
+            function resetAuto() {
+                clearInterval(autoTimer);
+                startAuto();
+            }
+
+            var prevBtn = document.getElementById('testiPrev');
+            var nextBtn = document.getElementById('testiNext');
+
+            if (prevBtn) {
+                prevBtn.addEventListener('click', function() { goTo(current - 1); resetAuto(); });
+            }
+            if (nextBtn) {
+                nextBtn.addEventListener('click', function() { goTo(current + 1); resetAuto(); });
+            }
+
+            window.addEventListener('resize', function() {
+                setCardWidths();
+                goTo(current);
+            });
+
+            setCardWidths();
+
+            if (total > visible) {
+                startAuto();
             }
         })();
     </script>
