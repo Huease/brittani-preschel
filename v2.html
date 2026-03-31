@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brittani Preschel | CEO, Speaker, Digital Advertising Leader | Ormond Beach, FL</title>
-    <meta name="description" content="Brittani Preschel is the CEO and Founder of D2 Advertising, a Google Premier Partner agency in Ormond Beach, FL. Named 40 Under 40, Most Influential Women in Business, and Top 50 Women Leaders of Orlando 2026.">
+    <meta name="description" content="Brittani Preschel is CEO and Founder of D2 Advertising, a Google Premier Partner agency in Ormond Beach, Florida. Speaker on digital advertising, AI in marketing, and women in leadership.">
     <link rel="canonical" href="https://brittanipreschel.com/">
     <meta property="og:title" content="Brittani Preschel | CEO, Speaker, Digital Advertising Leader">
     <meta property="og:description" content="CEO and Founder of D2 Advertising. Google Premier Partner. 20+ years building brands that lead markets.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://brittanipreschel.com/">
     <meta property="og:image" content="brittani-preschel-ceo-d2-advertisingheadshot-sitting-down-centered-black-suite.webp">
+    <meta property="og:url" content="https://brittanipreschel.com/">
+    <meta property="og:type" content="profile">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Brittani Preschel | CEO, Speaker, Digital Advertising Leader">
     <meta name="twitter:description" content="CEO and Founder of D2 Advertising. Google Premier Partner. 20+ years building brands that lead markets.">
@@ -22,14 +22,13 @@
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Brittani Preschel",
-        "jobTitle": "CEO & Founder",
+        "jobTitle": "CEO and Founder",
         "worksFor": {"@type": "Organization", "name": "D2 Advertising"},
         "url": "https://brittanipreschel.com/",
         "email": "brittani@d2ads.com",
         "address": {"@type": "PostalAddress", "addressLocality": "Ormond Beach", "addressRegion": "FL", "addressCountry": "US"},
         "sameAs": [
             "https://www.linkedin.com/in/brittanipreschel/",
-            "https://www.facebook.com/brittani.preschel",
             "https://www.instagram.com/d2mfp/"
         ],
         "award": ["40 Under 40", "Most Influential Women in Business", "Top 50 Women Leaders of Orlando 2026"]
@@ -130,6 +129,15 @@
             border-color: #DDDDDD;
         }
 
+        body.light .sec-logos {
+            background: #F0F0F0;
+        }
+
+        body.light .logo-badge {
+            border-color: #CCCCCC;
+            color: #666666;
+        }
+
         body.light .sec-speaking {
             background: #F8F8F8;
         }
@@ -166,6 +174,34 @@
             color: #555555;
         }
 
+        body.light .sec-press {
+            background: #F4F4F4;
+        }
+
+        body.light .press-heading {
+            color: #080808;
+        }
+
+        body.light .press-award {
+            color: #080808;
+        }
+
+        body.light .press-org {
+            color: #555555;
+        }
+
+        body.light .press-card {
+            border-color: #DDDDDD;
+        }
+
+        body.light .sec-community {
+            background: #F8F8F8;
+        }
+
+        body.light .comm-heading {
+            color: #080808;
+        }
+
         body.light .sec-testimonials {
             background: #F8F8F8;
         }
@@ -190,12 +226,26 @@
             background: #F8F8F8;
         }
 
+        body.light .cnt-heading {
+            color: #080808;
+        }
+
         body.light .cnt-email {
             color: #080808;
         }
 
         body.light .cnt-loc {
             color: #555555;
+        }
+
+        body.light .form-input {
+            background: #FFFFFF;
+            border-color: #DDDDDD;
+            color: #080808;
+        }
+
+        body.light .form-input::placeholder {
+            color: #AAAAAA;
         }
 
         body.light .cnt-social a svg {
@@ -211,7 +261,35 @@
             border-color: #DDDDDD;
         }
 
-        body.light .site-footer p {
+        body.light .footer-logo {
+            color: #080808;
+        }
+
+        body.light .footer-nav a {
+            color: #888888;
+        }
+
+        body.light .footer-nav a:hover {
+            color: #080808;
+        }
+
+        body.light .footer-social a svg {
+            fill: #080808;
+        }
+
+        body.light .footer-social a:hover svg {
+            fill: #C4004F;
+        }
+
+        body.light .footer-bottom {
+            border-color: #DDDDDD;
+        }
+
+        body.light .footer-bottom p {
+            color: #999999;
+        }
+
+        body.light .footer-privacy {
             color: #999999;
         }
 
@@ -269,7 +347,6 @@
         }
 
         .nav-link {
-            font-family: 'DM Sans', sans-serif;
             font-weight: 400;
             font-size: 13px;
             color: #888888;
@@ -508,7 +585,6 @@
         }
 
         .marquee-inner span {
-            font-family: 'DM Sans', sans-serif;
             font-weight: 500;
             font-size: 11px;
             text-transform: uppercase;
@@ -520,6 +596,50 @@
         @keyframes scrollMarquee {
             0% { transform: translateX(0); }
             100% { transform: translateX(-50%); }
+        }
+
+        /* === LOGO BAR === */
+        .sec-logos {
+            background: #0F0F0F;
+            padding: 48px 0;
+            transition: background 300ms;
+        }
+
+        .logos-label {
+            font-weight: 500;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+            color: #888888;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+
+        .logos-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+            overflow-x: auto;
+        }
+
+        .logo-badge {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 500;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: #AAAAAA;
+            border: 1px solid #333333;
+            padding: 8px 20px;
+            border-radius: 100px;
+            white-space: nowrap;
+            transition: color 300ms, border-color 300ms;
+        }
+
+        .logo-badge:hover {
+            color: #C4004F;
+            border-color: #C4004F;
         }
 
         /* === SPEAKING === */
@@ -562,6 +682,20 @@
             border-bottom: 1px solid #1E1E1E;
             padding: 28px 0;
             transition: border-color 300ms;
+        }
+
+        a.topic-row {
+            display: flex;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        a.topic-row:hover .topic-arrow {
+            transform: translateX(4px);
+        }
+
+        .topic-arrow {
+            transition: transform 300ms;
         }
 
         .topic-info {
@@ -697,6 +831,120 @@
             color: #FFFFFF;
         }
 
+        /* === PRESS === */
+        .sec-press {
+            background: #0A0A0A;
+            padding: 120px 0;
+            transition: background 300ms;
+        }
+
+        .press-label {
+            font-weight: 500;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+            color: #C4004F;
+            margin-bottom: 16px;
+        }
+
+        .press-heading {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            color: #FFFFFF;
+            margin-bottom: 64px;
+            transition: color 300ms;
+        }
+
+        .press-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        .press-card {
+            border-top: 1px solid #1E1E1E;
+            padding-top: 24px;
+            transition: border-color 300ms;
+        }
+
+        .press-icon {
+            width: 28px;
+            height: 28px;
+            margin-bottom: 16px;
+        }
+
+        .press-award {
+            font-weight: 600;
+            font-size: 14px;
+            color: #FFFFFF;
+            margin-bottom: 6px;
+            transition: color 300ms;
+        }
+
+        .press-org {
+            font-weight: 300;
+            font-size: 12px;
+            color: #888888;
+            transition: color 300ms;
+        }
+
+        .press-year {
+            font-weight: 500;
+            font-size: 11px;
+            color: #C4004F;
+            margin-top: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        /* === COMMUNITY === */
+        .sec-community {
+            background: #080808;
+            padding: 100px 0;
+            transition: background 300ms;
+        }
+
+        .comm-label {
+            font-weight: 500;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+            color: #C4004F;
+            margin-bottom: 16px;
+        }
+
+        .comm-heading {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            color: #FFFFFF;
+            margin-bottom: 24px;
+            transition: color 300ms;
+        }
+
+        .comm-body {
+            font-weight: 300;
+            font-size: 15px;
+            color: #555555;
+            line-height: 1.8;
+            max-width: 640px;
+            margin-bottom: 40px;
+            font-style: italic;
+        }
+
+        .comm-cta {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 500;
+            font-size: 13px;
+            color: #C4004F;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            transition: letter-spacing 300ms;
+        }
+
+        .comm-cta:hover {
+            letter-spacing: 0.25em;
+        }
+
         /* === TESTIMONIALS === */
         .sec-testimonials {
             background: #080808;
@@ -811,14 +1059,17 @@
         .sec-contact {
             background: #080808;
             padding: 120px 0;
-            text-align: center;
             transition: background 300ms;
         }
 
         .cnt-inner {
-            max-width: 800px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 60px;
+            display: grid;
+            grid-template-columns: 1fr 380px;
+            gap: 80px;
+            align-items: start;
         }
 
         .cnt-label {
@@ -827,14 +1078,98 @@
             text-transform: uppercase;
             letter-spacing: 0.3em;
             color: #C4004F;
-            margin-bottom: 48px;
+            margin-bottom: 16px;
+        }
+
+        .cnt-heading {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(2.5rem, 4vw, 3.5rem);
+            color: #FFFFFF;
+            margin-bottom: 40px;
+            transition: color 300ms;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        .form-label {
+            display: block;
+            font-weight: 500;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: #888888;
+            margin-bottom: 8px;
+        }
+
+        .form-input {
+            width: 100%;
+            background: #111111;
+            border: 1px solid #2A2A2A;
+            color: #FFFFFF;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 14px;
+            font-weight: 300;
+            padding: 14px 18px;
+            outline: none;
+            transition: border-color 300ms;
+            appearance: none;
+            -webkit-appearance: none;
+        }
+
+        .form-input:focus {
+            border-color: #C4004F;
+        }
+
+        .form-input::placeholder {
+            color: #444444;
+        }
+
+        .form-select {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23888888' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 16px center;
+            padding-right: 40px;
+            cursor: pointer;
+        }
+
+        .form-select option {
+            background: #111111;
+            color: #FFFFFF;
+        }
+
+        .form-textarea {
+            min-height: 140px;
+            resize: vertical;
+        }
+
+        .form-submit {
+            margin-top: 8px;
+            width: 100%;
+        }
+
+        .form-success {
+            display: none;
+            margin-top: 20px;
+            padding: 16px 20px;
+            background: rgba(196, 0, 79, 0.1);
+            border: 1px solid #C4004F;
+            color: #FFFFFF;
+            font-size: 14px;
+            font-weight: 300;
+        }
+
+        .cnt-info-col {
+            padding-top: 60px;
         }
 
         .cnt-email {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: clamp(2.5rem, 4vw, 4.5rem);
-            color: #FFFFFF;
             display: block;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(1.2rem, 2vw, 1.6rem);
+            color: #FFFFFF;
+            margin-bottom: 12px;
             transition: color 300ms;
         }
 
@@ -842,17 +1177,28 @@
             color: #C4004F;
         }
 
+        .cnt-loc {
+            font-weight: 300;
+            font-size: 14px;
+            color: #888888;
+            margin-bottom: 40px;
+            transition: color 300ms;
+        }
+
         .cnt-social {
             display: flex;
-            justify-content: center;
-            gap: 24px;
-            margin-top: 40px;
+            gap: 20px;
+        }
+
+        .cnt-social a {
+            display: flex;
+            align-items: center;
         }
 
         .cnt-social a svg {
-            width: 28px;
-            height: 28px;
-            fill: #FFFFFF;
+            width: 20px;
+            height: 20px;
+            fill: #555555;
             transition: fill 300ms;
         }
 
@@ -860,20 +1206,11 @@
             fill: #C4004F;
         }
 
-        .cnt-loc {
-            font-weight: 300;
-            font-size: 13px;
-            color: #888888;
-            margin-top: 24px;
-            transition: color 300ms;
-        }
-
         /* === FOOTER === */
         .site-footer {
             background: #080808;
             border-top: 1px solid #1E1E1E;
-            padding: 32px 0;
-            text-align: center;
+            padding: 48px 0 32px;
             transition: background 300ms, border-color 300ms;
         }
 
@@ -883,10 +1220,84 @@
             padding: 0 60px;
         }
 
-        .site-footer p {
+        .footer-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 32px;
+        }
+
+        .footer-logo {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 16px;
+            color: #FFFFFF;
+            letter-spacing: 0.2em;
+            transition: color 300ms;
+        }
+
+        .footer-nav {
+            display: flex;
+            gap: 32px;
+        }
+
+        .footer-nav a {
+            font-size: 12px;
+            font-weight: 400;
+            color: #888888;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            transition: color 300ms;
+        }
+
+        .footer-nav a:hover {
+            color: #FFFFFF;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 16px;
+        }
+
+        .footer-social a {
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-social a svg {
+            width: 18px;
+            height: 18px;
+            fill: #555555;
+            transition: fill 300ms;
+        }
+
+        .footer-social a:hover svg {
+            fill: #C4004F;
+        }
+
+        .footer-bottom {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-top: 1px solid #1A1A1A;
+            padding-top: 24px;
+        }
+
+        .footer-bottom p {
             font-weight: 300;
             font-size: 12px;
             color: #444444;
+        }
+
+        .footer-privacy {
+            font-size: 11px;
+            color: #444444;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            transition: color 300ms;
+        }
+
+        .footer-privacy:hover {
+            color: #888888;
         }
 
         /* === MODAL === */
@@ -903,6 +1314,7 @@
             justify-content: center;
             opacity: 0;
             transition: opacity 300ms;
+            padding: 24px;
         }
 
         .bio-modal.show {
@@ -910,10 +1322,42 @@
             opacity: 1;
         }
 
+        .bio-modal-content {
+            background: #111111;
+            max-width: 680px;
+            width: 100%;
+            max-height: 80vh;
+            overflow-y: auto;
+            padding: 64px 48px 48px;
+            position: relative;
+        }
+
+        .bio-modal-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 48px;
+            color: #FFFFFF;
+            border-left: 3px solid #C4004F;
+            padding-left: 20px;
+            margin-bottom: 32px;
+        }
+
+        .bio-modal-content p {
+            font-weight: 300;
+            font-size: 15px;
+            color: #AAAAAA;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .bio-placeholder {
+            color: #555555 !important;
+            font-style: italic;
+        }
+
         .bio-modal-close {
             position: absolute;
-            top: 24px;
-            right: 32px;
+            top: 20px;
+            right: 24px;
             font-family: 'Bebas Neue', sans-serif;
             font-size: 24px;
             color: #FFFFFF;
@@ -921,16 +1365,11 @@
             border: none;
             z-index: 2001;
             transition: color 300ms;
+            cursor: pointer;
         }
 
         .bio-modal-close:hover {
             color: #C4004F;
-        }
-
-        .bio-modal-img {
-            max-width: 600px;
-            max-height: 90vh;
-            width: 90%;
         }
 
         /* === HERO TOP GRADIENT (nav readability) === */
@@ -1029,7 +1468,6 @@
 
             .section-inner,
             .cta-inner,
-            .cnt-inner,
             .footer-inner {
                 padding: 0 24px;
             }
@@ -1078,6 +1516,16 @@
                 font-size: 64px;
             }
 
+            .press-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .logos-row {
+                overflow-x: auto;
+                flex-wrap: nowrap;
+                -webkit-overflow-scrolling: touch;
+            }
+
             .sec-testimonials {
                 padding: 80px 0;
             }
@@ -1101,8 +1549,35 @@
                 padding: 80px 0;
             }
 
+            .cnt-inner {
+                grid-template-columns: 1fr;
+                padding: 0 24px;
+            }
+
+            .cnt-info-col {
+                padding-top: 0;
+            }
+
             .site-footer {
                 padding: 24px 0;
+            }
+
+            .footer-top {
+                flex-direction: column;
+                gap: 24px;
+                align-items: flex-start;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 12px;
+                align-items: flex-start;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .footer-nav {
+                display: none;
             }
         }
     </style>
@@ -1116,7 +1591,7 @@
             <div class="nav-links">
                 <a href="#about" class="nav-link">About</a>
                 <a href="#speaking" class="nav-link">Speaking</a>
-                <a href="#testimonials" class="nav-link">Credentials</a>
+                <a href="#recognition" class="nav-link">Recognition</a>
                 <a href="#contact" class="nav-link">Contact</a>
             </div>
             <button class="theme-toggle" id="themeBtn" aria-label="Toggle light mode">
@@ -1132,7 +1607,7 @@
     <div class="mob-nav" id="mobNav">
         <a href="#about">About</a>
         <a href="#speaking">Speaking</a>
-        <a href="#testimonials">Credentials</a>
+        <a href="#recognition">Recognition</a>
         <a href="#contact">Contact</a>
     </div>
 
@@ -1149,11 +1624,11 @@
             <p class="hero-sub">20+ years building brands that lead markets.</p>
             <div class="hero-btns">
                 <a href="#contact" class="btn-solid">BOOK BRITTANI</a>
-                <a href="#testimonials" class="btn-ghost">VIEW CREDENTIALS</a>
+                <a href="#recognition" class="btn-ghost">VIEW CREDENTIALS</a>
             </div>
         </div>
         <div class="hero-right">
-            <img src="brittani-preschel-ceo-d2-advertisingheadshot-sitting-down-centered-black-suite.webp" alt="Brittani Preschel, CEO of D2 Advertising" width="800" height="1000">
+            <img src="brittani-preschel-ceo-d2-advertisingheadshot-sitting-down-centered-black-suite.webp" alt="Brittani Preschel, CEO and Founder of D2 Advertising, seated in a black business suit" width="800" height="1000">
             <div class="hero-overlay"></div>
         </div>
     </section>
@@ -1166,6 +1641,21 @@
         </div>
     </div>
 
+    <!-- LOGO BAR -->
+    <section class="sec-logos">
+        <div class="section-inner">
+            <p class="logos-label">RECOGNIZED BY</p>
+            <div class="logos-row">
+                <span class="logo-badge">Daytona Beach News-Journal</span>
+                <span class="logo-badge">Google</span>
+                <span class="logo-badge">We Admire Women</span>
+                <span class="logo-badge">FSU Alumni</span>
+                <span class="logo-badge">Women Techmaker</span>
+                <span class="logo-badge">Facebook Marketing Partner</span>
+            </div>
+        </div>
+    </section>
+
     <!-- SPEAKING -->
     <section class="sec-speaking" id="speaking">
         <div class="section-inner">
@@ -1175,27 +1665,27 @@
                 <p class="spk-body">Before founding D2 Advertising, Brittani built her voice in on-air media and radio. She brought that presence to a Google conference stage and today speaks on the topics defining modern business leadership.</p>
             </div>
             <div>
-                <div class="topic-row reveal">
+                <a href="#contact" class="topic-row reveal">
                     <div class="topic-info">
                         <div class="topic-title">DIGITAL ADVERTISING + AI IN MARKETING</div>
                         <div class="topic-sub">Data-driven strategy and AI-powered campaigns</div>
                     </div>
                     <span class="topic-arrow">&rarr;</span>
-                </div>
-                <div class="topic-row reveal">
+                </a>
+                <a href="#contact" class="topic-row reveal">
                     <div class="topic-info">
                         <div class="topic-title">WOMEN IN LEADERSHIP + BUILDING YOUR AGENCY</div>
                         <div class="topic-sub">Scaling a business and breaking industry barriers</div>
                     </div>
                     <span class="topic-arrow">&rarr;</span>
-                </div>
-                <div class="topic-row reveal">
+                </a>
+                <a href="#contact" class="topic-row reveal">
                     <div class="topic-info">
                         <div class="topic-title">COMMUNITY IMPACT + CORPORATE RESPONSIBILITY</div>
                         <div class="topic-sub">Aligning growth with meaningful community investment</div>
                     </div>
                     <span class="topic-arrow">&rarr;</span>
-                </div>
+                </a>
                 <div class="spk-cta reveal">
                     <a href="#contact" class="btn-solid">BOOK A SPEAKING ENGAGEMENT</a>
                 </div>
@@ -1209,20 +1699,20 @@
         <div class="section-inner">
         <div class="stats-row">
             <div class="stat-box reveal">
-                <div class="stat-num" data-target="2100">0</div>
+                <div class="stat-num" data-target="2100">2100+</div>
                 <div class="stat-lbl">Campaigns Delivered</div>
             </div>
             <div class="stat-box reveal">
-                <div class="stat-num" data-target="20">0</div>
+                <div class="stat-num" data-target="20">20+</div>
                 <div class="stat-lbl">Years Experience</div>
             </div>
             <div class="stat-box reveal">
-                <div class="stat-num" data-target="40">0</div>
+                <div class="stat-num" data-target="40">40+</div>
                 <div class="stat-lbl">Client Partners</div>
             </div>
             <div class="stat-box reveal">
-                <div class="stat-num" data-target="1" data-prefix="#">0</div>
-                <div class="stat-lbl">CDJR Dealership in the Country</div>
+                <div class="stat-num" data-target="1" data-prefix="#">#1</div>
+                <div class="stat-lbl">Top Automotive Partnership in Florida</div>
             </div>
         </div>
         </div>
@@ -1245,8 +1735,70 @@
         </div>
     </section>
 
+    <!-- PRESS + RECOGNITION -->
+    <section class="sec-press" id="press">
+        <div class="section-inner">
+            <p class="press-label reveal">PRESS + RECOGNITION</p>
+            <h2 class="press-heading reveal">A Voice That Gets Noticed</h2>
+            <div class="press-grid">
+                <div class="press-card reveal">
+                    <svg class="press-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6L12 2z" fill="#C4004F"/></svg>
+                    <div class="press-award">40 Under 40</div>
+                    <div class="press-org">Daytona Beach News-Journal</div>
+                    <div class="press-year">2023</div>
+                </div>
+                <div class="press-card reveal">
+                    <svg class="press-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6L12 2z" fill="#C4004F"/></svg>
+                    <div class="press-award">Most Influential Women in Business</div>
+                    <div class="press-org">Daytona Beach News-Journal</div>
+                    <div class="press-year">2023</div>
+                </div>
+                <div class="press-card reveal">
+                    <svg class="press-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6L12 2z" fill="#C4004F"/></svg>
+                    <div class="press-award">Top 50 Women Leaders Orlando</div>
+                    <div class="press-org">We Admire Women</div>
+                    <div class="press-year">2026</div>
+                </div>
+                <div class="press-card reveal">
+                    <svg class="press-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6L12 2z" fill="#C4004F"/></svg>
+                    <div class="press-award">Google Premier Partner</div>
+                    <div class="press-org">Google</div>
+                    <div class="press-year">Active</div>
+                </div>
+                <div class="press-card reveal">
+                    <svg class="press-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6L12 2z" fill="#C4004F"/></svg>
+                    <div class="press-award">Women Techmaker Ambassador</div>
+                    <div class="press-org">Google</div>
+                    <div class="press-year">Active</div>
+                </div>
+                <div class="press-card reveal">
+                    <svg class="press-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6L12 2z" fill="#C4004F"/></svg>
+                    <div class="press-award">Google Cloud Digital Leader</div>
+                    <div class="press-org">Google</div>
+                    <div class="press-year">Active</div>
+                </div>
+                <div class="press-card press-placeholder reveal">
+                    <svg class="press-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6L12 2z" fill="#333333"/></svg>
+                    <div class="press-award" style="color:#555555">[PLACEHOLDER: Add media features, podcast appearances, or press articles]</div>
+                    <div class="press-org" style="color:#444444">To be added</div>
+                    <div class="press-year" style="color:#444444">--</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMMUNITY -->
+    <section class="sec-community" id="community">
+        <div class="section-inner">
+            <p class="comm-label reveal">GIVING BACK</p>
+            <h2 class="comm-heading reveal">Leadership Beyond the Office</h2>
+            <p class="comm-body reveal">[PLACEHOLDER: Brittani will provide details about her community involvement, nonprofit work, and Volusia County initiatives here.]</p>
+            <a href="#contact" class="comm-cta reveal">Learn more about Brittani's community work &rarr;</a>
+        </div>
+    </section>
+
     <!-- TESTIMONIALS -->
-    <section class="sec-testimonials" id="testimonials">
+    <section class="sec-testimonials" id="recognition">
         <div class="section-inner">
         <p class="tst-label reveal">CLIENT RESULTS</p>
         <div class="tst-grid">
@@ -1289,34 +1841,110 @@
     <!-- CONTACT -->
     <section class="sec-contact" id="contact">
         <div class="cnt-inner">
-        <p class="cnt-label reveal">CONTACT</p>
-        <a href="mailto:brittani@d2ads.com" class="cnt-email reveal">BRITTANI@D2ADS.COM</a>
-        <div class="cnt-social reveal">
-            <a href="https://www.linkedin.com/in/brittanipreschel/" target="_blank" rel="noopener" aria-label="LinkedIn">
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-            </a>
-            <a href="https://www.facebook.com/brittani.preschel" target="_blank" rel="noopener" aria-label="Facebook">
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-            </a>
-            <a href="https://www.instagram.com/d2mfp/?hl=en" target="_blank" rel="noopener" aria-label="Instagram">
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 1 0 0-12.324zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405a1.441 1.441 0 1 1-2.882 0 1.441 1.441 0 0 1 2.882 0z"/></svg>
-            </a>
-        </div>
-        <p class="cnt-loc reveal">Based in Ormond Beach, Florida.</p>
+            <div class="cnt-form-col">
+                <p class="cnt-label">GET IN TOUCH</p>
+                <h2 class="cnt-heading">Let's Work Together</h2>
+                <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="cbb49c28-b311-4156-a1e6-798732f7b5c0">
+                    <input type="hidden" name="subject" value="New inquiry from brittanipreschel.com">
+                    <input type="hidden" name="from_name" value="Brittani Preschel Website">
+                    <input type="hidden" name="redirect" value="false">
+                    <input type="checkbox" name="botcheck" style="display:none">
+                    <div class="form-group">
+                        <label class="form-label" for="fullName">Full Name *</label>
+                        <input class="form-input" type="text" id="fullName" name="name" required placeholder="Your full name">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="emailAddr">Email Address *</label>
+                        <input class="form-input" type="email" id="emailAddr" name="email" required placeholder="your@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="orgName">Organization / Company *</label>
+                        <input class="form-input" type="text" id="orgName" name="organization" required placeholder="Your organization">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="inquiryType">Inquiry Type *</label>
+                        <select class="form-input form-select" id="inquiryType" name="inquiry_type" required>
+                            <option value="" disabled selected>Select inquiry type</option>
+                            <option value="Speaking Engagement">Speaking Engagement</option>
+                            <option value="Media / Press">Media / Press</option>
+                            <option value="Business Partnership">Business Partnership</option>
+                            <option value="General Inquiry">General Inquiry</option>
+                        </select>
+                    </div>
+                    <div class="form-group" id="eventDateGroup" style="display:none">
+                        <label class="form-label" for="eventDate">Event Date (optional)</label>
+                        <input class="form-input" type="date" id="eventDate" name="event_date">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="message">Message *</label>
+                        <textarea class="form-input form-textarea" id="message" name="message" required placeholder="Tell Brittani about your event, project, or inquiry..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-solid form-submit">SEND MESSAGE</button>
+                    <div class="form-success" id="formSuccess">
+                        <p>Thank you. Brittani will be in touch within 48 hours.</p>
+                    </div>
+                </form>
+            </div>
+            <div class="cnt-info-col">
+                <p class="cnt-label">DIRECT CONTACT</p>
+                <a href="mailto:brittani@d2ads.com" class="cnt-email">brittani@d2ads.com</a>
+                <p class="cnt-loc">Ormond Beach / Daytona Beach, Florida</p>
+                <div class="cnt-social">
+                    <a href="https://www.linkedin.com/in/brittanipreschel/" aria-label="LinkedIn" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    </a>
+                    <a href="https://www.instagram.com/d2mfp/?hl=en" aria-label="Instagram" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+                    </a>
+                    <a href="https://www.facebook.com/brittani.preschel" aria-label="Facebook" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- FOOTER -->
     <footer class="site-footer">
         <div class="footer-inner">
-            <p>&copy; 2026 Brittani Preschel. All rights reserved.</p>
+            <div class="footer-top">
+                <span class="footer-logo">BRITTANI PRESCHEL</span>
+                <nav class="footer-nav">
+                    <a href="#about">About</a>
+                    <a href="#speaking">Speaking</a>
+                    <a href="#press">Press</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/brittanipreschel/" aria-label="LinkedIn" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    </a>
+                    <a href="https://www.instagram.com/d2mfp/?hl=en" aria-label="Instagram" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+                    </a>
+                    <a href="https://www.facebook.com/brittani.preschel" aria-label="Facebook" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Brittani Preschel. All rights reserved. Based in Ormond Beach, Florida.</p>
+                <a href="#" class="footer-privacy">Privacy Policy</a>
+            </div>
         </div>
     </footer>
 
     <!-- BIO MODAL -->
     <div class="bio-modal" id="bioModal">
         <button class="bio-modal-close" id="closeModal">&times;</button>
-        <img src="Brittani_Bio_.webp" alt="Brittani Preschel Full Bio" class="bio-modal-img">
+        <div class="bio-modal-content">
+            <h2 class="bio-modal-title">ABOUT BRITTANI</h2>
+            <p>Brittani Preschel is the CEO and Founder of D2 Advertising, a full-service digital marketing agency based in Ormond Beach, Florida. A Summa Cum Laude graduate of Florida State University, Brittani began her career in on-air media and radio before transitioning into digital marketing at the national agency level. She founded D2 Advertising on a single conviction: that digital strategy should be the foundation of every marketing decision, not an afterthought.</p>
+            <p>Under her leadership, D2 has grown into a Google Premier Partner with a team of fifteen specialists serving clients across automotive, legal, tourism, healthcare, and retail throughout Florida. The agency is also a Bing Accredited Partner, Facebook Marketing Partner, Google Cloud Digital Leader, and Women Techmaker Ambassador.</p>
+            <p>Brittani has been recognized as one of the Daytona Beach News-Journal's 40 Under 40 and Most Influential Women in Business, and was named to the Top 50 Women Leaders of Orlando 2026 by We Admire Women. She has spoken at Google conferences and continues to represent the next generation of digital advertising leadership.</p>
+            <p class="bio-placeholder">[PLACEHOLDER: Add personal community involvement, family background, or personal mission statement here -- to be completed with Brittani's input.]</p>
+        </div>
     </div>
 
     <script>
@@ -1525,6 +2153,44 @@
                     if (target) {
                         target.scrollIntoView({ behavior: 'smooth', block: 'start' });
                     }
+                });
+            }
+        })();
+
+        /* === INQUIRY TYPE SHOW/HIDE === */
+        (function() {
+            var select = document.getElementById('inquiryType');
+            var dateGroup = document.getElementById('eventDateGroup');
+            if (select) {
+                select.addEventListener('change', function() {
+                    dateGroup.style.display = this.value === 'Speaking Engagement' ? 'block' : 'none';
+                });
+            }
+        })();
+
+        /* === FORM SUBMISSION === */
+        (function() {
+            var form = document.getElementById('contactForm');
+            var success = document.getElementById('formSuccess');
+            var dateGroup = document.getElementById('eventDateGroup');
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    var data = new FormData(form);
+                    fetch(form.action, {
+                        method: 'POST',
+                        body: data
+                    }).then(function(res) {
+                        return res.json();
+                    }).then(function(json) {
+                        if (json.success) {
+                            form.reset();
+                            success.style.display = 'block';
+                            dateGroup.style.display = 'none';
+                        }
+                    }).catch(function() {
+                        success.style.display = 'block';
+                    });
                 });
             }
         })();
