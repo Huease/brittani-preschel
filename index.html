@@ -68,6 +68,8 @@
 
         body {
             font-family: 'DM Sans', sans-serif;
+            font-size: 17px;
+            line-height: 1.7;
             background: #080808;
             color: #FFFFFF;
             overflow-x: hidden;
@@ -707,7 +709,7 @@
 
         .spk-body {
             font-weight: 300;
-            font-size: 15px;
+            font-size: 17px;
             color: #888888;
             line-height: 1.8;
             margin-top: 32px;
@@ -815,13 +817,13 @@
 
         .abt-grid {
             display: grid;
-            grid-template-columns: 380px 1fr;
-            gap: 60px;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
             align-items: center;
             max-width: 1200px;
             width: 100%;
             margin: 0 auto;
-            padding: 0 60px;
+            padding: 0 80px;
             box-sizing: border-box;
         }
 
@@ -842,7 +844,7 @@
 
         .abt-text {
             font-weight: 300;
-            font-size: 16px;
+            font-size: 17px;
             color: #AAAAAA;
             line-height: 1.9;
             margin-bottom: 32px;
@@ -944,7 +946,7 @@
         /* === COMMUNITY === */
         .sec-community {
             background: #080808;
-            padding: 100px 0;
+            padding: 48px 0;
             transition: background 300ms;
         }
 
@@ -967,11 +969,19 @@
 
         .comm-body {
             font-weight: 300;
-            font-size: 15px;
+            font-size: 17px;
             color: #555555;
             line-height: 1.8;
             max-width: 640px;
             margin-bottom: 40px;
+            font-style: italic;
+        }
+
+        .comm-placeholder {
+            background: rgba(255,255,255,0.03);
+            border: 1px dashed rgba(255,255,255,0.1);
+            padding: 20px 24px;
+            border-radius: 4px;
             font-style: italic;
         }
 
@@ -1104,7 +1114,7 @@
 
         .tst-quote {
             font-weight: 300;
-            font-size: 15px;
+            font-size: 17px;
             color: #AAAAAA;
             line-height: 1.8;
             margin-bottom: 24px;
@@ -1143,8 +1153,10 @@
 
         .cta-inner {
             max-width: 1200px;
+            width: 100%;
             margin: 0 auto;
-            padding: 0 60px;
+            padding: 0 80px;
+            box-sizing: border-box;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -1187,7 +1199,7 @@
             max-width: 1200px;
             width: 100%;
             margin: 0 auto;
-            padding: 0 60px;
+            padding: 0 80px;
             box-sizing: border-box;
             display: grid;
             grid-template-columns: 1fr 380px;
@@ -1339,8 +1351,10 @@
 
         .footer-inner {
             max-width: 1200px;
+            width: 100%;
             margin: 0 auto;
-            padding: 0 60px;
+            padding: 0 80px;
+            box-sizing: border-box;
         }
 
         .footer-top {
@@ -1466,7 +1480,7 @@
 
         .bio-modal-content p {
             font-weight: 300;
-            font-size: 15px;
+            font-size: 17px;
             color: #AAAAAA;
             line-height: 1.8;
             margin-bottom: 20px;
@@ -1516,7 +1530,7 @@
             max-width: 1200px;
             width: 100%;
             margin: 0 auto;
-            padding: 0 60px;
+            padding: 0 80px;
             box-sizing: border-box;
         }
 
@@ -1527,9 +1541,15 @@
         }
 
         .email-inner {
-            text-align: center;
-            max-width: 560px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: center;
+            max-width: 1200px;
+            width: 100%;
             margin: 0 auto;
+            padding: 0 80px;
+            box-sizing: border-box;
         }
 
         .email-label {
@@ -1550,7 +1570,7 @@
 
         .email-sub {
             font-weight: 300;
-            font-size: 14px;
+            font-size: 17px;
             color: #888888;
             line-height: 1.7;
             margin-bottom: 32px;
@@ -1884,6 +1904,11 @@
                 flex-direction: column;
                 text-align: center;
                 gap: 32px;
+                padding: 0 24px;
+            }
+
+            .section-inner {
+                padding: 0 24px;
             }
 
             .sec-contact {
@@ -1899,8 +1924,18 @@
                 padding-top: 0;
             }
 
+            .email-inner {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                padding: 0 24px;
+            }
+
             .site-footer {
                 padding: 24px 0;
+            }
+
+            .footer-inner {
+                padding: 0 24px;
             }
 
             .footer-top {
@@ -2079,23 +2114,23 @@
 
     <!-- EMAIL CAPTURE -->
     <section class="sec-email">
-        <div class="section-inner">
-            <div class="email-inner reveal">
+        <div class="email-inner reveal">
+            <div class="email-copy">
                 <p class="email-label">STAY CONNECTED</p>
                 <h2 class="email-heading">Insights Delivered Direct</h2>
                 <p class="email-sub">Leadership strategy, digital marketing trends, and Florida business news -- straight to your inbox.</p>
-                <form class="email-form" id="emailForm" action="https://api.web3forms.com/submit" method="POST">
-                    <input type="hidden" name="access_key" value="cbb49c28-b311-4156-a1e6-798732f7b5c0">
-                    <input type="hidden" name="subject" value="New newsletter signup from brittanipreschel.com">
-                    <input type="hidden" name="redirect" value="false">
-                    <input type="checkbox" name="botcheck" style="display:none">
-                    <div class="email-fields">
-                        <input class="email-input" type="email" name="email" required placeholder="your@email.com">
-                        <button type="submit" class="email-btn">SUBSCRIBE</button>
-                    </div>
-                    <p class="email-success" id="emailSuccess">You're in. Expect sharp thinking, not spam.</p>
-                </form>
             </div>
+            <form class="email-form" id="emailForm" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="cbb49c28-b311-4156-a1e6-798732f7b5c0">
+                <input type="hidden" name="subject" value="New newsletter signup from brittanipreschel.com">
+                <input type="hidden" name="redirect" value="false">
+                <input type="checkbox" name="botcheck" style="display:none">
+                <div class="email-fields">
+                    <input class="email-input" type="email" name="email" required placeholder="your@email.com">
+                    <button type="submit" class="email-btn">SUBSCRIBE</button>
+                </div>
+                <p class="email-success" id="emailSuccess">You're in. Expect sharp thinking, not spam.</p>
+            </form>
         </div>
     </section>
 
@@ -2104,7 +2139,7 @@
         <div class="abt-grid">
             <div class="reveal">
                 <h2 class="abt-heading">ABOUT</h2>
-                <img src="brittani-preschel-headshot009.webp" alt="Brittani Preschel" class="abt-photo" width="380" height="500">
+                <img src="brittani-preschel-headshot009.webp" alt="Brittani Preschel" class="abt-photo" width="380">
             </div>
             <div class="reveal">
                 <p class="abt-text">Brittani Preschel founded D2 Advertising with a clear thesis: digital should be the foundation, not an afterthought. A Summa Cum Laude graduate of Florida State University with a background in on-air media and national agency work, she built D2 into a Google Premier Partner with fifteen specialists driving results across automotive, legal, tourism, and retail markets throughout Florida. Named 40 Under 40 and Most Influential Women in Business by the Daytona Beach News-Journal, and Top 50 Women Leaders of Orlando 2026 by We Admire Women.</p>
@@ -2199,7 +2234,7 @@
         <div class="section-inner">
             <p class="comm-label reveal">GIVING BACK</p>
             <h2 class="comm-heading reveal">Leadership Beyond the Office</h2>
-            <p class="comm-body reveal">[PLACEHOLDER: Brittani will provide details about her community involvement, nonprofit work, and Volusia County initiatives here.]</p>
+            <p class="comm-body comm-placeholder reveal">[PLACEHOLDER: Brittani will provide details about her community involvement, nonprofit work, and Volusia County initiatives here.]</p>
             <a href="#contact" class="comm-cta reveal">Learn more about Brittani's community work &rarr;</a>
         </div>
     </section>
