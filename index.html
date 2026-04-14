@@ -51,6 +51,7 @@
             "occupationLocation": {"@type": "City", "name": "Ormond Beach, FL"},
             "skills": "Digital Advertising, AI Marketing Strategy, Business Leadership, Google Premier Partner"
         },
+        "image": "https://brittanipreschel.com/brittani-preschel-ceo-d2-advertisingheadshot-sitting-down-centered-black-suite.webp",
         "award": ["40 Under 40", "Most Influential Women in Business", "Top 50 Women Leaders of Orlando 2026"]
     }
     </script>
@@ -378,6 +379,9 @@
             text-transform: uppercase;
             letter-spacing: 0.1em;
             transition: color 300ms;
+            min-height: 44px;
+            display: flex;
+            align-items: center;
         }
 
         .nav-link:hover {
@@ -391,6 +395,9 @@
             margin-left: 40px;
             display: flex;
             align-items: center;
+            justify-content: center;
+            min-width: 44px;
+            min-height: 44px;
         }
 
         .theme-toggle svg {
@@ -408,6 +415,10 @@
             border: none;
             padding: 4px;
             margin-left: 16px;
+            min-width: 44px;
+            min-height: 44px;
+            align-items: center;
+            justify-content: center;
         }
 
         .hamburger span {
@@ -2080,7 +2091,7 @@
         <div class="section-inner">
         <div class="spk-grid">
             <div class="reveal">
-                <h2 class="spk-heading">SPEAKING</h2>
+                <h2 class="spk-heading">Digital Advertising & AI Marketing Speaker</h2>
                 <p class="spk-body">Before founding D2 Advertising, Brittani built her voice in on-air media and radio. She brought that presence to a Google conference stage and today speaks on the topics defining modern business leadership.</p>
                 <div class="spk-cta">
                     <a href="#contact" class="btn-solid">BOOK A SPEAKING ENGAGEMENT</a>
@@ -2167,7 +2178,7 @@
                 <img src="brittani-preschel-headshot009.webp" alt="Brittani Preschel" class="abt-photo" width="380" height="475">
             </div>
             <div class="reveal">
-                <h2 class="abt-heading">ABOUT</h2>
+                <h2 class="abt-heading">CEO & Founder, D2 Advertising — Google Premier Partner</h2>
                 <p class="abt-text">Brittani Preschel founded D2 Advertising with a clear thesis: digital should be the foundation, not an afterthought. A Summa Cum Laude graduate of Florida State University with a background in on-air media and national agency work, she built D2 into a Google Premier Partner with fifteen specialists driving results across automotive, legal, tourism, and retail markets throughout Florida. Named 40 Under 40 and Most Influential Women in Business by the Daytona Beach News-Journal, and Top 50 Women Leaders of Orlando 2026 by We Admire Women.</p>
                 <p class="abt-creds">GOOGLE PREMIER PARTNER &middot; BING ACCREDITED &middot; FACEBOOK MARKETING PARTNER</p>
                 <button class="btn-bio" id="openModal">VIEW FULL BIO</button>
@@ -2179,7 +2190,7 @@
     <section class="sec-press" id="press">
         <div class="section-inner">
             <p class="press-label reveal">PRESS + RECOGNITION</p>
-            <h2 class="press-heading reveal">A Voice That Gets Noticed</h2>
+            <h2 class="press-heading reveal">Awards & Media Recognition</h2>
             <div class="press-grid">
                 <div class="press-card reveal">
                     <svg class="press-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6L12 2z" fill="#C4004F"/></svg>
@@ -2254,15 +2265,15 @@
         <div class="section-inner">
             <p class="comm-label reveal">GIVING BACK</p>
             <h2 class="comm-heading reveal">Leadership Beyond the Office</h2>
-            <p class="comm-body comm-placeholder reveal">[PLACEHOLDER: Brittani will provide details about her community involvement, nonprofit work, and Volusia County initiatives here.]</p>
-            <a href="#contact" class="comm-cta reveal">Learn more about Brittani's community work &rarr;</a>
+            <p class="comm-body reveal">Brittani is actively involved in the Volusia County business community and committed to initiatives that support women in business and local economic growth. Details on current partnerships and initiatives coming soon.</p>
+            <a href="#contact" class="comm-cta reveal">Connect with Brittani &rarr;</a>
         </div>
     </section>
 
     <!-- TESTIMONIALS -->
     <section class="sec-testimonials" id="recognition">
         <div class="section-inner">
-        <h2 class="tst-label reveal">CLIENT RESULTS</h2>
+        <h2 class="tst-label reveal">Client Campaign Results</h2>
         <div class="testi-carousel-wrap reveal">
             <button class="testi-arrow testi-prev" id="testiPrev" aria-label="Previous">&#8592;</button>
             <div class="testi-track-clip">
@@ -2598,29 +2609,33 @@
             var statsSection = document.querySelector('.sec-stats');
             var counted = false;
 
+            function animateCounter(num) {
+                var target = parseInt(num.getAttribute('data-target'));
+                var prefix = num.getAttribute('data-prefix') || '';
+                var suffix = target > 10 ? '+' : '';
+                var duration = 2000;
+                var startTime = null;
+
+                function step(timestamp) {
+                    if (!startTime) startTime = timestamp;
+                    var progress = Math.min((timestamp - startTime) / duration, 1);
+                    num.textContent = prefix + Math.floor(progress * target).toLocaleString() + suffix;
+                    if (progress < 1) {
+                        requestAnimationFrame(step);
+                    } else {
+                        num.textContent = prefix + target.toLocaleString() + suffix;
+                    }
+                }
+                requestAnimationFrame(step);
+            }
+
             var observer = new IntersectionObserver(function(entries) {
                 entries.forEach(function(entry) {
                     if (entry.isIntersecting && !counted) {
                         counted = true;
                         var nums = document.querySelectorAll('.stat-num');
                         for (var i = 0; i < nums.length; i++) {
-                            (function(num) {
-                                var target = parseInt(num.getAttribute('data-target'));
-                                var prefix = num.getAttribute('data-prefix') || '';
-                                var suffix = target > 10 ? '+' : '';
-                                var duration = 2000;
-                                var steps = 60;
-                                var increment = target / steps;
-                                var current = 0;
-                                var timer = setInterval(function() {
-                                    current += increment;
-                                    if (current >= target) {
-                                        current = target;
-                                        clearInterval(timer);
-                                    }
-                                    num.textContent = prefix + Math.floor(current).toLocaleString() + suffix;
-                                }, duration / steps);
-                            })(nums[i]);
+                            animateCounter(nums[i]);
                         }
                         observer.unobserve(entry.target);
                     }
