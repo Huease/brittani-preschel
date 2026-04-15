@@ -173,16 +173,16 @@
             background: #C4004F;
         }
 
-        body.light .sec-logos {
-            background: #f0f0f0;
+        body.light .rec-card {
+            background: #ffffff;
         }
 
-        body.light .logo-badge {
-            border-color: #CCCCCC;
-        }
-
-        body.light .logo-badge-text {
+        body.light .rec-card-name {
             color: #111111;
+        }
+
+        body.light .rec-card-sub {
+            color: #888888;
         }
 
         body.light .sec-speaking {
@@ -693,63 +693,71 @@
         }
 
         /* === LOGO BAR === */
-        .sec-logos {
-            background: #1a1a1a;
-            padding: 48px 0;
-            transition: background 300ms;
+        /* === RECOGNIZED BY === */
+        .sec-recognized {
+            padding: 60px 40px;
+            background: transparent;
         }
 
-        .logos-label {
-            font-weight: 500;
+        .rec-label {
+            font-family: 'Bebas Neue', sans-serif;
             font-size: 11px;
-            text-transform: uppercase;
             letter-spacing: 0.3em;
-            color: #c8c8c8;
-            margin-bottom: 24px;
+            color: #999999;
             text-align: center;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
         }
 
-        .logos-row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 16px;
-            justify-content: center;
+        .rec-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            max-width: 900px;
+            margin: 0 auto;
         }
 
-        .logo-badge {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            border: 1px solid #222222;
-            padding: 20px 24px;
-            min-width: 180px;
-            transition: border-color 300ms;
+        .rec-card {
+            border-top: 3px solid #C4004F;
+            background: #1a1a1a;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+            border-radius: 6px;
+            padding: 1.5rem 1.25rem;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
-        .logo-badge:hover {
-            border-color: #C4004F;
+        .rec-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 32px rgba(196, 0, 79, 0.15);
         }
 
-        .logo-badge-wide {
-            min-width: 240px;
+        .rec-icon {
+            width: 32px;
+            height: 32px;
+            display: block;
         }
 
-        .logo-badge-text {
+        .rec-card-name {
             font-family: 'DM Sans', sans-serif;
-            font-weight: 600;
-            font-size: 13px;
-            color: #FFFFFF;
-            letter-spacing: 0.03em;
-            margin-bottom: 4px;
+            font-weight: 700;
+            font-size: 1rem;
+            color: #ffffff;
+            text-decoration: none;
+            display: block;
+            margin: 0.75rem 0 0.25rem;
             transition: color 300ms;
         }
 
-        .logo-badge-sub {
-            font-weight: 300;
-            font-size: 11px;
-            color: #c8c8c8;
+        .rec-card-name:hover {
+            color: #C4004F;
+        }
+
+        .rec-card-sub {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.8rem;
+            color: #aaaaaa;
+            letter-spacing: 0.05em;
             text-transform: uppercase;
-            letter-spacing: 0.15em;
         }
 
         /* === SPEAKING === */
@@ -2070,15 +2078,8 @@
                 grid-template-columns: repeat(2, 1fr);
             }
 
-            .logos-row {
-                flex-wrap: wrap;
-            }
-            .logo-badge {
-                flex: 1 1 calc(50% - 8px);
-                min-width: 0;
-            }
-            .logo-badge-wide {
-                min-width: 0;
+            .rec-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
 
             .sec-testimonials {
@@ -2164,6 +2165,9 @@
             .footer-nav {
                 display: none;
             }
+            .rec-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -2235,37 +2239,55 @@
     </div>
 
     <!-- LOGO BAR -->
-    <div class="sec-logos">
-        <div class="section-inner">
-            <p class="logos-label">RECOGNIZED BY</p>
-            <div class="logos-row">
-                <div class="logo-badge">
-                    <span class="logo-badge-text">Daytona Beach News-Journal</span>
-                    <span class="logo-badge-sub">Print + Digital Media</span>
-                </div>
-                <div class="logo-badge">
-                    <span class="logo-badge-text">Google</span>
-                    <span class="logo-badge-sub">Premier Partner</span>
-                </div>
-                <div class="logo-badge">
-                    <span class="logo-badge-text">We Admire Women</span>
-                    <span class="logo-badge-sub">Top 50 Women Leaders</span>
-                </div>
-                <div class="logo-badge">
-                    <span class="logo-badge-text">FSU Alumni</span>
-                    <span class="logo-badge-sub">Summa Cum Laude</span>
-                </div>
-                <div class="logo-badge">
-                    <span class="logo-badge-text">Women Techmaker</span>
-                    <span class="logo-badge-sub">Google Ambassador</span>
-                </div>
-                <div class="logo-badge logo-badge-wide">
-                    <span class="logo-badge-text">Facebook Marketing Partner</span>
-                    <span class="logo-badge-sub">Meta Business Partner</span>
-                </div>
+    <!-- RECOGNIZED BY -->
+    <section class="sec-recognized" aria-label="Recognition and credentials">
+        <p class="rec-label">Recognized By</p>
+        <div class="rec-grid">
+
+            <div class="rec-card reveal">
+                <!-- Newspaper / document -->
+                <svg class="rec-icon" viewBox="0 0 24 24" fill="none" stroke="#C4004F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8M15 18h-5M10 6h8v4h-8V6Z"/></svg>
+                <a class="rec-card-name" href="https://www.news-journalonline.com" target="_blank" rel="noopener">Daytona Beach News-Journal</a>
+                <span class="rec-card-sub">40 Under 40 · Most Influential Women</span>
             </div>
+
+            <div class="rec-card reveal">
+                <!-- Shield with checkmark -->
+                <svg class="rec-icon" viewBox="0 0 24 24" fill="none" stroke="#C4004F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+                <a class="rec-card-name" href="https://ads.google.com/home/resources/google-partner/" target="_blank" rel="noopener">Google Premier Partner</a>
+                <span class="rec-card-sub">Certified Agency Partner</span>
+            </div>
+
+            <div class="rec-card reveal">
+                <!-- Trophy -->
+                <svg class="rec-icon" viewBox="0 0 24 24" fill="none" stroke="#C4004F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 0 0 5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 1 0 5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>
+                <a class="rec-card-name" href="https://weadmirewomen.com" target="_blank" rel="noopener">We Admire Women</a>
+                <span class="rec-card-sub">Top 50 Women Leaders 2026</span>
+            </div>
+
+            <div class="rec-card reveal">
+                <!-- Graduation cap -->
+                <svg class="rec-icon" viewBox="0 0 24 24" fill="none" stroke="#C4004F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                <a class="rec-card-name" href="https://www.fsu.edu" target="_blank" rel="noopener">Florida State University</a>
+                <span class="rec-card-sub">Summa Cum Laude · Marketing</span>
+            </div>
+
+            <div class="rec-card reveal">
+                <!-- Code bracket + person -->
+                <svg class="rec-icon" viewBox="0 0 24 24" fill="none" stroke="#C4004F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/><circle cx="12" cy="7" r="2.5"/><path d="M9.5 13c0-1.38 1.12-2.5 2.5-2.5s2.5 1.12 2.5 2.5v1.5h-5V13z"/></svg>
+                <a class="rec-card-name" href="https://developers.google.com/womentechmakers" target="_blank" rel="noopener">Women Techmaker</a>
+                <span class="rec-card-sub">Google Ambassador Program</span>
+            </div>
+
+            <div class="rec-card reveal">
+                <!-- Megaphone -->
+                <svg class="rec-icon" viewBox="0 0 24 24" fill="none" stroke="#C4004F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg>
+                <a class="rec-card-name" href="https://www.facebook.com/business/marketing-partners" target="_blank" rel="noopener">Meta Business Partner</a>
+                <span class="rec-card-sub">Facebook Marketing Partner</span>
+            </div>
+
         </div>
-    </div>
+    </section>
 
     <!-- SPEAKING -->
     <section class="sec-speaking" id="speaking">
