@@ -6,7 +6,10 @@
       "Bash(git commit:*)",
       "Bash(git push:*)",
       "Bash(python -)",
-      "Bash(ls:*)"
+      "Bash(ls:*)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(mkdir -p ~/.claude/skills/ux-designer)",
+      "Bash(curl -L https://raw.githubusercontent.com/szilu/ux-designer-skill/main/SKILL.md -o ~/.claude/skills/ux-designer/SKILL.md)"
     ]
   }
 }
