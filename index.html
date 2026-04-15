@@ -643,23 +643,6 @@
             transition: background 300ms;
         }
 
-        /* === MEDIA BAR === */
-        .media-bar {
-            padding: 16px 0;
-            text-align: center;
-        }
-
-        .media-bar-text {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 13px;
-            letter-spacing: 0.15em;
-            color: #999999;
-        }
-
-        body.light .media-bar-text {
-            color: #aaaaaa;
-        }
-
         /* === MARQUEE === */
         .marquee-section {
             background: #C4004F;
@@ -917,7 +900,7 @@
 
         .abt-subtitle {
             font-family: 'Cormorant Garamond', Georgia, serif;
-            font-size: clamp(1.2rem, 2vw, 1.5rem);
+            font-size: 1.3rem;
             font-weight: 600;
             color: #C4004F;
             margin-bottom: 24px;
@@ -1919,6 +1902,23 @@
             margin-top: 8px;
         }
 
+        .insights-teaser {
+            max-width: 640px;
+        }
+
+        .insights-teaser-body {
+            font-weight: 300;
+            font-size: 17px;
+            color: #c8c8c8;
+            line-height: 1.8;
+            margin-bottom: 32px;
+            transition: color 300ms;
+        }
+
+        body.light .insights-teaser-body {
+            color: #555555;
+        }
+
         body.light .sec-insights {
             background: #F4F4F4;
         }
@@ -2225,11 +2225,6 @@
         </div>
     </section>
 
-    <!-- MEDIA CREDIBILITY BAR -->
-    <section class="media-bar" aria-label="Credentials and recognition">
-        <p class="media-bar-text">GOOGLE PREMIER PARTNER &nbsp;&middot;&nbsp; DAYTONA BEACH NEWS-JOURNAL &nbsp;&middot;&nbsp; WE ADMIRE WOMEN &nbsp;&middot;&nbsp; FLORIDA STATE UNIVERSITY &nbsp;&middot;&nbsp; META BUSINESS PARTNER</p>
-    </section>
-
     <!-- MARQUEE -->
     <div class="marquee-section" aria-hidden="true">
         <div class="marquee-inner">
@@ -2445,26 +2440,10 @@
     <section class="sec-insights" id="insights">
         <div class="section-inner">
             <p class="insights-label reveal">THOUGHT LEADERSHIP</p>
-            <h2 class="insights-heading reveal">Perspectives on What's Next</h2>
-            <div class="insights-grid">
-                <div class="insight-card reveal">
-                    <span class="insight-tag">Digital Advertising</span>
-                    <h3 class="insight-title">Why AI Won't Replace Your Media Buyer — But Will Expose the Bad Ones</h3>
-                    <p class="insight-excerpt">The agencies winning right now are the ones treating AI as a multiplier, not a shortcut. Here's what separates signal from noise.</p>
-                    <span class="insight-cta">Coming Soon</span>
-                </div>
-                <div class="insight-card reveal">
-                    <span class="insight-tag">Women in Business</span>
-                    <h3 class="insight-title">Building an Agency in a Market That Didn't Expect You</h3>
-                    <p class="insight-excerpt">Twenty years in, the playbook for women founders hasn't changed as much as the headlines suggest. What actually moves the needle.</p>
-                    <span class="insight-cta">Coming Soon</span>
-                </div>
-                <div class="insight-card reveal">
-                    <span class="insight-tag">Local Markets</span>
-                    <h3 class="insight-title">The Florida Advantage: Why Regional Brands Are Outpacing National Campaigns</h3>
-                    <p class="insight-excerpt">Hyper-local strategy combined with data infrastructure built for scale is reshaping how Florida brands compete nationally.</p>
-                    <span class="insight-cta">Coming Soon</span>
-                </div>
+            <h2 class="insights-heading reveal">Insights on Digital, Leadership, and What's Next</h2>
+            <div class="insights-teaser reveal">
+                <p class="insights-teaser-body">Brittani shares perspectives on digital advertising strategy, women in leadership, and Florida business growth. Articles and interviews coming soon — follow on LinkedIn for the latest.</p>
+                <a href="https://www.linkedin.com/in/brittanipreschel/" target="_blank" rel="noopener" class="btn-solid">FOLLOW ON LINKEDIN</a>
             </div>
         </div>
     </section>
@@ -2474,7 +2453,7 @@
         <div class="section-inner">
             <p class="comm-label reveal">GIVING BACK</p>
             <h2 class="comm-heading reveal">Leadership Beyond the Office</h2>
-            <p class="comm-body reveal">Brittani is actively involved in the Volusia County business community and committed to initiatives that support women in business and local economic growth. Details on current partnerships and initiatives coming soon.</p>
+            <p class="comm-body reveal">Brittani serves as Chairperson of the Volusia County Community Foundation, sits on the Board of Directors for United Way of Volusia-Flagler Counties, and advises Provision Packs in its mission to end childhood food insecurity in the region.</p>
             <a href="#contact" class="comm-cta reveal">Connect with Brittani &rarr;</a>
         </div>
     </section>
