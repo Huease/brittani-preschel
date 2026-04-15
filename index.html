@@ -74,6 +74,8 @@
             --color-rec-label: #999999;
             /* Card subtitles — dark mode: #aaaaaa on #1a1a1a = 7.5:1 ✓ */
             --color-rec-sub: #aaaaaa;
+            /* Muted CTA text — dark mode: #777777 on #111111 = 4.83:1 ✓ */
+            --color-muted-cta: #777777;
         }
 
         body.light {
@@ -85,6 +87,8 @@
             --color-rec-label: #595959;
             /* Card subtitles — light mode: #595959 on #ffffff = 7.0:1 ✓ */
             --color-rec-sub: #595959;
+            /* Muted CTA text — light mode: #595959 on #F4F4F4 ≈ 6+:1 ✓ */
+            --color-muted-cta: #595959;
         }
 
         /* === RESET === */
@@ -1917,7 +1921,7 @@
             font-size: 11px;
             text-transform: uppercase;
             letter-spacing: 0.15em;
-            color: #777777;
+            color: var(--color-muted-cta);
             margin-top: 8px;
         }
 
