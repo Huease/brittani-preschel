@@ -3,3 +3,4 @@ node_modules
 brittani-site.zip
 pw-screenshots/
 test-results/
+.claude/settings.local.json
