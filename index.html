@@ -76,6 +76,10 @@
             --color-rec-sub: #aaaaaa;
             /* Muted CTA text — dark mode: #777777 on #111111 = 4.83:1 ✓ */
             --color-muted-cta: #777777;
+            /* Accent text used on light/dark surfaces (light-mode needs deeper tone) */
+            --color-accent-text: #C4004F;
+            /* Accent text used on white/light UI surfaces (e.g., white buttons) */
+            --color-accent-text-lightbg: #8C0039;
         }
 
         body.light {
@@ -89,6 +93,8 @@
             --color-rec-sub: #595959;
             /* Muted CTA text — light mode: #595959 on #F4F4F4 ≈ 6+:1 ✓ */
             --color-muted-cta: #595959;
+            --color-accent-text: #8C0039;
+            --color-accent-text-lightbg: #8C0039;
         }
 
         /* === RESET === */
@@ -511,7 +517,7 @@
         }
 
         .mob-nav a:hover {
-            color: #C4004F;
+            color: var(--color-accent-text);
         }
 
         /* === HERO === */
@@ -560,7 +566,7 @@
             font-size: clamp(5.5rem, 7.7vw, 8.25rem);
             line-height: 0.9;
             letter-spacing: 0.05em;
-            color: #C4004F;
+            color: var(--color-accent-text);
             display: block;
             margin-bottom: 32px;
             opacity: 0;
@@ -756,7 +762,7 @@
         }
 
         .rec-card-name:hover {
-            color: #C4004F;
+            color: var(--color-accent-text);
         }
 
         .rec-card-sub {
@@ -824,7 +830,7 @@
 
         .topic-arrow {
             font-size: 18px;
-            color: #C4004F;
+            color: var(--color-accent-text);
             flex-shrink: 0;
             margin-left: 24px;
             transition: transform 300ms;
@@ -926,7 +932,7 @@
             font-family: 'Cormorant Garamond', Georgia, serif;
             font-size: 1.3rem;
             font-weight: 600;
-            color: #C4004F;
+            color: var(--color-accent-text);
             margin-bottom: 24px;
             letter-spacing: 0.02em;
             line-height: 1.4;
@@ -956,7 +962,7 @@
             font-size: 13px;
             text-transform: uppercase;
             letter-spacing: 0.15em;
-            color: #C4004F;
+            color: var(--color-accent-text);
             margin-bottom: 40px;
         }
 
@@ -964,15 +970,15 @@
             font-family: 'Bebas Neue', sans-serif;
             font-size: 15px;
             background: transparent;
-            border: 1px solid #C4004F;
-            color: #C4004F;
+            border: 1px solid var(--color-accent-text);
+            color: var(--color-accent-text);
             padding: 12px 32px;
             border-radius: 0;
             transition: background 300ms, color 300ms;
         }
 
         .btn-bio:hover {
-            background: #C4004F;
+            background: var(--color-accent-text);
             color: #FFFFFF;
         }
 
@@ -988,7 +994,7 @@
             font-size: 11px;
             text-transform: uppercase;
             letter-spacing: 0.3em;
-            color: #C4004F;
+            color: var(--color-accent-text);
             margin-bottom: 16px;
         }
 
@@ -1064,8 +1070,8 @@
         }
 
         .press-org a:hover {
-            color: #C4004F;
-            border-bottom-color: #C4004F;
+            color: var(--color-accent-text);
+            border-bottom-color: var(--color-accent-text);
         }
 
         body.light .press-org {
@@ -1075,7 +1081,7 @@
         .press-year {
             font-weight: 500;
             font-size: 11px;
-            color: #C4004F;
+            color: var(--color-accent-text);
             margin-top: 8px;
             text-transform: uppercase;
             letter-spacing: 0.1em;
@@ -1093,7 +1099,7 @@
             font-size: 11px;
             text-transform: uppercase;
             letter-spacing: 0.3em;
-            color: #C4004F;
+            color: var(--color-accent-text);
             margin-bottom: 16px;
         }
 
@@ -1129,7 +1135,7 @@
             font-family: 'DM Sans', sans-serif;
             font-weight: 500;
             font-size: 13px;
-            color: #C4004F;
+            color: var(--color-accent-text);
             text-transform: uppercase;
             letter-spacing: 0.15em;
             transition: letter-spacing 300ms;
@@ -1151,7 +1157,7 @@
             font-size: 11px;
             text-transform: uppercase;
             letter-spacing: 0.3em;
-            color: #C4004F;
+            color: var(--color-accent-text);
             margin-bottom: 40px;
         }
 
@@ -1211,7 +1217,7 @@
         }
 
         .tst-reviews-link a {
-            color: #C4004F;
+            color: var(--color-accent-text);
             font-size: 12px;
             font-weight: 700;
             letter-spacing: 0.12em;
@@ -1222,7 +1228,7 @@
         }
 
         .tst-reviews-link a:hover {
-            border-color: #C4004F;
+            border-color: var(--color-accent-text);
             color: #FFFFFF;
         }
 
@@ -1246,7 +1252,7 @@
         .tst-mark {
             font-family: 'Bebas Neue', sans-serif;
             font-size: 72px;
-            color: #C4004F;
+            color: var(--color-accent-text);
             line-height: 0.6;
             margin-bottom: 16px;
             display: block;
@@ -1316,7 +1322,7 @@
             font-family: 'Bebas Neue', sans-serif;
             font-size: 18px;
             background: #FFFFFF;
-            color: #C4004F;
+            color: var(--color-accent-text-lightbg);
             padding: 18px 48px;
             border: none;
             border-radius: 0;
@@ -1379,7 +1385,7 @@
             font-size: 11px;
             text-transform: uppercase;
             letter-spacing: 0.3em;
-            color: #C4004F;
+            color: var(--color-accent-text);
             margin-bottom: 16px;
         }
 
@@ -1475,7 +1481,7 @@
         }
 
         .cnt-email:hover {
-            color: #C4004F;
+            color: var(--color-accent-text);
         }
 
         .cnt-loc {
@@ -1506,7 +1512,7 @@
         }
 
         .cnt-social a:hover svg {
-            fill: #C4004F;
+            fill: var(--color-accent-text);
         }
 
         /* === FOOTER === */
@@ -1676,7 +1682,7 @@
         }
 
         .bio-modal-close:hover {
-            color: #C4004F;
+            color: var(--color-accent-text);
         }
 
         body.light .bio-modal {
@@ -1700,7 +1706,7 @@
         }
 
         body.light .bio-modal-close:hover {
-            color: #C4004F;
+            color: var(--color-accent-text);
         }
 
         /* === HERO TOP GRADIENT (nav readability) === */
@@ -1751,7 +1757,7 @@
             font-size: 11px;
             text-transform: uppercase;
             letter-spacing: 0.3em;
-            color: #C4004F;
+            color: var(--color-accent-text);
             margin-bottom: 16px;
         }
 
@@ -1821,7 +1827,7 @@
             display: none;
             margin-top: 16px;
             font-size: 13px;
-            color: #C4004F;
+            color: var(--color-accent-text);
             letter-spacing: 0.05em;
         }
 
@@ -1857,7 +1863,7 @@
             font-size: 11px;
             text-transform: uppercase;
             letter-spacing: 0.3em;
-            color: #C4004F;
+            color: var(--color-accent-text);
             margin-bottom: 16px;
         }
 
@@ -1895,7 +1901,7 @@
             font-size: 10px;
             text-transform: uppercase;
             letter-spacing: 0.2em;
-            color: #C4004F;
+            color: var(--color-accent-text);
         }
 
         .insight-title {
@@ -2238,7 +2244,7 @@
             <div class="hero-rule"></div>
             <p class="hero-sub">20+ years building brands that lead markets.</p>
             <div class="hero-btns">
-                <a href="#contact" class="btn-solid">BOOK BRITTANI</a>
+                <a href="#contact-hero" class="btn-solid">BOOK BRITTANI</a>
                 <a href="#recognition" class="btn-ghost">VIEW CREDENTIALS</a>
             </div>
         </div>
@@ -2315,25 +2321,25 @@
                 <h2 class="spk-heading">Digital Advertising & AI Marketing Speaker</h2>
                 <p class="spk-body">Before founding D2 Advertising, Brittani built her voice in on-air media and radio. She brought that presence to a Google conference stage and today speaks on the topics defining modern business leadership.</p>
                 <div class="spk-cta">
-                    <a href="#contact" class="btn-solid">BOOK A SPEAKING ENGAGEMENT</a>
+                    <a href="#contact-speaking" class="btn-solid">BOOK A SPEAKING ENGAGEMENT</a>
                 </div>
             </div>
             <div>
-                <a href="#contact" class="topic-row reveal">
+                <a href="#contact-digital" class="topic-row reveal">
                     <div class="topic-info">
                         <div class="topic-title">DIGITAL ADVERTISING + AI IN MARKETING</div>
                         <div class="topic-sub">Data-driven strategy and AI-powered campaigns</div>
                     </div>
                     <span class="topic-arrow">&rarr;</span>
                 </a>
-                <a href="#contact" class="topic-row reveal">
+                <a href="#contact-leadership" class="topic-row reveal">
                     <div class="topic-info">
                         <div class="topic-title">WOMEN IN LEADERSHIP + BUILDING YOUR AGENCY</div>
                         <div class="topic-sub">Scaling a business and breaking industry barriers</div>
                     </div>
                     <span class="topic-arrow">&rarr;</span>
                 </a>
-                <a href="#contact" class="topic-row reveal">
+                <a href="#contact-community" class="topic-row reveal">
                     <div class="topic-info">
                         <div class="topic-title">COMMUNITY IMPACT + CORPORATE RESPONSIBILITY</div>
                         <div class="topic-sub">Aligning growth with meaningful community investment</div>
@@ -2381,7 +2387,11 @@
                 <input type="hidden" name="access_key" value="cbb49c28-b311-4156-a1e6-798732f7b5c0">
                 <input type="hidden" name="subject" value="New newsletter signup from brittanipreschel.com">
                 <input type="hidden" name="redirect" value="false">
-                <input type="checkbox" name="botcheck" style="display:none">
+                <fieldset style="display:none">
+                    <legend>Spam prevention</legend>
+                    <input type="checkbox" name="botcheck" id="emailBotcheck">
+                    <label for="emailBotcheck">Do not check this box</label>
+                </fieldset>
                 <div class="email-fields">
                     <label for="emailCapture" class="sr-only">Email address</label>
                     <input class="email-input" type="email" id="emailCapture" name="email" required placeholder="your@email.com">
@@ -2424,7 +2434,7 @@
                     <!-- Crown: Most Influential Women in Business -->
                     <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#C4004F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="press-icon"><path d="M2 19h20M2 19l3-9 5 4 2-6 2 6 5-4 3 9"/><circle cx="12" cy="5" r="1" fill="#C4004F"/><circle cx="5" cy="10" r="1" fill="#C4004F"/><circle cx="19" cy="10" r="1" fill="#C4004F"/></svg>
                     <div class="press-award">Most Influential Women in Business</div>
-                    <div class="press-org"><a href="https://www.news-journalonline.com/" target="_blank" rel="noopener">Daytona Beach News-Journal</a></div>
+                    <div class="press-org">Daytona Beach News-Journal</div>
                     <div class="press-year">2023</div>
                 </div>
                 <div class="press-card reveal">
@@ -2445,14 +2455,14 @@
                     <!-- Code + person: Women Techmaker Ambassador -->
                     <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#C4004F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="press-icon"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/><circle cx="12" cy="7" r="2.5"/><path d="M9.5 13c0-1.38 1.12-2.5 2.5-2.5s2.5 1.12 2.5 2.5v1.5h-5V13z"/></svg>
                     <div class="press-award">Women Techmaker Ambassador</div>
-                    <div class="press-org"><a href="https://www.google.com/" target="_blank" rel="noopener">Google</a></div>
+                    <div class="press-org">Google</div>
                     <div class="press-year">Active</div>
                 </div>
                 <div class="press-card reveal">
                     <!-- Cloud + bolt: Google Cloud Digital Leader -->
                     <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#C4004F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="press-icon"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/><polyline points="13 11 11 15 14 15 12 19"/></svg>
                     <div class="press-award">Google Cloud Digital Leader</div>
-                    <div class="press-org"><a href="https://www.google.com/" target="_blank" rel="noopener">Google</a></div>
+                    <div class="press-org">Google</div>
                     <div class="press-year">Active</div>
                 </div>
             </div>
@@ -2477,7 +2487,7 @@
             <p class="comm-label reveal">GIVING BACK</p>
             <h2 class="comm-heading reveal">Leadership Beyond the Office</h2>
             <p class="comm-body reveal">Brittani serves as Chairperson of the Volusia County Community Foundation, sits on the Board of Directors for United Way of Volusia-Flagler Counties, and advises Provision Packs in its mission to end childhood food insecurity in the region.</p>
-            <a href="#contact" class="comm-cta reveal">Connect with Brittani &rarr;</a>
+            <a href="#contact-community" class="comm-cta reveal">Connect with Brittani &rarr;</a>
         </div>
     </section>
 
@@ -2576,6 +2586,11 @@
     <section class="sec-contact" id="contact">
         <div class="cnt-inner">
             <div class="cnt-form-col">
+                <span id="contact-hero" class="sr-only"></span>
+                <span id="contact-speaking" class="sr-only"></span>
+                <span id="contact-digital" class="sr-only"></span>
+                <span id="contact-leadership" class="sr-only"></span>
+                <span id="contact-community" class="sr-only"></span>
                 <p class="cnt-label">GET IN TOUCH</p>
                 <h2 class="cnt-heading">Let's Get Started</h2>
                 <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
@@ -2583,7 +2598,11 @@
                     <input type="hidden" name="subject" value="New inquiry from brittanipreschel.com">
                     <input type="hidden" name="from_name" value="Brittani Preschel Website">
                     <input type="hidden" name="redirect" value="false">
-                    <input type="checkbox" name="botcheck" style="display:none">
+                    <fieldset style="display:none">
+                        <legend>Spam prevention</legend>
+                        <input type="checkbox" name="botcheck" id="contactBotcheck">
+                        <label for="contactBotcheck">Do not check this box</label>
+                    </fieldset>
                     <div class="form-group">
                         <label class="form-label" for="fullName">Full Name *</label>
                         <input class="form-input" type="text" id="fullName" name="name" required placeholder="Your full name">
