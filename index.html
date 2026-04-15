@@ -106,7 +106,7 @@
         }
 
         body.light .nav-logo {
-            color: #111111;
+            /* color handled by SVG fill */
         }
 
         body.light .nav-link {
@@ -356,11 +356,15 @@
         }
 
         .nav-logo {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 16px;
-            color: #FFFFFF;
-            letter-spacing: 0.2em;
-            transition: color 300ms;
+            display: flex;
+            align-items: center;
+            line-height: 1;
+        }
+
+        .nav-logo img {
+            height: 48px;
+            width: auto;
+            display: block;
         }
 
         .nav-right {
@@ -2060,7 +2064,7 @@
 
     <!-- NAV -->
     <nav class="nav" id="mainNav">
-        <a href="#" class="nav-logo">BRITTANI PRESCHEL</a>
+        <a href="#" class="nav-logo"><img src="/brittani-logo.svg" alt="Brittani Preschel" height="48" width="224"></a>
         <div class="nav-right">
             <div class="nav-links">
                 <a href="#about" class="nav-link">About</a>

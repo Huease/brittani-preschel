@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 120"
+     role="img" aria-label="Brittani Preschel — CEO, Founder, Speaker">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;700&amp;display=swap');
+    </style>
+  </defs>
+
+  <!--
+    on-light  : white background, crimson wordmark  — shown by default
+    on-dark   : transparent background, crimson wordmark — hidden by default
+    Toggle visibility with JS or CSS as needed.
+  -->
+
+  <!-- ═══ ON-LIGHT: white background version ═══ -->
+  <g id="on-light">
+    <rect width="560" height="120" fill="#ffffff"/>
+
+    <!-- Primary wordmark -->
+    <text
+      x="280" y="62"
+      font-family="'Cormorant Garamond', Georgia, serif"
+      font-weight="700"
+      font-size="44"
+      letter-spacing="6.6"
+      fill="#C4004F"
+      text-anchor="middle">BRITTANI PRESCHEL</text>
+
+    <!-- Divider rule at 40% opacity -->
+    <line x1="20" y1="76" x2="540" y2="76"
+      stroke="#C4004F" stroke-opacity="0.4" stroke-width="1"/>
+
+    <!-- Tagline — 40% of main size ≈ 17.6px → 18px, lighter weight -->
+    <text
+      x="280" y="100"
+      font-family="'Cormorant Garamond', Georgia, serif"
+      font-weight="300"
+      font-size="18"
+      letter-spacing="3.6"
+      fill="#888888"
+      text-anchor="middle">CEO · FOUNDER · SPEAKER</text>
+  </g>
+
+  <!-- ═══ ON-DARK: transparent background version ═══ -->
+  <g id="on-dark" display="none">
+
+    <!-- Primary wordmark — crimson reads on dark backgrounds -->
+    <text
+      x="280" y="62"
+      font-family="'Cormorant Garamond', Georgia, serif"
+      font-weight="700"
+      font-size="44"
+      letter-spacing="6.6"
+      fill="#C4004F"
+      text-anchor="middle">BRITTANI PRESCHEL</text>
+
+    <!-- Divider rule, slightly more opaque on dark -->
+    <line x1="20" y1="76" x2="540" y2="76"
+      stroke="#C4004F" stroke-opacity="0.6" stroke-width="1"/>
+
+    <!-- Tagline — lighter gray for dark backgrounds -->
+    <text
+      x="280" y="100"
+      font-family="'Cormorant Garamond', Georgia, serif"
+      font-weight="300"
+      font-size="18"
+      letter-spacing="3.6"
+      fill="#aaaaaa"
+      text-anchor="middle">CEO · FOUNDER · SPEAKER</text>
+  </g>
+</svg>
