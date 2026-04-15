@@ -489,18 +489,6 @@
             z-index: 2;
         }
 
-        .hero-eyebrow {
-            font-family: 'DM Sans', sans-serif;
-            font-weight: 400;
-            font-size: 11px;
-            letter-spacing: 0.35em;
-            text-transform: uppercase;
-            color: #C4004F;
-            margin-bottom: 32px;
-            opacity: 0;
-            transform: translateY(10px);
-        }
-
         .hero-name-white {
             font-family: 'Cormorant Garamond', Georgia, serif;
             font-weight: 900;
@@ -2117,7 +2105,6 @@
     <section class="hero">
         <div class="hero-top-gradient" aria-hidden="true"></div>
         <div class="hero-left">
-            <p class="hero-eyebrow">CEO &middot; Founder &middot; Speaker &middot; Digital Strategist</p>
             <h1>
                 <span class="hero-name-white">BRITTANI</span>
                 <span class="hero-name-pink">PRESCHEL</span>
@@ -2631,7 +2618,6 @@
 
         /* === HERO ENTRANCE === */
         window.addEventListener('load', function() {
-            var eyebrow = document.querySelector('.hero-eyebrow');
             var nameW = document.querySelector('.hero-name-white');
             var nameP = document.querySelector('.hero-name-pink');
             var tagline = document.querySelector('.hero-tagline');
@@ -2640,16 +2626,10 @@
             var btns = document.querySelector('.hero-btns');
 
             setTimeout(function() {
-                eyebrow.style.transition = 'opacity 600ms ease, transform 600ms ease';
-                eyebrow.style.opacity = '1';
-                eyebrow.style.transform = 'translateY(0)';
-            }, 200);
-
-            setTimeout(function() {
                 nameW.style.transition = 'opacity 700ms ease, transform 700ms ease';
                 nameW.style.opacity = '1';
                 nameW.style.transform = 'translateX(0)';
-            }, 400);
+            }, 200);
 
             setTimeout(function() {
                 nameP.style.transition = 'opacity 700ms ease, transform 700ms ease';
