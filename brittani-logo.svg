@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 120"
+<!--
+  brittani-logo.svg
+  ViewBox: 640 × 120  (40px padding left/right, 20px top/bottom)
+  Text center: x=320
+  Text area: x=40 to x=600 (560px usable width)
+  "BRITTANI PRESCHEL" at 44px Georgia Bold ≈ 540px rendered → fits with margin
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 120"
+     overflow="visible"
      role="img" aria-label="Brittani Preschel — CEO, Founder, Speaker">
   <defs>
     <style>
@@ -8,18 +16,17 @@
   </defs>
 
   <!--
-    on-light  : white background, crimson wordmark  — shown by default
-    on-dark   : transparent background, crimson wordmark — hidden by default
-    Toggle visibility with JS or CSS as needed.
+    on-light : white background, crimson wordmark  — shown by default
+    on-dark  : transparent background, crimson wordmark — hidden by default
   -->
 
   <!-- ═══ ON-LIGHT: white background version ═══ -->
   <g id="on-light">
-    <rect width="560" height="120" fill="#ffffff"/>
+    <rect width="640" height="120" fill="#ffffff"/>
 
-    <!-- Primary wordmark -->
+    <!-- Primary wordmark — centered at x=320 -->
     <text
-      x="280" y="62"
+      x="320" y="62"
       font-family="'Cormorant Garamond', Georgia, serif"
       font-weight="700"
       font-size="44"
@@ -27,13 +34,13 @@
       fill="#C4004F"
       text-anchor="middle">BRITTANI PRESCHEL</text>
 
-    <!-- Divider rule at 40% opacity -->
-    <line x1="20" y1="76" x2="540" y2="76"
+    <!-- Divider rule at 40% opacity — spans x=40 to x=600 -->
+    <line x1="40" y1="76" x2="600" y2="76"
       stroke="#C4004F" stroke-opacity="0.4" stroke-width="1"/>
 
-    <!-- Tagline — 40% of main size ≈ 17.6px → 18px, lighter weight -->
+    <!-- Tagline: 40% of 44px ≈ 18px, weight 300 -->
     <text
-      x="280" y="100"
+      x="320" y="100"
       font-family="'Cormorant Garamond', Georgia, serif"
       font-weight="300"
       font-size="18"
@@ -45,9 +52,9 @@
   <!-- ═══ ON-DARK: transparent background version ═══ -->
   <g id="on-dark" display="none">
 
-    <!-- Primary wordmark — crimson reads on dark backgrounds -->
+    <!-- Primary wordmark — crimson on dark backgrounds -->
     <text
-      x="280" y="62"
+      x="320" y="62"
       font-family="'Cormorant Garamond', Georgia, serif"
       font-weight="700"
       font-size="44"
@@ -56,12 +63,12 @@
       text-anchor="middle">BRITTANI PRESCHEL</text>
 
     <!-- Divider rule, slightly more opaque on dark -->
-    <line x1="20" y1="76" x2="540" y2="76"
+    <line x1="40" y1="76" x2="600" y2="76"
       stroke="#C4004F" stroke-opacity="0.6" stroke-width="1"/>
 
     <!-- Tagline — lighter gray for dark backgrounds -->
     <text
-      x="280" y="100"
+      x="320" y="100"
       font-family="'Cormorant Garamond', Georgia, serif"
       font-weight="300"
       font-size="18"
