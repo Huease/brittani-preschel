@@ -19,8 +19,8 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:wght@400;700&family=DM+Sans:wght@300;400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:wght@400;700&family=DM+Sans:wght@300;400;500;600&display=swap"></noscript>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:wght@300;400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:wght@300;400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap"></noscript>
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -502,10 +502,11 @@
         }
 
         .hero-name-white {
-            font-family: 'Bebas Neue', sans-serif;
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-weight: 900;
             font-size: clamp(5rem, 7vw, 7.5rem);
             line-height: 0.9;
-            color: #FFFFFF;
+            color: #111111;
             display: block;
             margin-bottom: 0;
             opacity: 0;
@@ -513,8 +514,13 @@
             transition: color 300ms;
         }
 
+        body:not(.light) .hero-name-white {
+            color: #f0f0f0;
+        }
+
         .hero-name-pink {
-            font-family: 'Bebas Neue', sans-serif;
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-weight: 900;
             font-size: clamp(5rem, 7vw, 7.5rem);
             line-height: 0.9;
             color: #C4004F;
@@ -522,6 +528,22 @@
             margin-bottom: 32px;
             opacity: 0;
             transform: translateX(-30px);
+        }
+
+        .hero-tagline {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-weight: 400;
+            font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+            letter-spacing: 0.2em;
+            color: #666666;
+            margin-bottom: 20px;
+            opacity: 0;
+            transform: translateX(-30px);
+            transition: color 300ms;
+        }
+
+        body:not(.light) .hero-tagline {
+            color: #a0a0a0;
         }
 
         .hero-rule {
@@ -2100,6 +2122,7 @@
                 <span class="hero-name-white">BRITTANI</span>
                 <span class="hero-name-pink">PRESCHEL</span>
             </h1>
+            <p class="hero-tagline">CEO · Founder · Speaker · Digital Strategist</p>
             <div class="hero-rule"></div>
             <p class="hero-sub">20+ years building brands that lead markets.</p>
             <div class="hero-btns">
@@ -2611,6 +2634,7 @@
             var eyebrow = document.querySelector('.hero-eyebrow');
             var nameW = document.querySelector('.hero-name-white');
             var nameP = document.querySelector('.hero-name-pink');
+            var tagline = document.querySelector('.hero-tagline');
             var rule = document.querySelector('.hero-rule');
             var sub = document.querySelector('.hero-sub');
             var btns = document.querySelector('.hero-btns');
@@ -2634,20 +2658,26 @@
             }, 550);
 
             setTimeout(function() {
+                tagline.style.transition = 'opacity 600ms ease, transform 600ms ease';
+                tagline.style.opacity = '1';
+                tagline.style.transform = 'translateX(0)';
+            }, 680);
+
+            setTimeout(function() {
                 rule.style.transition = 'width 500ms ease';
                 rule.style.width = '48px';
-            }, 700);
+            }, 800);
 
             setTimeout(function() {
                 sub.style.transition = 'opacity 600ms ease';
                 sub.style.opacity = '1';
-            }, 800);
+            }, 900);
 
             setTimeout(function() {
                 btns.style.transition = 'opacity 600ms ease, transform 600ms ease';
                 btns.style.opacity = '1';
                 btns.style.transform = 'translateY(0)';
-            }, 950);
+            }, 1050);
         });
 
         /* === SCROLL REVEAL === */
