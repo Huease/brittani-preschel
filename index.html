@@ -151,8 +151,7 @@
         }
 
         body.light .marquee-section {
-            background: #f0f0f0;
-            border-color: #DDDDDD;
+            background: #C4004F;
         }
 
         body.light .sec-logos {
@@ -607,14 +606,14 @@
 
         /* === MARQUEE === */
         .marquee-section {
-            background: #1a1a1a;
-            height: 44px;
+            background: #C4004F;
+            padding: 12px 0;
             overflow: hidden;
-            border-top: 1px solid #1E1E1E;
-            border-bottom: 1px solid #1E1E1E;
+            border-top: none;
+            border-bottom: none;
             display: flex;
             align-items: center;
-            transition: background 300ms, border-color 300ms;
+            transition: background 300ms;
         }
 
         .marquee-inner {
@@ -628,7 +627,7 @@
             font-size: 13px;
             text-transform: uppercase;
             letter-spacing: 0.15em;
-            color: #C4004F;
+            color: #ffffff;
             padding-right: 4px;
         }
 
@@ -1227,6 +1226,7 @@
             padding: 0 80px;
             box-sizing: border-box;
             display: flex;
+            flex-direction: row-reverse;
             gap: 64px;
             align-items: stretch;
         }
@@ -1549,6 +1549,30 @@
         }
 
         .bio-modal-close:hover {
+            color: #C4004F;
+        }
+
+        body.light .bio-modal {
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        body.light .bio-modal-content {
+            background: #ffffff;
+        }
+
+        body.light .bio-modal-title {
+            color: #000000;
+        }
+
+        body.light .bio-modal-content p {
+            color: #333333;
+        }
+
+        body.light .bio-modal-close {
+            color: #111111;
+        }
+
+        body.light .bio-modal-close:hover {
             color: #C4004F;
         }
 
