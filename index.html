@@ -322,8 +322,14 @@
         }
 
         body.light .form-input {
+            /* Slight tint + stronger border so fields are visible on white contact section */
+            background: #F6F6F6;
+            border-color: #BDBDBD;
+            color: #111111;
+        }
+
+        body.light .form-select option {
             background: #FFFFFF;
-            border-color: #DDDDDD;
             color: #111111;
         }
 
@@ -464,7 +470,7 @@
         .nav-social a svg {
             width: 20px;
             height: 20px;
-            fill: #8C0039;
+            fill: var(--color-accent-text);
             transition: opacity 200ms ease;
             opacity: 0.95;
         }
@@ -2619,7 +2625,7 @@
                     <input type="hidden" name="access_key" value="cbb49c28-b311-4156-a1e6-798732f7b5c0">
                     <input type="hidden" name="subject" value="New inquiry from brittanipreschel.com">
                     <input type="hidden" name="from_name" value="Brittani Preschel Website">
-                    <input type="hidden" name="redirect" value="false">
+                    <input type="hidden" name="redirect" value="https://brittanipreschel.com/thank-you.html">
                     <fieldset style="display:none">
                         <legend>Spam prevention</legend>
                         <input type="checkbox" name="botcheck" id="contactBotcheck">
@@ -2985,6 +2991,14 @@
                         return res.json();
                     }).then(function(json) {
                         if (json.success) {
+                            var redirectInput = form.querySelector('input[name="redirect"]');
+                            var redirectUrl = redirectInput ? redirectInput.value : '';
+                            if (redirectUrl) {
+                                window.location.href = redirectUrl;
+                                return;
+                            }
+
+                            // Fallback: if redirect isn't set for some reason, show the inline message.
                             form.reset();
                             success.style.display = 'block';
                             dateGroup.style.display = 'none';

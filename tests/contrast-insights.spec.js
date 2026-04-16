@@ -1,5 +1,7 @@
 const { test, expect } = require('@playwright/test');
 
+const STAGE = process.env.PW_STAGE || 'after';
+
 function parseRgbToLinear(rgbString) {
   // Accepts "rgb(r, g, b)" or "rgba(r, g, b, a)" (alpha is ignored for contrast calc here)
   const match = rgbString.match(/rgba?\(\s*([\d.]+)\s*,\s*([\d.]+)\s*,\s*([\d.]+)\s*(?:,\s*[\d.]+\s*)?\)/i);
@@ -48,15 +50,52 @@ test('Insights CTA text meets 4.5:1 in light mode', async ({ page }) => {
 
   // Save reference screenshots for "before/after visual change" workflow.
   await page.setViewportSize({ width: 1440, height: 900 });
+  await page.evaluate(() => window.scrollTo(0, 0));
+  await page.waitForTimeout(200);
+  await page.screenshot({ path: `pw-screenshots/nav-light-${STAGE}-1440.png`, fullPage: false });
+
   await page.evaluate(() => {
     const el = document.querySelector('#insights') || document.querySelector('.sec-insights');
     if (el) el.scrollIntoView({ block: 'start' });
   });
   await page.waitForTimeout(300);
-  await page.screenshot({ path: 'pw-screenshots/insights-light.png', fullPage: false });
+  await page.screenshot({ path: `pw-screenshots/insights-light-${STAGE}-1440.png`, fullPage: false });
+
+  // Contact form visibility screenshots (light mode).
+  await page.evaluate(() => {
+    const el = document.querySelector('#contact');
+    if (el) el.scrollIntoView({ block: 'start' });
+  });
+  await page.waitForTimeout(400);
+  await page.screenshot({ path: `pw-screenshots/contact-light-${STAGE}-1440.png`, fullPage: false });
 
   await page.evaluate(() => document.body.classList.remove('light'));
   await page.waitForTimeout(300);
-  await page.screenshot({ path: 'pw-screenshots/insights-dark.png', fullPage: false });
+  await page.screenshot({ path: `pw-screenshots/contact-dark-${STAGE}-1440.png`, fullPage: false });
+
+  // Mobile contact form screenshots (375px).
+  await page.setViewportSize({ width: 375, height: 812 });
+  await page.evaluate(() => document.body.classList.add('light'));
+  await page.evaluate(() => {
+    const el = document.querySelector('#contact');
+    if (el) el.scrollIntoView({ block: 'start' });
+  });
+  await page.waitForTimeout(400);
+  await page.screenshot({ path: `pw-screenshots/contact-light-${STAGE}-375.png`, fullPage: false });
+  await page.evaluate(() => document.body.classList.remove('light'));
+  await page.waitForTimeout(250);
+  await page.screenshot({ path: `pw-screenshots/contact-dark-${STAGE}-375.png`, fullPage: false });
+
+  // Thank-you page screenshots only after it's created.
+  if (STAGE === 'after') {
+    await page.setViewportSize({ width: 1440, height: 900 });
+    await page.goto('/thank-you.html');
+    await page.waitForTimeout(300);
+    await page.screenshot({ path: `pw-screenshots/thank-you-${STAGE}-1440.png`, fullPage: false });
+
+    await page.setViewportSize({ width: 375, height: 812 });
+    await page.waitForTimeout(250);
+    await page.screenshot({ path: `pw-screenshots/thank-you-${STAGE}-375.png`, fullPage: false });
+  }
 });
 
